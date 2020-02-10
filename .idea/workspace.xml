@@ -75,6 +75,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/6 Webpack/New WebPack/2. 常用扩展/2-8. [练习]区域查询/工程/package.json" />
     <dismissed value="$PROJECT_DIR$/8 Vue/Vue循环迭代 项目/3/vue/package.json" />
   </component>
   <component name="ProjectId" id="1Xbd35cRKX6xFwCoysn1o5uhM8d" />
@@ -95,13 +96,27 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="liveEdit" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/7 ES6/NEW-ES6/.vscode" />
       <recent name="$PROJECT_DIR$/7 ES6/NEW-ES6" />
     </key>
+  </component>
+  <component name="RunManager" selected="Node.js.demo.js">
+    <configuration name="vue.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Progress/8 Vue/Vue Class/7. vue指令：v-model/vue.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="demo.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/测试/demo.js" working-dir="$PROJECT_DIR$/测试">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.demo.js" />
+        <item itemvalue="JavaScript Debug.vue.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -113,7 +128,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581318525609</updated>
-      <workItem from="1581318528164" duration="2486000" />
+      <workItem from="1581318528164" duration="6170000" />
+      <workItem from="1581339709745" duration="2159000" />
     </task>
     <servers />
   </component>
@@ -135,9 +151,57 @@
       <screen x="0" y="23" width="1440" height="799" />
     </state>
     <state x="536" y="239" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.799@0.23.1440.799" timestamp="1581320854342" />
-    <state x="413" y="61" key="SettingsEditor" timestamp="1581318564464">
+    <state width="913" height="204" key="GridCell.Tab.0.bottom" timestamp="1581346739078">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state x="413" y="61" key="SettingsEditor/0.23.1440.799@0.23.1440.799" timestamp="1581318564464" />
+    <state width="913" height="204" key="GridCell.Tab.0.bottom/0.23.1440.799@0.23.1440.799" timestamp="1581346739078" />
+    <state width="913" height="204" key="GridCell.Tab.0.center" timestamp="1581346739077">
+      <screen x="0" y="23" width="1440" height="799" />
+    </state>
+    <state width="913" height="204" key="GridCell.Tab.0.center/0.23.1440.799@0.23.1440.799" timestamp="1581346739077" />
+    <state width="913" height="204" key="GridCell.Tab.0.left" timestamp="1581346739077">
+      <screen x="0" y="23" width="1440" height="799" />
+    </state>
+    <state width="913" height="204" key="GridCell.Tab.0.left/0.23.1440.799@0.23.1440.799" timestamp="1581346739077" />
+    <state width="913" height="204" key="GridCell.Tab.0.right" timestamp="1581346739078">
+      <screen x="0" y="23" width="1440" height="799" />
+    </state>
+    <state width="913" height="204" key="GridCell.Tab.0.right/0.23.1440.799@0.23.1440.799" timestamp="1581346739078" />
+    <state width="981" height="254" key="GridCell.Tab.1.bottom" timestamp="1581328652163">
+      <screen x="0" y="23" width="1440" height="799" />
+    </state>
+    <state width="981" height="254" key="GridCell.Tab.1.bottom/0.23.1440.799@0.23.1440.799" timestamp="1581328652163" />
+    <state width="981" height="254" key="GridCell.Tab.1.center" timestamp="1581328652163">
+      <screen x="0" y="23" width="1440" height="799" />
+    </state>
+    <state width="981" height="254" key="GridCell.Tab.1.center/0.23.1440.799@0.23.1440.799" timestamp="1581328652163" />
+    <state width="981" height="254" key="GridCell.Tab.1.left" timestamp="1581328652162">
+      <screen x="0" y="23" width="1440" height="799" />
+    </state>
+    <state width="981" height="254" key="GridCell.Tab.1.left/0.23.1440.799@0.23.1440.799" timestamp="1581328652162" />
+    <state width="981" height="254" key="GridCell.Tab.1.right" timestamp="1581328652163">
+      <screen x="0" y="23" width="1440" height="799" />
+    </state>
+    <state width="981" height="254" key="GridCell.Tab.1.right/0.23.1440.799@0.23.1440.799" timestamp="1581328652163" />
+    <state width="981" height="254" key="GridCell.Tab.2.bottom" timestamp="1581328652165">
+      <screen x="0" y="23" width="1440" height="799" />
+    </state>
+    <state width="981" height="254" key="GridCell.Tab.2.bottom/0.23.1440.799@0.23.1440.799" timestamp="1581328652165" />
+    <state width="981" height="254" key="GridCell.Tab.2.center" timestamp="1581328652164">
+      <screen x="0" y="23" width="1440" height="799" />
+    </state>
+    <state width="981" height="254" key="GridCell.Tab.2.center/0.23.1440.799@0.23.1440.799" timestamp="1581328652164" />
+    <state width="981" height="254" key="GridCell.Tab.2.left" timestamp="1581328652164">
+      <screen x="0" y="23" width="1440" height="799" />
+    </state>
+    <state width="981" height="254" key="GridCell.Tab.2.left/0.23.1440.799@0.23.1440.799" timestamp="1581328652164" />
+    <state width="981" height="254" key="GridCell.Tab.2.right" timestamp="1581328652164">
+      <screen x="0" y="23" width="1440" height="799" />
+    </state>
+    <state width="981" height="254" key="GridCell.Tab.2.right/0.23.1440.799@0.23.1440.799" timestamp="1581328652164" />
+    <state x="413" y="61" key="SettingsEditor" timestamp="1581322953712">
+      <screen x="0" y="23" width="1440" height="799" />
+    </state>
+    <state x="413" y="61" key="SettingsEditor/0.23.1440.799@0.23.1440.799" timestamp="1581322953712" />
   </component>
 </project>

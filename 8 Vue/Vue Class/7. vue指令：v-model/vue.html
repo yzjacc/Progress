@@ -8,20 +8,29 @@
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body> 
+<!--    <div id="app">-->
+<!--      <input type="text" :value="inpVal" @input="handleChange">-->
+<!--      <span >{{inpVal}}</span>-->
+<!--    </div>-->
+<!--    -->
+<!--  </div>-->
+<div id="app">
+  <input type="text" v-model="inpVal">
+  <span >{{inpVal}}</span>
+</div>
 
-    
-  </div>
-
+</div>
   <script>
     const vm = new Vue({
       el: '#app',
       data: {
-        content: 'shanshan',
-        // checked: true
-        checked: [],
-        picked: '',
-        // selected: ''
-        selected: []
+        inpVal: "暂无更新"
+      },
+      methods:{
+        // handleChange(e){
+        //   console.log(e)
+        //   this.inpVal = e.target.value;
+        // }
       }
     })
   </script>

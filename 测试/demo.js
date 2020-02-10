@@ -106,7 +106,64 @@
 //     }
 //     return false;
 // }
+//
+// import fun from './axios.js'
+// fun();
+// console.log("hjdjwa")
 
-import fun from './axios.js'
-fun();
-console.log("hjdjwa")
+// var obj = {
+//     name:"kevin",
+//     age:1
+// }
+//
+// for (const prop in obj) {
+//     console.log(prop)
+// }
+//
+// for (const i = 0; i < 10; i++) {
+//
+// }
+// 9)); // 1+2*8-9function cal(a, b, c, d) {
+// //     return a + b * c - d;
+// // }
+// // //curry：柯里化，用户固定某个函数的前面的参数，得到一个新的函数，新的函数调用时，接收剩余的参数
+// // function curry(func, ...args) {
+// //     return function(...subArgs) {
+// //         const allArgs = [...args, ...subArgs];
+// //         if (allArgs.length >= func.length) {
+// //             //参数够了
+// //             return func(...allArgs);
+// //         } else {
+// //             //参数不够，继续固定
+// //             return curry(func, ...allArgs);
+// //         }
+// //     }
+// // }
+// //
+// // const newCal = curry(cal, 1, 2)
+// //
+// // console.log(newCal(3, 4)) // 1+2*3-4
+// // console.log(newCal(4, 5)) // 1+2*4-5
+// // console.log(newCal(5, 6)) // 1+2*5-6
+// // console.log(newCal(6, 7)) // 1+2*6-7
+// //
+// // const newCal2 = newCal(8)
+// //
+// // console.log(newCal2(
+
+class Test {
+
+    constructor() {
+        this.a = 123;
+    }
+
+    print = () => {
+        console.log(this.a)
+    }
+}
+
+const t1 = new Test();
+const t2 = new Test();
+console.log(t1.print === t2.print)
+
+
