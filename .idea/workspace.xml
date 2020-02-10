@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5ac09fe6-6049-4353-828c-c86839c5a4e5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/yarn-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/yarn-error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/笔记.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/components/ImgUploader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/components/ImgUploader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/components/MovieForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/components/MovieForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/components/MovieTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/components/MovieTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/components/Test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/components/Test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/pages/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/pages/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/pages/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/pages/movie/AddMovie.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/pages/movie/AddMovie.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/pages/movie/EditMovie.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/pages/movie/EditMovie.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/pages/movie/MovieList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/pages/movie/MovieList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/react-app-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/redux/actions/MovieAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/redux/actions/MovieAction.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/redux/reducers/MovieReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/redux/reducers/MovieReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/redux/reducers/RootReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/redux/reducers/RootReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/services/CommonTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/services/CommonTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/services/MovieService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/services/MovieService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/server/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/server/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/server/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/server/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/server/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/server/tslint.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/server/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/server/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/分析.md" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/分析.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/teris-game/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/teris-game/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/teris-game/src/core/GameConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/teris-game/src/core/GameConfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/teris-game/src/core/viewer/GamePageViewer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/teris-game/src/core/viewer/GamePageViewer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/teris-game/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/teris-game/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/teris-game/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/teris-game/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/teris-game/笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/teris-game/笔记.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/ts-react-game/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/ts-react-game/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/ts-react-game/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/ts-react-game/src/react-app-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/ts-react-game/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/ts-react-game/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/15 TypeScript/ts-react-game/笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/ts-react-game/笔记.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 JavaScript/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 JavaScript/1. 概述/1. 课程概述/笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/2 JavaScript/1. 概述/1. 课程概述/笔记.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 JavaScript/10. JS进阶/1. 原型和原型链/笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/2 JavaScript/10. JS进阶/1. 原型和原型链/笔记.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._.DS_Store" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_adding.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_cart_01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_cart_02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_cart_03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_cart_04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_del.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_icon_01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_icon_02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_logo.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_minus.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_relation.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_subtn.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2 JavaScript/4. 流程控制/8. 数组/test4.html" beforeDir="false" afterPath="$PROJECT_DIR$/2 JavaScript/4. 流程控制/8. 数组/test4.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/8 Vue/Vue循环迭代 项目/3/vue/package.json" />
+  </component>
+  <component name="ProjectId" id="1Xbd35cRKX6xFwCoysn1o5uhM8d" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/7 ES6/NEW-ES6/.vscode" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/7 ES6/NEW-ES6/.vscode" />
+      <recent name="$PROJECT_DIR$/7 ES6/NEW-ES6" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5ac09fe6-6049-4353-828c-c86839c5a4e5" name="Default Changelist" comment="" />
+      <created>1581318525609</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581318525609</updated>
+      <workItem from="1581318528164" duration="2486000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+      <path value="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS" />
+      <path value="$PROJECT_DIR$/15 TypeScript/moviesys" />
+      <path value="$PROJECT_DIR$/15 TypeScript/teris-game" />
+      <path value="$PROJECT_DIR$/15 TypeScript/ts-react-game" />
+      <path value="$PROJECT_DIR$/2 JavaScript" />
+    </ignored-roots>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="536" y="239" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581320854342">
+      <screen x="0" y="23" width="1440" height="799" />
+    </state>
+    <state x="536" y="239" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.799@0.23.1440.799" timestamp="1581320854342" />
+    <state x="413" y="61" key="SettingsEditor" timestamp="1581318564464">
+      <screen x="0" y="23" width="1440" height="799" />
+    </state>
+    <state x="413" y="61" key="SettingsEditor/0.23.1440.799@0.23.1440.799" timestamp="1581318564464" />
+  </component>
+</project>
