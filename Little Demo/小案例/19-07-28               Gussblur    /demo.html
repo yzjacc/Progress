@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      canvas {
+        border: 1px solid #000;
+      }
+      .box{
+        width: 300px;
+        height: 300px;
+        border:1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <div class="box"></div>
+    <script>
+      var myCanvas = document.getElementById("myCanvas");
+      var ctx = myCanvas.getContext("2d");
+      var img = new Image();
+      img.src = "./peiqi.jpg";
+      img.onload = function() {
+        //三个参数 图片 起始坐标
+        //五个参数 图片 起始坐标 图片存放区域大小
+        //ctx.drawImage(img,100,100);
+        //ctx.drawImage(img,100,100,200,200)
+        //九个参数 图片 图片区域 canvas位置区域
+        ctx.drawImage(img, 300, 300, 200, 200, 0, 0, 400, 400);
+        var data = myCanvas.toDataurl();
+        img.src = data;
+        //获取像素信息
+        var info = ctx.getImagedata(0, 0, 500, 500);
+        //500 * 500 = 250000 * 4 (rgba的四个值 )= 1000000
+      };
+    </script>
+    <script src="./jquery.min.js"></script>
+    <script>
+      (function($, root) {
+        function gaussBlur(imgData) {
+        var pixes = imgData.data;
+        var width = imgData.width;
+        var height = imgData.height;
+        var gaussMatrix = [],
+            gaussSum = 0,
+            x, y,
+            r, g, b, a,
+            i, j, k, len;
+
+        var radius = 10;
+        var sigma = 5;
+
+        a = 1 / (Math.sqrt(2 * Math.PI) * sigma);
+        b = -1 / (2 * sigma * sigma);
+        //生成高斯矩阵
+        for (i = 0, x = -radius; x <= radius; x++ , i++) {
+            g = a * Math.exp(b * x * x);
+            gaussMatrix[i] = g;
+            gaussSum += g;
+
+        }
+        //归一化, 保证高斯矩阵的值在[0,1]之间
+        for (i = 0, len = gaussMatrix.length; i < len; i++) {
+            gaussMatrix[i] /= gaussSum;
+        }
+        //x 方向一维高斯运算
+        for (y = 0; y < height; y++) {
+            for (x = 0; x < width; x++) {
+                r = g = b = a = 0;
+                gaussSum = 0;
+                for (j = -radius; j <= radius; j++) {
+                    k = x + j;
+                    if (k >= 0 && k < width) {//确保 k 没超出 x 的范围
+                        //r,g,b,a 四个一组
+                        i = (y * width + k) * 4;
+                        r += pixes[i] * gaussMatrix[j + radius];
+                        g += pixes[i + 1] * gaussMatrix[j + radius];
+                        b += pixes[i + 2] * gaussMatrix[j + radius];
+                        // a += pixes[i + 3] * gaussMatrix[j];
+                        gaussSum += gaussMatrix[j + radius];
+                    }
+                }
+                i = (y * width + x) * 4;
+                // 除以 gaussSum 是为了消除处于边缘的像素, 高斯运算不足的问题
+                // console.log(gaussSum)
+                pixes[i] = r / gaussSum;
+                pixes[i + 1] = g / gaussSum;
+                pixes[i + 2] = b / gaussSum;
+                // pixes[i + 3] = a ;
+            }
+        }
+        //y 方向一维高斯运算
+        for (x = 0; x < width; x++) {
+            for (y = 0; y < height; y++) {
+                r = g = b = a = 0;
+                gaussSum = 0;
+                for (j = -radius; j <= radius; j++) {
+                    k = y + j;
+                    if (k >= 0 && k < height) {//确保 k 没超出 y 的范围
+                        i = (k * width + x) * 4;
+                        r += pixes[i] * gaussMatrix[j + radius];
+                        g += pixes[i + 1] * gaussMatrix[j + radius];
+                        b += pixes[i + 2] * gaussMatrix[j + radius];
+                        // a += pixes[i + 3] * gaussMatrix[j];
+                        gaussSum += gaussMatrix[j + radius];
+                    }
+                }
+                i = (y * width + x) * 4;
+                pixes[i] = r / gaussSum;
+                pixes[i + 1] = g / gaussSum;
+                pixes[i + 2] = b / gaussSum;
+            }
+        }
+        //end
+        return imgData;
+    }
+        function blurImg(img, ele) {
+          var myCanvas = document.createElement("canvas");
+          var w = img.width;
+          var h = img.height;
+          myCanvas.width = 100;
+          myCanvas.height = 100;
+          var ctx = myCanvas.getContext("2d");
+          ctx.drawImage(img, 0, 0, w, h, 0, 0, 100, 100);
+          var info = ctx.getImageData(0, 0, 100, 100);
+          var result = gaussBlur(info);
+          ctx.putImageData(result, 0, 0);
+          var base = myCanvas.toDataURL();
+          ele.css("backgroundImage", "url(" + base + ")");
+        }
+        root.blurImg = blurImg;
+      })(window.jQuery, (window.player = {}));
+    </script>
+    <script>
+      var img = new Image();
+      img.src = './peiqi.jpg';
+      img.onload = function(){
+        window.player.blurImg(img,$('.box'))
+      }
+    </script>
+  </body>
+</html>

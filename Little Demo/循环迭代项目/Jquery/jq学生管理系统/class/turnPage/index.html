@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            width: 700px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 50px  auto;
+        }
+        
+        .my-turn-page, .my-turn-page li {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .my-turn-page {
+            overflow: hidden;
+        }
+        .my-turn-page li {
+            float: left;
+            padding: 5px 10px;
+            border: 1px solid #eee;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        .my-turn-page span {
+            float: left;
+        }
+        .my-turn-page li.active {
+            background-color: #428bca;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <ul class="my-turn-page">
+            <!-- <li class="prev">上一页</li>
+            <li class="num">1</li>
+            <span>...</span>
+            <li class="num">3</li>
+            <li class="num">4</li>
+            <li class="num active">5</li>
+            <li class="num">6</li>
+            <li class="num">7</li>
+            <span>...</span>
+            <li class="num">10</li>
+            <li class="next">下一页</li> -->
+        </ul>
+    </div>
+    <script src="../jquery-3.3.1.js"></script>
+    <script src="./index.js"></script>
+    <script>
+        $('.wrapper').turnpage({
+            curPage: 2,
+            allPage: 10,
+            callback: function (page) {
+                console.log(page);
+            }
+        });
+    
+    </script>
+</body>
+</html>

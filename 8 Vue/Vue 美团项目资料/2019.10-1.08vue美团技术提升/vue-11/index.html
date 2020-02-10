@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id="inp" type="text">
+    <span id="view"></span>
+    <script>
+        //1. vue中数据是如何进行双向绑定的
+        var obj = {};
+        var value = 'demo'
+        Object.defineProperty(obj, 'text', {
+            get: () => {
+                return value;
+            },
+            set: (val) => {
+                view.innerText = val;
+                value = val;
+                inp.value = val;
+            }
+        })
+        inp.value = obj.text;
+        view.innerText = obj.text;
+
+        inp.oninput = function () {
+            obj.text = this.value;
+            view.innerText = obj.text;
+        }
+        // 2. vue 和react的区别
+
+        // 3. vue生命周期
+        // 创建前后， 渲染前后，更新前后，销毁前后
+        // 4. 组件与组件之间数据交互如何实现
+        // 父--》子
+        // 子--》父
+        // 子--》子
+        // vuex 状态管理   所有组件之间
+        // event bus  父子
+        // props    $emit  父子
+        // children parent
+        // $attr
+
+        // 5. muations  actions 区别
+        // actions 方便调试异步  在actions里面做异步处理
+        // mutations 不方便调试异步  在mutations里面做同步处理
+
+        // vm.diretives 自定义指令的用途  可以实现一些自己想要的功能
+        // vm.filter 过滤器  10,000,000   |   
+
+        // 6. computed  和 methods 的区别
+        // methods 不断监听
+        // computed 监听变化
+
+    </script>
+</body>
+</html>

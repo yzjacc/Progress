@@ -1,0 +1,13 @@
+.wrapper {
+  position: relative;
+  display: block;
+  column-width: 200px;
+  border: 1px solid #ccc;
+  width: 200px;
+  height: 500px;
+  overflow: hidden;
+}
+.content {
+  position: relative;
+  transition: all 0.4s;
+}

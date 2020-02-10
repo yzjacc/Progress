@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        html {
+            background: lightblue;
+        }
+
+        .c1 {
+            position: relative;
+            z-index: 0;
+            width: 200px;
+            height: 200px;
+            background: #008c8c;
+        }
+
+        .c2 {
+            position: absolute;
+            z-index: -1;
+            width: 200px;
+            height: 200px;
+            background: chocolate;
+            left: 100px;
+            top: 100px;
+        }
+        .item1{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+        }
+        .item1{
+            right: -50px;
+            bottom: -50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c1">
+        <div class="item1" style="background: red; z-index: -9999;"></div>
+     
+    </div>
+    <div class="c2">
+        <div class="item1" style="background: rgb(145, 0, 0); z-index: 9999;"></div>
+  
+    </div>
+</body>
+
+</html>

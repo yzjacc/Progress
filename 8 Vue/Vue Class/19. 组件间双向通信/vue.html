@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- <my-count :value="count" :obj="obj"></my-count> -->
+    <div>当前计数：{{ count }}</div>
+    <hr />
+    <!-- <my-count :value="count" @input="changeCount"></my-count> -->
+    <!-- <my-count v-model="count" ></my-count> -->
+    <!-- <my-count :value="count" @update:value="changeCount"></my-count> -->
+    <!-- 下为上的语法糖 -->
+    <my-count :value.sync="count"></my-count>
+
+  </div>
+  
+  <script>
+    // 在子组件中最好不要修改父组件的属性值
+    // 所以可以子组件自己改变了data数据后 将改变的结果告诉父组件 然后让父组件自己修改data值
+    // 单向数据流
+    // :value + @input = v-model
+    // .sync = :value + @update:value
+
+    // 组件中 this为组件实例
+    Vue.component('myCount', {
+      props: ['value'],
+      mounted () {
+        setInterval(()=>{
+          let value = this.value + 1;
+          this.$emit('update:value', value);
+        }, 1000)
+      },
+      template: `<div>{{ value }}</div>`,
+    })
+
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        count: 100
+      }
+    })
+
+    // 利用 v-model 处理
+    // Vue.component('myCount', {
+    //   props: ['value'],
+    //   mounted () {
+    //     setInterval(()=>{
+    //       let value = this.value + 1;
+    //       this.$emit('input', value);
+
+    //     }, 1000)
+    //   },
+    //   template: `<div>{{ value }}</div>`,
+    // })
+
+    // const vm = new Vue({
+    //   el: '#app',
+    //   data: {
+    //     count: 100
+    //   }
+    // })
+
+
+    // Vue.component('myCount', {
+    //   props: ['value'],
+    //   mounted () {
+    //     setInterval(()=>{
+    //       let value = this.value + 1;
+    //       this.$emit('input', value);
+
+    //     }, 1000)
+    //   },
+    //   template: `<div>{{ value }}</div>`,
+    // })
+
+    // const vm = new Vue({
+    //   el: '#app',
+    //   data: {
+    //     count: 100
+    //   },
+    //   methods: {
+    //     handleInput (value) {
+    //       this.count = value; 
+    //     }
+    //   }
+    // })
+
+    // Vue.component('myCount', {
+    //   props: ['value', 'obj'],
+    //   data () {
+    //     return {
+    //       myObj: JSON.parse(JSON.stringify(this.obj)),
+    //     }
+    //   },
+    //   mounted () {
+    //     setInterval(()=>{
+    //       // this.value ++;
+    //     }, 1000)
+    //   },
+    //   template: `<div>{{ myObj.a }} <button @click="handleClick">click</button></div>`,
+    //   methods: {
+    //     handleClick () {
+    //       this.myObj.a = 100;
+    //     }
+    //   }
+    // })
+
+    // const vm = new Vue({
+    //   el: '#app',
+    //   data: {
+    //     count: 100,
+    //     obj: {
+    //       a: 1
+    //     }
+    //   }
+    // })
+  </script> 
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. 预加载 -> https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537457512697&di=6b9d60c4a27a3260612ed2fbf070a5a7&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201112%2F26%2F20111226195006_NQcMj.jpg
+
+      // 首先要在计算机性能较好的时候，先发送一次。  之后再用就是取缓存了
+
+      // 2. 懒加载 -> 监控真正要展示的图片内容 是否有被加载成功， https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537458419518&di=e2b3be122771e06068fae521f652ba7e&imgtype=0&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F5bafa40f4bfbfbed4bd0124f7af0f736afc31f70.jpg
+
+      // 提高用户体验的同时 减少对性能的伤害
+      // function MyImage (_id) {
+      //     var oImg = document.createElement('img');
+      //     this.setSrc = function (_src) {
+      //         oImg.src = _src;
+      //     }
+      //     document.getElementById(_id).appendChild(oImg);
+      // }
+      // // new MyImage('demo').setSrc('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537457512697&di=6b9d60c4a27a3260612ed2fbf070a5a7&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201112%2F26%2F20111226195006_NQcMj.jpg');
+
+      // var ProxyImage = (function () {
+      //     var oImg = new Image();
+      //     var oMyImage = new MyImage('demo');
+      //     oImg.onload = function () {
+      //          oMyImage.setSrc(oImg.src);
+      //     }
+      //     return function (occupySrc, src) {
+      //         oImg.src = src;
+      //         oMyImage.setSrc(occupySrc);
+      //     }
+      // })();
+
+      // ProxyImage('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537457512697&di=6b9d60c4a27a3260612ed2fbf070a5a7&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201112%2F26%2F20111226195006_NQcMj.jpg', 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1537458419518&di=e2b3be122771e06068fae521f652ba7e&imgtype=0&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fzhidao%2Fpic%2Fitem%2F5bafa40f4bfbfbed4bd0124f7af0f736afc31f70.jpg');
+
+      // 理解代理模式很重要
+
+      var mrDeng = {
+        sendFlower: function(target) {
+          var flower = "sunflower";
+          target.receiveFlower(flower);
+        }
+      };
+
+      // 代理人   代理   利用原有对象的功能 加上 自己额外的部分 去和 要访问对象互动
+
+      var cheng = {
+        proxyFlower: function(target) {
+          this.listenMood(target, function() {
+            mrDeng.sendFlower(target);
+          });
+        },
+        listenMood: function(target, func) {
+          var timer = setInterval(function() {
+            if (target.mood) {
+              func();
+              clearInterval(timer);
+            }
+          }, 500);
+        }
+      };
+
+      var goddness = {
+        mood: null,
+        receiveFlower: function(flower) {
+          console.log(this.mood ? "ok" : "get out");
+        },
+        changeMood: function() {
+          this.mood = Math.random() > 0.8 ? true : false;
+        },
+        createMood: function() {
+          this.changeMood();
+          var self = this;
+          setInterval(function() {
+            self.changeMood();
+          }, 300);
+        }
+      };
+      goddness.createMood();
+
+      // 不保准
+      // mrDeng.sendFlower(goddness);
+      cheng.proxyFlower(goddness);
+    </script>
+  </body>
+</html>

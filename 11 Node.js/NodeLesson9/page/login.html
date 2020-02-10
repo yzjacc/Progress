@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="login.js"></script>
+    <script>
+        function login() {
+            var stuNum = document.getElementById("stuNum").value;
+            var password = document.getElementById("password").value;
+            var params = "stuNum=" + stuNum + "&password=" + password;
+
+            xmlHttp=new XMLHttpRequest();
+            xmlHttp.open("POST","/login",true);
+            xmlHttp.send(params);
+
+            xmlHttp.onreadystatechange=function () {
+                if (xmlHttp.readyState ==4 && xmlHttp.status ==200){
+                    console.log(xmlHttp.responseText);
+                    console.log(typeof xmlHttp.responseText);
+                    if (xmlHttp.responseText == "OK") {
+                        alert("成功");
+                        location.href = "/main.html";
+                    } else {
+                        alert("失败");
+                    }
+
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form method="post" action="/login">
+        <input type="text" name="stuNum" id="stuNum" placeholder="学号">
+        <input type="password" name="password" id="password" placeholder="密码">
+        <input type="submit" value="提交">
+    </form>
+
+</body>
+</html>

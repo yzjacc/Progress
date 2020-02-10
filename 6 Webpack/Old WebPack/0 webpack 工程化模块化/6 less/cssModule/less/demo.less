@@ -1,0 +1,170 @@
+// 嵌套语法   只想给开发人员看到得注释 
+
+/*包裹注释 会被编译到C's's文件中*/
+
+
+// 变量 及变量运算
+@width:300px;
+@color:blue;
+@height:@width + 100px;
+
+// 作用域  块级作用域  变量延迟加载
+@size:10px;
+// body{
+//     background-color:#ccc;
+//     @size:20px;
+//     .wrapper{
+//         width:@width;
+//         height:@height;
+//         border:1px solid #000;
+//         @size:30px;
+//         .box{
+//             background-color: @color;
+//             li{
+//                 @size:40px;
+//                 font-size:@size;
+//                 width:80%;
+//                 height:20px;
+//                 background-color:#fff;
+//                 border:1px solid #000;
+//                 list-style: none;
+//                 @size:5px;
+//                 // 变量&符号
+//                 &:hover{
+//                     background-color:#000;
+//                 }
+//             }
+//             // li:hover{
+
+//             // }
+//         }
+
+//     }
+// }
+
+
+// less得混合  将相同样式抽出
+// .border{
+//     border-top:2px solid #000;
+//     border-bottom:2px solid red;
+// }
+
+
+// body{
+//     background-color:#ccc;
+//     .wrapper{
+//         margin:50px auto;
+//         width:500px;
+//         height:500px;
+//         .border;
+//         .box{
+//             margin-top:30px;
+//             width:200px;
+//             height: 200px;
+//             background-color: @color;
+//             .border;
+//             li{
+//                 width:80%;
+//                 height:20px;
+//                 background-color:#fff;
+//                 border:1px solid #000;
+//                 list-style: none;
+//             }
+//         }
+
+//     }
+// }
+
+// 带参数得混合 
+// 混合：从一个规则引入到另一个规则集得方式
+// .border(@w,@color){
+//     border:@w solid @color;
+// }
+// body{
+//     background-color:#ccc;
+//     .wrapper{
+//         margin:50px auto;
+//         width:500px;
+//         height:500px;
+//         .border(5px,red);
+//         .box{
+//             margin-top:30px;
+//             width:200px;
+//             height: 200px;
+//             background-color: @color;
+//             .border(5px,pink);
+    
+//             li{
+//                 width:80%;
+//                 height:20px;
+//                 background-color:#fff;
+//                 border:1px solid #000;
+//                 list-style: none;
+//             }
+//         }
+
+//     }
+// }
+
+// 带默认值得参数   不传值得时候取默认值
+// .border(@w:1px,@color:#000){
+//     border:@w solid @color;
+// }
+// body{
+//     background-color:#ccc;
+//     .wrapper{
+//         margin:50px auto;
+//         width:500px;
+//         height:500px;
+//         .border(5px,red);
+//         .box{
+//             margin-top:30px;
+//             width:200px;
+//             height: 200px;
+//             background-color: @color;
+//             .border();
+//             li{
+//                 width:80%;
+//                 height:20px;
+//                 background-color:#fff;
+//                 border:1px solid #000;
+//                 list-style: none;
+//             }
+//         }
+
+//     }
+// }
+
+// 在less中引入模块
+@import './triangle.less';
+
+// .wrapper{
+//     width:400px;
+//     height:400px;
+//     margin:50px auto;
+//     //
+//     .box{
+//         .triangleTop(50px,blue) 
+//     }
+// }
+
+// 运算
+// .box{
+//     width:(100+100px);
+//     height:300px;
+//     border:3px solid #000;
+// }
+
+// arguments
+.border(@w,@b,@color){
+    border:@arguments;
+}
+.box{
+    width:(100+100px);
+    height:300px;
+    .border(4px,dashed,red);
+}
+
+
+
+

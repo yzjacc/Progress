@@ -1,0 +1,13 @@
+Npm install@vue/ci安装脚手架,用于生成项目
+
+npm install- g @vue/cli- service- global 快速原型开发编译 Vue 文件
+
+如果之前已经安装过旧版本（非 3.X）脚手架，需先卸载旧版本：
+
+npm uninstall vue-cli -g
+
+如果仍然需要使用旧版本的 vue Init 功能，可以全局安装个桥接工具
+
+npm install-g@vue/cli-init 拉取旧版本
+
+插件名字：Vetur

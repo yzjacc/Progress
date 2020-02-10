@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <!-- 过滤器 不改变原有数据 修改表现形式-->
+  <div id="app">
+    <!-- <input type="text" v-slice="a"> -->
+    <!-- 1,000,000 -->
+    {{ money | toMoney(2) | ceshi }}
+  </div>
+  
+
+  <script>
+
+    // filter  过滤器名字 value 管道符之前的数值 
+    // times   传递的参数
+    Vue.filter('toMoney', (value, times) => {
+      return (value * times).toLocaleString();
+    });
+
+    Vue.filter('ceshi', value => {
+      console.log(value);
+      return value;
+    })
+
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        a: 10,
+        money: 1000000
+      },
+      filters: {
+        toMoney: () => {}
+      }
+    })
+  </script> 
+</body>
+</html>

@@ -1,0 +1,597 @@
+*{
+    margin:0;
+    padding:0;  
+    list-style:none;
+    text-decoration: none;                                
+}
+label{
+    display:inline-block;
+    width:70px;
+    text-align: right;
+}
+input,button{
+    border:none;
+    background:none;
+    outline:none;
+}
+html,body{
+    font-size:14px;
+    color:#333;
+    font-family: 'YouYuan';
+}
+.wrapper{
+    position: relative;
+    width:100vw;
+    min-height:100vh;
+    transform-style: preserve-3d;
+}
+.wrapper header{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:4.5rem;
+    background:linear-gradient(90deg,#333,#111,#aaa);
+    padding-left:3rem;
+    box-sizing: border-box;
+}
+.wrapper header::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('./images/bg.png') repeat center center;
+    opacity: .4;
+}
+.wrapper header .logo{
+    height:100%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+.wrapper header .logo img{
+    width:3rem;
+    height:3rem;
+}
+.wrapper header .logo span{
+    margin-left:1rem;
+    font-size:1.7rem;
+    font-weight:bolder;
+    text-shadow:4px 2px 6px #ccc;
+    animation: jumping 0.7s infinite alternate;
+}
+
+.wrapper header .logo .du{
+    animation-delay:0s;
+}
+.wrapper header .logo .yi{
+    animation-delay:0.25s;
+}
+.wrapper header .logo .jiao{
+    animation-delay:0.5s;
+}
+.wrapper header .logo .yu{
+    animation-delay:0.75s;
+}
+@keyframes jumping{
+    0%{
+        transform: translateY(0);
+        text-shadow:4px 2px 6px #ccc;
+    }
+    100%{
+        transform: translateY(-20px);
+        text-shadow:3px 5px 6px rgba(255,255,255,.5);
+        /* text-shadow:3px 5px 6px red; */
+    }
+}
+
+
+/* btn */
+.wrapper header .btn{
+    display:none;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left:30px;
+    padding: 9px 10px;
+    margin-right: 15px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index:999;
+}
+.wrapper header .btn span{
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #fff;
+    margin:4px 0;
+}
+.wrapper header .btn:hover{
+    transform: translateY(-50%) scale(1.1);
+    transition: all 0.3s ease-in-out;
+    background-color: rgba(255,255,255,.1);
+}
+.wrapper header .btn:hover span{
+    animation:change 2s ease-in-out infinite;
+}
+.wrapper header .drop-list{
+    display:none;
+    position: absolute;
+    left:0;
+    width:100vw;
+    padding:30px;
+    box-sizing: border-box;
+    background:linear-gradient(#333,#222,#111);
+    text-align: center;
+    z-index:999;
+}
+.wrapper header .drop-list ul{
+    display: inline-block;
+}
+
+.wrapper header .drop-list ul li a{
+    color:#ccc;
+    line-height:40px;
+    font-size: 1.1rem;
+}
+.wrapper header .drop-list ul li a:hover{
+    color:#fff;
+}
+@keyframes change{
+    0%{
+        transform: rotateZ(0);
+    }
+     25%{
+        transform: rotateZ(45deg);    
+    }
+    50%{
+        transform: rotateZ(0deg);
+    }
+    75%{
+        transform: rotateZ(-45deg);
+    }
+    100%{
+        transform: rotateZ(0);
+    }
+}
+
+
+/* left-menu */
+.wrapper .left-menu{
+    min-height:calc(100vh - 4.5rem);
+    width:200px;
+    background-color:#ddd;
+    position: fixed;
+    top:4.5rem;
+    left:0;
+    padding-top:2rem;
+    padding-left:2rem;
+    box-sizing: border-box;
+    background:linear-gradient(#333,#222,#111);
+}
+.wrapper .left-menu::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('./images/bg.png') repeat center center;
+    opacity: .4;
+    z-index:-1;
+}
+.wrapper .left-menu .list{
+    width:100%;
+    font-weight:bolder;
+}
+.wrapper .left-menu .list .title{
+    color:#fff;
+    font-size:1.1rem;
+}
+.wrapper .left-menu .list .list-group{
+    margin-top:2rem;
+    text-align: center;
+} 
+.wrapper .left-menu .list .list-group li{
+    width:100%;
+    display: inline-block;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-bottom:5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.wrapper .left-menu .list .list-group .list-item.active{
+    background-color: rgba(255,255,255,.3);
+}
+
+.wrapper .left-menu .list .list-group .list-item.active a,
+.wrapper .left-menu .list .list-group .list-item:hover a{
+    transition: all 0.3s ease-in-out;
+    color: rgba(255,255,255,1.4); 
+}
+.wrapper .left-menu .list .list-group a{
+    color:#ccc;
+    line-height:40px;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+/* 右侧展示区 */
+.wrapper .right-content{
+    min-width: 990px;    
+    min-height:100vh;
+    background-color: rgba(0,0,0,.1); 
+    padding-left: 200px;
+    box-sizing: border-box;
+    padding-top:4.5rem;
+}
+
+.wrapper .tab-content-item.echarts .area,
+.wrapper .tab-content-item.echarts .sex{
+    display:inline-block;
+    width:500px;
+    height:500px;
+    margin:145px 50px 0 50px;
+    vertical-align: top;
+    border:1px solid #000;
+}
+
+.wrapper .right-content .tab-content-item{
+    display:none;
+    padding:20px;
+}
+
+
+.wrapper .right-content .tab-content-item table{
+   width:100%;
+}
+.wrapper .right-content .tab-content-item table tr{
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    background-color: #fff;
+    width: 100%;
+}
+
+.wrapper .right-content .tab-content-item table thead tr{
+    background-color:#ccc;
+    font-weight:700;
+    font-size:15px;
+
+}
+.wrapper .right-content .tab-content-item table tbody tr{
+    line-height:45px;
+    color:#222;
+    /* min-width:100px; */
+    text-align: center;
+}
+
+.wrapper .right-content .tab-content-item table tr td{
+    min-width:100px;
+    text-align: center;
+}
+.wrapper .right-content tr button{
+    border:none;
+    background: none;
+    width:65px;
+    height:33px;
+    border:1px solid #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    color:#fff;
+    font-weight:bolder;
+    outline: none;
+}
+.wrapper .right-content tr button:hover{
+    opacity: 0.8;
+}
+.wrapper .right-content tr button.edit{
+    background-color:#006400;
+    
+}
+.wrapper .right-content tr button.del{
+    background-color:#CD0000;
+}
+
+/* 编辑信息弹出页 */
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,.4);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal .modal-content{
+    background-color: #fff;
+    padding:60px 60px 30px 60px;
+    border-radius: 10px;
+}
+.modal .modal-content .title{
+    text-align: left;
+    color:#222;
+    line-height: 30px;
+}
+.modal {
+    text-align: center;
+    margin-top:10px;  
+}
+
+.modal .form-con {
+    display: inline-block;
+}
+
+.modal .form-con .item{
+    margin:10px 0;
+}
+.right-content .modal input{
+    border:none;
+    outline:none;
+    border:1px solid #ccc;
+    border-radius: 8px;
+    padding:10px;
+    box-sizing: border-box;  
+    width:200px;
+}
+.modal .form-con .item label{
+    display: inline-block;
+    width:70px;
+    font-size:1rem;
+    text-align: right;
+}
+.s-add form .section.item .con,
+.modal .form-con .item.section .con{
+    display: inline-block;
+    width:200px;
+    text-align: left;
+}
+
+.s-add form .section.item .con input,
+.s-add form .section.item .con label,
+.modal .form-con .item.section .con input,
+.modal .form-con .item.section .con label{
+    width:20px;
+}
+
+.tab-content-item.s-add form .item.btn input,
+.modal .form-con .item.btn input{
+    width:80px;
+    margin:10px 10px 0 10px;
+    cursor: pointer;
+    color:#fff;
+    font-weight:bold;
+}
+.tab-content-item.s-add form .item.btn .add,
+.modal .form-con .item.btn input.submit{
+    background-color:#006400;
+}
+.tab-content-item.s-add form .item.btn .reset,
+.modal .form-con .item.btn input.reset{
+    background-color:#aaa;
+    /* color:#222; */
+}
+.modal .form-con .item.btn input:hover{
+    opacity:0.8;
+}
+
+.right-content .del-modal{
+    /* display:none; */
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,.4);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.right-content .del-modal .con{
+    width:400px;
+    height:200px;
+    background-color: #fff;
+    border-radius:20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.right-content .del-modal .con p{
+    color:#333;
+    font-size:1.3rem;
+    line-height: 40px;
+    font-weight:300;
+}
+.right-content .del-modal .con button:hover{
+    opacity:0.9;
+}
+.right-content .del-modal .con button{
+    border:none;
+    background:none;
+    width:80px;
+    height:40px;
+    margin:10px 10px 0;
+    cursor: pointer;
+    color:#fff;
+    font-weight:bold;
+    outline:none;
+    border-radius: 8px;
+}
+.right-content .del-modal .con .sure-btn{
+    background-color:#006400;
+
+}   
+.right-content .del-modal .con .reset-btn{
+    background-color:#aaa;
+}
+
+
+/* 右侧展示新增学生 */
+.tab-content-item.s-add{
+   /* border:1px solid #000; */
+   text-align: center;
+}
+.tab-content-item.s-add form{
+    display: inline-block;
+    margin-top:30px;
+}
+.tab-content-item.s-add form .item{
+    margin:10px 0;
+}
+
+.tab-content-item.s-add form .item input{
+    width: 200px;
+    padding:10px;
+    box-sizing: border-box;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+
+
+.wrapper .right-content .tab-content-item.show-list{
+    display:block;
+}
+
+
+.wrapper tbody p{
+    display: inline-block;
+    font-size:20px;
+    color:#aaa;
+    font-weight:30;
+    line-height:200px;
+    /* margin:0 auto;  */
+}
+
+
+
+
+@media all and (max-width:1430px){
+    .wrapper .tab-content-item.echarts .sex{
+        display:none;
+    }
+}
+
+/* .wrapper header  */
+/* 基于Bootstrap 3.x 全球主流框架的响应式尺寸 */
+@media all and (max-width: 991px) { 
+    .wrapper{
+        min-width:1190px;
+        /* background-color:red;  */
+    }
+    .wrapper header{
+        height:4.5rem;
+    }
+    .wrapper header .btn{
+        display:none;
+    }
+    .wrapper .right-content{
+        min-width: 990px;
+    }    
+    .wrapper .tab-content-item.echarts .sex{
+        display:none;
+    }
+    .wrapper .right-content .s-add{
+        margin-left:150px;
+        text-align: left;
+    }
+}
+@media all and (max-width: 768px) {  
+    .wrapper{
+        width: 100vw;
+    }
+    .wrapper header{
+        height:3.8rem;
+    }
+    .wrapper header .logo{
+        width:300px;
+        transform: translateX(200px);
+    }
+    .wrapper header .btn{
+        display: block;
+    }
+    .wrapper .left-menu{
+        display:none;
+    }
+    .wrapper .right-content{
+        height: calc(100vh - 3.8rem);
+        padding-left: 0px;
+    }
+    .wrapper .tab-content-item.echarts .sex{
+        display:none;
+    }
+    .wrapper .right-content .tab-content-item table tr td{
+        min-width:30px;
+        text-align: center;
+    }
+}
+@media all and (max-width: 480px) {  
+    html,body{
+        min-width:1190px;
+        height: 100vh;
+    }
+    .wrapper{
+        width:100%;
+        height:100vh;
+        /* background-color:green; */
+    }
+    .wrapper header{
+        height:3.8rem;
+    }
+    .wrapper header .btn{
+        display: block;
+    }
+    .wrapper header .logo {
+        width: 300px;
+        transform: translateX(80px);
+    }
+    .wrapper .left-menu{
+        display:none;
+    }
+    .wrapper header .drop-list{
+        width:100%;
+        text-align: left;
+    }
+    
+    .wrapper .right-content{
+        height: calc(100vh - 3.8rem);
+        padding-left: 0px;
+        min-width: 990px;
+    }
+    .wrapper .tab-content-item.echarts .sex{
+        display:none;
+    }
+    .wrapper .right-content .s-add{
+        margin-left: 40px;
+        text-align: left;
+    }
+    .wrapper .right-content .s-add .btn{
+        text-align: center;
+    }
+    .wrapper .right-content .tab-content-item table tr td{
+        min-width:30px;
+        text-align: center;
+    }
+}
+
+

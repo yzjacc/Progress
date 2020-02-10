@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        a {
+            /* 0001 */
+            color: red;
+        }
+
+        div ul a {
+            /* 0003 */
+            color: green;
+        }
+
+        #mydiv #myul a {
+            /* 0201 */
+            color: gray;
+        }
+
+
+        
+        #mydiv #myul .mylink {
+            /* 0210 */
+            color: #008c8c;
+        }
+
+        #mydiv #myul :link{
+            /* 0210 */
+            color:chocolate;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mydiv">
+        <ul id="myul">
+            <li id="myli">
+                <a href="https://163.com" class="mylink">
+                    举个例子
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

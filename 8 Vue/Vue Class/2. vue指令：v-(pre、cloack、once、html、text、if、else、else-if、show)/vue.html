@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- 指令 -->
+  <!-- 1. v-pre 跳过该元素和它的子元素的变异过程，(不显示查值表达式）显示原始的 {{}} 的标签-->
+  <!-- 2. v-cloak （预防先加载dom元素时可能会先渲染问题）该指令保持在元素上，直到关联实例结束变异 可与css配合使用 隐藏未编译的 {{}}标签 -->
+  <!-- 3. v-once （数据修改后 不渲染）只渲染元素和组件一次。随后的重新渲染，元素/组件及其所有的子节点将被视为静态内容并跳过。这可以用于优化更新性能。
+          vue内部进行了缓存，以后使用的值都是缓存里的结果
+  -->
+  <!-- 4. v-html ===  innerHTML  XSS  更新元素的innerHTML-->
+  <!-- 5. v-text innerText 更新元素的innerText -->
+  <!-- 6. v-if 控制元素是否存在 -->
+  <!-- 7. v-else -->
+  <!-- 8. v-else-if -->
+  <!-- 9. v-show  display 控制元素的样式-->
+
+  <!-- 
+    v-show和v-if的区别？
+    1. v-if是控制该元素是否存在，值为false时，完全移除该元素
+      v-show是控制该元素的样式(display)，值为false时，元素的display为none
+    2. v-if支持template标签
+      v-show不支持template标签 
+  -->
+
+
+  <div id="app" v-pre> 
+    {{ a }}
+  </div>
+  
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        a:10
+      }
+    })
+  </script>
+</body>
+</html>

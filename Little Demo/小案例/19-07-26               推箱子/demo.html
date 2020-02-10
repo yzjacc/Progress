@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      #game {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        border: 1px solid black;
+      }
+      #game .item {
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        background-size: 100% 100%;
+      }
+      #game .wall {
+        background-image: url("./imgs/wall.jpg");
+      }
+      #game .box {
+        background-image: url("./imgs/box.png");
+      }
+      #game .player {
+        background-image: url("./imgs/player.png");
+      }
+      #game .correct-box {
+        background-image: url("./imgs/over_box.png");
+      }
+      #game .correct {
+        border: 2px solid rgb(24, 151, 24);
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="game"></div>
+    <script>
+      var gameDom = document.getElementById("game");
+      var playerPoint = {
+        row: 1,
+        col: 4
+      };
+      var map = [
+        [0, 0, 2, 2, 2, 2, 2, 0, 0],
+        [0, 0, 2, 0, 1, 0, 2, 0, 0],
+        [0, 0, 2, 0, 3, 0, 2, 0, 0],
+        [2, 2, 2, 0, 0, 0, 2, 2, 2],
+        [2, 0, 0, 0, 3, 0, 0, 0, 2],
+        [2, 0, 3, 3, 3, 3, 3, 0, 2],
+        [2, 0, 0, 0, 3, 0, 0, 0, 2],
+        [2, 2, 0, 3, 3, 3, 0, 2, 2],
+        [0, 2, 0, 0, 0, 0, 0, 2, 0],
+        [0, 2, 0, 0, 3, 0, 0, 2, 0],
+        [0, 2, 0, 0, 0, 0, 0, 2, 0],
+        [0, 2, 2, 2, 2, 2, 2, 2, 0]
+      ];
+      var correct = [
+        { row: 3, col: 4 },
+        { row: 4, col: 4 },
+        { row: 5, col: 2 },
+        { row: 5, col: 3 },
+        { row: 5, col: 4 },
+        { row: 5, col: 5 },
+        { row: 5, col: 6 },
+        { row: 6, col: 4 },
+        { row: 7, col: 4 },
+        { row: 8, col: 4 },
+        { row: 9, col: 4 },
+        { row: 10, col: 4 }
+      ];
+      var width = 45,
+        height = 45;
+      var row;
+      gameDom.style.height = map.length * height + "px";
+      gameDom.style.width = map[0].length * width + "px";
+      function render() {
+        gameDom.innerHTML = "";
+        for (var j = 0; j < map.length; j++) {
+          row = map[j];
+          for (var i = 0; i < row.length; i++) {
+            if (row[i] === 0 && !isCorrect(j, i)) {
+              continue;
+            }
+            var div = document.createElement("div");
+            div.className = "item";
+            if (row[i] === 2) {
+              div.classList.add("wall");
+            } else if (row[i] === 1) {
+              div.classList.add("player");
+            } else if (row[i] === 3) {
+              if (isCorrect(j, i)) {
+                div.classList.add("correct-box");
+              } else {
+                div.classList.add("box");
+              }
+            } else {
+              div.classList.add("correct");
+            }
+            div.style.left = width * i + "px";
+            div.style.top = height * j + "px";
+            gameDom.appendChild(div);
+          }
+        }
+      }
+      render();
+      function isCorrect(r, c) {
+        for (var i = 0; i < correct.length; i++) {
+          if (r === correct[i].row && c === correct[i].col) {
+            return true;
+          }
+        }
+        return false;
+      }
+      function playerMove(direction) {
+        var targetPoint = getNewPoint(
+          playerPoint.row,
+          playerPoint.col,
+          direction
+        );
+        var target = map[targetPoint.row][targetPoint.col];
+        if (target === 0) {
+          exchange(playerPoint, targetPoint);
+          playerPoint.row = targetPoint.row;
+          playerPoint.col = targetPoint.col;
+          render(); 
+        } else if (target === 3) {
+          var boxForwardPoint = getNewPoint(
+            targetPoint.row,
+            targetPoint.col,
+            direction
+          );
+          var boxForward = map[boxForwardPoint.row][boxForwardPoint.col];
+          if (boxForward === 0) {
+            exchange(targetPoint, boxForwardPoint);
+            exchange(playerPoint, targetPoint);
+            playerPoint.row = targetPoint.row;
+            playerPoint.col = targetPoint.col;
+            render();
+          }
+        }
+      }
+
+      function exchange(point1, point2) {
+        var temp = map[point1.row][point1.col];
+        map[point1.row][point1.col] = map[point2.row][point2.col];
+        map[point2.row][point2.col] = temp;
+      }
+
+      function getNewPoint(row, col, direction) {
+        var point;
+        if (direction === "left") {
+          point = {
+            row: row,
+            col: col - 1
+          };
+        } else if (direction === "right") {
+          point = {
+            row: row,
+            col: col + 1
+          };
+        } else if (direction === "up") {
+          point = {
+            row: row - 1,
+            col: col
+          };
+        } else {
+          point = {
+            row: row + 1,
+            col: col
+          };
+        }
+        return point;
+      }
+      window.onkeydown = function(e) {
+        if (e.key == "ArrowUp") {
+          playerMove("up");
+        } else if (e.key == "ArrowDown") {
+          playerMove("down");
+        } else if (e.key == "ArrowLeft") {
+          playerMove("left");
+        } else if (e.key == "ArrowRight") {
+          playerMove("right");
+        }
+        if (isWin()) {
+          alert("You win!!!!");
+          window.onkeydown = null;
+        }
+      };
+      function isWin() {
+        for (var i = 0; i < correct.length; i++) {
+          var cr = correct[i];
+          if (map[cr.row][cr.col] !== 3) {
+            return false;
+          }
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>

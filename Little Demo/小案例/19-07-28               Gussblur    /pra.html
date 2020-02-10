@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            border: 1px solid #000;
+        }
+
+        #box {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+            background-size:cover;
+            background-repeat:no-repeat; 
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <div id="box"></div>
+    <img id="oImg" src="" alt="">
+    <script src="./jquery.min.js"></script>
+    <script src="./demo.js"></script>
+    <script>
+        var img = new Image();
+        img.src = './peiqi.jpg';
+        img.onload = function(){
+            window.player.blurImg(img,$('#box'));
+        };
+    </script>
+    <script>
+        var myCanvas = document.getElementById('myCanvas');
+        var ctx = myCanvas.getContext('2d');
+
+        var oImg = document.getElementById('oImg');
+
+        var img = new Image();
+        img.src = './peiqi.jpg';
+        img.onload = function () {
+            // 在canvas中画图片 三个参数 图片  起始位置
+            // ctx.drawImage(img, 30, 30);
+            // 五个参数  图片  起始点坐标及图片所存区域大小
+            // ctx.drawImage(img,20,20,200,200);
+            // 九个参数  前四个坐标控制图片显示位置 后四个值控制图片在canvas中显示位置及大小
+            ctx.drawImage(img, 0, 0, 300, 300, 0, 0, 400, 400);
+            // 将canvas抽成一张base64编码的格式图片
+            var data = myCanvas.toDataURL();
+            // console.log(data);
+            // oImg.src = data;
+
+            var info = ctx.getImageData(0, 0, 500, 500);
+            console.log(info);
+
+            ctx.putImageData(info, 400, 400);
+            // putImageData;将图像数据放回到画布上 
+        }
+
+    </script>
+</body>
+
+</html>

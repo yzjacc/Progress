@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body> 
+
+  <div id="app">
+    {{ person }}
+    计算相加: 
+    <input type="text" v-model.number="firstCount" /> +
+    <input type="text" v-model.number="lastCount" /> 
+
+    <p>
+      计算结果: <input type="text" v-model="sum" />
+    </p>
+    
+  </div>
+
+  <script> 
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        firstCount: null,
+        lastCount: null,
+        name: 'shanshan',
+        age: 18,
+        flag: false,
+        //data 当中 this 是 window
+        // person: `姓名：${this.name} 年龄：${this.age}`  // data中无this
+        person: ''
+      },
+      mounted () {
+        // this.getPerson (); 如果watch中 方法不为对象 需要先利用钩子函数提前触发一下
+      },
+      methods: {
+        // person () {
+        //   // 更改其他值也会触发这个函数的执行，对性能不好
+        //   return `姓名：${this.name} 年龄：${this.age}`;
+        // },
+        getPerson () {
+          this.person = `姓名：${this.name} 年龄：${this.age}`;
+        }
+      },
+      computed: {
+        // person () { 
+        //   // 计算属性相当于做了一层缓存，每次都从缓存中拿值
+        //   // 只有涉及的数据更改后才重新执行这个函数
+        //   return `姓名：${this.name} 年龄：${this.age}`
+        // },
+
+        // 计算属性也可写成对象的形式，涉及到双向数据绑定是会用到，但是不会经常被用到
+        // 功能：两个input 做加法 给另一个input （另一个也可以分开这两个值）
+        sum: {
+          //get方法功能与上方直接写为函数形式是一样的
+          get () {
+            if(!this.firstCount && !this.lastCount) {
+              return null;
+            }
+            return this.firstCount + this.lastCount;
+          },
+          //给sum赋值时会触发set函数 但是仅仅是赋值功能 不会更改对象 
+          set (val) {
+            const avg = val / 2;
+            this.firstCount = avg;
+            this.lastCount = avg;
+          }
+        }
+      },
+      watch: {
+        // 被观察的属性变化，就会执行相应的函数
+        // name改变触发name函数，age改变触发age函数
+        // 首次刷新页面时不执行，可以配合methods和生命周期函数来实现
+        // name (newVal) {
+        //   // newVal 是更改后的值
+        //   this.person = `姓名：${newVal} 年龄：${this.age}`;
+        // },
+        // age (newVal) {
+        //   this.person = `姓名：${this.name} 年龄：${newVal}`;
+        // }
+        // watch不仅可以写成函数的形式，还可以写成对象的形式
+        // 可以填写其他参数，如immediate：true, 无论有没有数据改变，立即执行
+        // 填写immediate后，就不需要配合methods和生命周期函数了
+        // name: {
+        //   handler (newVal) {
+        //     setTimeout (() => {
+        //       this.person = `姓名：${newVal} 年龄：${this.age}`;
+        //     }, 2000) 
+        //   },
+        //   immediate: true
+        // },
+        // age: {
+        //   handler (newVal) {
+        //     setTimeout (() => {
+        //       this.person = `姓名：${this.name} 年龄：${newVal}`;            
+        //     }, 2000)
+        //   },
+        //   immediate: true
+        // }
+        // 利用实例对象绑定 vm.$watch('name',()=>{
+        //   console.log('name')
+        // },{
+        //   immediate: true
+        // })
+      }
+    })
+    // 根据多个值去得到一个值 最好用计算属性
+    // computed和watch的区别是什么？
+    // computed不可执行异步，watch可执行异步。
+    // computed可以观察多个数据，watch只观察一个。
+    // computed可以新生成一个数据，直接在视图中渲染。watch不可，他用的是本身存在的数据。
+
+    // computed和methods的区别是什么？
+    // computed有缓存机制，methods无缓存机制。
+
+    // 数据查找顺序：data > methods > computed
+  </script>
+</body>
+</html>

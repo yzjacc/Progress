@@ -1,0 +1,63 @@
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.header {
+    background: #e3e4e5;
+    color: #999;
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.header .topnav>li {
+    float: left;
+    margin: 0 20px;
+    width: 150px;
+    text-align: center;
+    height: 40px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.header .topnav>li:hover{
+    background: #fff;
+    border: 2px solid #ccc;
+    border-bottom: none;
+    line-height: 36px;
+    background: #fff;
+}
+
+.header .topnav>li .submenu{
+    text-align: left;
+    line-height: 1.5;
+    width: 300px;
+    /* 不生成盒子 */
+    display: none; 
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    position: absolute;
+    right: -2px;
+    background: #fff;
+}
+
+.header .topnav>li:hover .submenu{
+    display: block;
+    padding: 10px;
+}
+
+.header .topnav>li:hover::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background: red;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+}

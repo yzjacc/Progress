@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <!-- 处理 父传孙数据 但是免去父传子的不足 -->
+  
+  <!-- vm.$attrs -->
+  <!-- vm.$parent vm.$children -->
+  <!-- provide inject -->
+
+  <div id="app">
+    <my-content></my-content>
+  </div>
+
+  <script> 
+    //  provide 的属性 都能被子孙组件inject得到
+    const vm = new Vue({
+      el: '#app',
+      provide: {
+        content: '我是内容是内容是内容是内容是内容是内容是内容是内容',
+        title: '我是标题'
+      },
+      components: {
+        myContent: {
+          inject: ['title'],
+          template: `<div>
+                      <h3>{{ title }}</h3>
+                      <my-p></my-p>
+                    </div>`,
+          components: {
+            myP: {
+              inject: ['content'],
+              template: `<p>{{ content }}</p>`
+            }
+          }
+        }
+      }
+    })
+    // 找爹
+    // const vm = new Vue({
+    //   el: '#app',
+    //   data: {
+    //     content: '我是内容是内容是内容是内容是内容是内容是内容是内容',
+    //     title: '我是标题'
+    //   },
+    //   components: {
+    //     myContent: {
+    //       // props: ['title'],
+    //       created () {
+    //         // console.log(this.$attrs);
+    //         // console.log(this.$parent);
+    //         this.title = this.$parent.title
+    //       },
+    //       mounted () {
+    //         console.log(this.$children);
+    //       },
+    //       //
+    //       // inheritAttrs: false,
+    //       template: `<div>
+    //                   <h3>{{ title }}</h3>
+    //                   <my-p></my-p>
+    //                   <my-p></my-p>
+    //                   <my-p></my-p>
+    //                   <my-p></my-p>
+                      
+    //                 </div>`,
+    //       components: {
+    //         myP: {
+    //           // props: ['content'],
+    //           created () {
+    //             this.content = this.$parent.$parent.content;
+    //           },
+    //           template: `<p>{{ content }}</p>`
+    //         }
+    //       }
+    //     }
+    //   }
+    // })
+
+
+    //父传子 子传孙 变为父传孙
+    //   <div id="app">
+    //        <my-content :title="title" :content="content"></my-content>
+    //   </div>
+    // const vm = new Vue({
+    //   el: '#app',
+    //   data: {
+    //     content: '我是内容是内容是内容是内容是内容是内容是内容是内容',
+    //     title: '我是标题'
+    //   },
+    //   components: {
+    //     myContent: {
+    //       props: ['title'],
+    //       created () {
+               // 没注册的 属性保存在$attrs
+    //         console.log(this.$attrs);//content
+    //       },
+    //      //绑定v-on且未注册 的属性 不在行间表示
+    //       inheritAttrs: false,
+    //       template: `<div>
+    //                   <h3>{{ title }}</h3>
+    //                   <my-p v-bind="$attrs"></my-p>
+    //                 </div>`,
+    //       components: {
+    //         myP: {
+    //           props: ['content'],
+    //           template: `<p>{{ content }}</p>`
+    //         }
+    //       }
+    //     }
+    //   }
+    // })
+  
+  </script> 
+</body>
+</html>

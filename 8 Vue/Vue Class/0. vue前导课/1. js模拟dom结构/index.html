@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1 class="title">渡一谁最美？<span></span></h1>
+        <p class="content">当然是杉杉咯，不接受反驳！！！</p>
+    </div>
+
+    <script>
+        const vDom = {
+            tag: 'div',
+            attrs: {
+                id: 'container'
+            },
+            children: [
+                {
+                    tag: 'h1',
+                    attrs: {
+                        class: 'title'
+                    },
+                    children: [
+                        '渡一谁最美？',
+                        {
+                            tag: 'span'
+                        }
+                    ]
+                },
+                {
+                    tag: 'p',
+                    attrs: {
+                        class: 'content'
+                    },
+                    children: [
+                        '当然是杉杉咯，不接受反驳！！！'
+                    ]
+                }
+            ]
+
+        }
+        
+    </script>
+</body>
+</html>

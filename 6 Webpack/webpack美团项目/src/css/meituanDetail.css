@@ -1,0 +1,552 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #f0efed;
+}
+
+i {
+  font-style: normal;
+}
+
+img {
+  max-width: 100%;
+}
+
+#gotop {
+  text-align: center;
+  display: none;
+  width: 43px;
+  height: 43px;
+  background: #06C1AE;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 30px;
+  line-height: 43px;
+  position: fixed;
+  right: 10px;
+  bottom: 50px;
+}
+
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  height: 50px;
+  background: #06c1ae;
+  text-align: center;
+  display: flex;
+  line-height: 50px;
+  color: #fff;
+}
+header h3 {
+  flex: 1;
+  font-size: 20px;
+}
+
+.forback {
+  width: 50px;
+  font-size: 30px;
+  font-family: simsun;
+  border: none;
+  background: none;
+  color: #fff;
+}
+
+.header-right {
+  width: 80px;
+  display: flex;
+  font-size: 10px;
+  position: relative;
+}
+.header-right p {
+  line-height: 20px;
+  flex: 1;
+  margin-right: 5px;
+  margin-top: 7px;
+}
+.header-right p span {
+  display: block;
+  font-size: 25px;
+  font-family: SimSun;
+}
+.header-right button {
+  line-height: 18px;
+  margin-right: 10px;
+  flex: 1;
+  background: none;
+  border: none;
+  color: #fff;
+  padding-top: 5px;
+}
+.header-right button span {
+  display: block;
+  font-weight: bolder;
+  font-size: 33px;
+  font-family: SimSun;
+}
+.header-right .mynav {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: 51px;
+  right: 3px;
+  width: 100px;
+  text-align: center;
+}
+.header-right .mynav ul {
+  background: rgba(31, 195, 173, 0.8);
+}
+.header-right .mynav ul li {
+  line-height: 40px;
+  border-bottom: 1px solid #21897d;
+}
+.header-right .mynav ul li a {
+  color: #fff;
+}
+.header-right .mynav ul li span {
+  padding: 0 5px;
+}
+.header-right .mynav ul li:nth-child(3) {
+  border: none;
+}
+
+section {
+  width: 100%;
+}
+section .look-pic a {
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  color: #62D8CC;
+  font-size: 16px;
+  display: flex;
+}
+section .look-pic a span:nth-child(1) {
+  flex: 2;
+}
+section .look-pic a span:nth-child(2) {
+  flex: 1;
+  text-align: right;
+  font-size: 18px;
+  font-weight: bolder;
+  font-family: SimSun;
+}
+section .bigimg {
+  width: 100%;
+  position: relative;
+}
+section .bigimg img {
+  width: 100%;
+  margin-top: 20px;
+}
+section .bigimg .linnebg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: 2;
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.3) 30%, transparent);
+}
+section .bigimg dl {
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  z-index: 3;
+  color: #fff;
+  font-family: SimSun;
+}
+section .bigimg dl dt {
+  font-size: 20px;
+  line-height: 30px;
+  padding: 5px 0;
+}
+section .bigimg dl dd {
+  font-size: 14px;
+  font-family: "Microsoft YaHei";
+}
+section .price-box {
+  width: 100%;
+  display: flex;
+  padding: 14px 10px;
+  background: #fff;
+}
+section .price-box .price {
+  flex: 1;
+  text-align: left;
+  color: #06C1AE;
+}
+section .price-box .price strong {
+  font-size: 32px;
+}
+section .price-box .price span {
+  font-size: 14px;
+  padding: 0 5px;
+}
+section .price-box .price mark {
+  background: none;
+  color: #A7A7A7;
+}
+section .price-box .btn-buy {
+  flex: 1;
+  text-align: right;
+  padding-right: 20px;
+}
+section .price-box .btn-buy button {
+  background: #FF9900;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 2px;
+  border: none;
+  font-family: SimSun;
+}
+section .list-details {
+  border-top: 1px solid #ddd;
+  background: #fff;
+}
+section .list-details .tips {
+  display: flex;
+  padding: 10px;
+  color: #FF9900;
+}
+section .list-details .tips p:nth-child(1) {
+  flex: 2;
+  color: #FF9900;
+  text-align: left;
+}
+section .list-details .tips p:nth-child(1) span:nth-child(1) {
+  padding: 0 2px;
+  background: red;
+  color: #fff;
+  margin-right: 5px;
+}
+section .list-details .tips p:nth-child(2) {
+  flex: 1;
+  font-size: 18px;
+  text-align: right;
+}
+section .list-details .tips p:nth-child(2) span {
+  font-size: 12px;
+  padding: 0 5px;
+  border: 1px solid #FF9900;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+section .list-details .tell {
+  display: flex;
+  padding: 10px;
+}
+section .list-details .tell p {
+  flex: 1;
+}
+section .list-details .tell p:nth-child(1) {
+  text-align: left;
+}
+section .list-details .tell p:nth-child(2) {
+  text-align: right;
+  color: #8DCC3B;
+}
+section .list-details .tell p:nth-child(2) mark {
+  position: relative;
+  top: 5px;
+}
+section .list-details .tell p:nth-child(2) i {
+  font-size: 30px !important;
+}
+section .list-details .tell mark {
+  color: #8DCC3B;
+  text-align: center;
+  display: inline-block;
+  background: none;
+  border: 1px solid #8DCC3B;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+section .list-details .tell #icon-1 {
+  color: #8DCC3B;
+  display: block;
+  font-size: 30px;
+}
+section .list-details .tell #icon-1 strong {
+  font-size: 14px;
+}
+section .list-details .tell #icon-1 mark {
+  position: relative;
+  top: 5px;
+}
+section .list-details .tell #icon-2 {
+  color: #8DCC3B;
+  display: block;
+}
+section .list-details .tell #icon-2 mark {
+  font-size: 10px;
+  position: relative;
+  top: -1px;
+}
+section .evaluateq {
+  margin: 10px 0;
+  padding: 10px;
+  background: #fff;
+  display: flex;
+}
+section .evaluateq p:nth-child(1) {
+  flex: 1;
+}
+section .evaluateq p:nth-child(1) span {
+  font-size: 18px;
+  color: #FF9900;
+  font-weight: bold;
+}
+section .evaluateq p:nth-child(1) span:nth-child(5) {
+  color: #ddd;
+}
+section .evaluateq p:nth-child(2) {
+  flex: 1;
+  color: #999;
+  text-align: right;
+}
+section .seller {
+  padding: 10px;
+  background: #fff;
+}
+section .seller h3 {
+  color: #6B6B6B;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+section .seller dl {
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+}
+section .seller dl dt {
+  flex: 1;
+}
+section .seller dl dt h4 {
+  font-size: 16px;
+  padding: 5px 0;
+}
+section .seller dl dt p {
+  color: #898989;
+  font-size: 14px;
+  line-height: 23px;
+}
+section .seller dl dt .juli {
+  color: #F1AB52;
+}
+section .seller dl dd {
+  text-align: center;
+  width: 100px;
+  line-height: 20px;
+  line-height: 70px;
+}
+section .seller a {
+  padding: 10px 0 5px 0;
+  display: flex;
+  color: #58D5C8;
+  font-size: 16px;
+}
+section .seller a span:nth-child(1) {
+  flex: 1;
+}
+section .seller a span:nth-child(2) {
+  width: 40px;
+  text-align: right;
+}
+section .taocan {
+  background: #fff;
+  margin-top: 10px;
+}
+section .taocan h3 {
+  font-size: 20px;
+  color: #666;
+  padding: 10px;
+}
+section .taocan table {
+  color: #666;
+}
+section .taocan table thead {
+  width: 100%;
+  background: #F8F9FA;
+  text-align: center;
+}
+section .taocan table thead th {
+  font-size: 16px;
+  padding: 15px 0;
+}
+section .taocan table tbody td {
+  padding: 15px 10px;
+  border: 1px solid #ddd;
+}
+section .taocan table tfoot td {
+  padding: 20px 10px;
+  font-size: 20px;
+}
+section .taocan table tfoot td span {
+  font-size: 14px;
+  padding-right: 7px;
+}
+section .buy-notes {
+  margin-top: 10px;
+  padding: 10px;
+  background: #fff;
+}
+section .buy-notes h3 {
+  color: #6B6B6B;
+  font-size: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+section .buy-notes ul {
+  font-size: 18px;
+}
+section .buy-notes ul > li h4 {
+  line-height: 30px;
+  color: #FFB445;
+  padding-top: 10px;
+}
+section .buy-notes ul > li p {
+  padding-left: 15px;
+}
+section .buy-notes ul .buy-text {
+  list-style: disc;
+}
+section .buy-notes ul .buy-text li {
+  color: #878787;
+  line-height: 20px;
+  text-indent: 20px;
+}
+section .buy-notes ul .buy-text li:before {
+  content: '.';
+  font-size: 50px;
+  padding-right: 5px;
+  position: relative;
+  bottom: 4px;
+  color: #000;
+}
+section .food-evaluate {
+  margin-top: 10px;
+  background: #fff;
+  padding: 10px 10px 0 10px;
+}
+section .food-evaluate .item-evaluate {
+  border-top: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+section .food-evaluate h3 {
+  color: #6B6B6B;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+section .food-evaluate .foot-user {
+  padding: 15px 0 10px 0;
+}
+section .food-evaluate .foot-user img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  float: left;
+}
+section .food-evaluate .foot-user .user-strart {
+  margin: 12px 0 0 10px;
+  float: left;
+}
+section .food-evaluate .foot-user .user-strart span {
+  color: #FF9900;
+  font-size: 20px;
+}
+section .food-evaluate .foot-user .user-strart span:nth-child(5) {
+  color: #aaa;
+}
+section .food-evaluate .foot-user .evaluate-date {
+  float: left;
+  padding-left: 20px;
+  margin-top: 30px;
+}
+section .food-evaluate .evaluate-content {
+  font-size: 16px;
+}
+section .food-evaluate .evaluate-content p {
+  line-height: 25px;
+  color: #6E6E6E;
+}
+section .food-evaluate .evaluate-content img {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  margin: 10px 1px;
+}
+section .food-evaluate .locale a {
+  color: #6E6E6E;
+  font-size: 16px;
+}
+
+footer {
+  width: 100%;
+  height: 200px;
+}
+footer a {
+  color: #2CCABA;
+}
+footer .footer-top {
+  color: #2CCABA;
+  padding: 15px 0 15px 10px;
+}
+footer .footer-top button {
+  padding: 7px 18px;
+  border: 1px solid #2CCABA;
+  border-radius: 5px;
+  margin: 20px 10px 0 0;
+  color: #2CCABA;
+}
+footer .footer-top .currentcity {
+  float: right;
+  margin-top: 30px;
+  margin-right: 10px;
+  color: #999;
+}
+footer .footer-top .currentcity strong {
+  padding: 7px 25px;
+  border: 1px solid #2CCABA;
+  border-radius: 5px;
+  color: #2CCABA;
+}
+footer .footer-center {
+  text-align: center;
+  margin: 15px;
+}
+footer .footer-center ul {
+  display: flex;
+  margin: 0 10px;
+  padding-bottom: 10px;
+}
+footer .footer-center ul li {
+  flex: 1;
+  border-right: 1px solid #666;
+}
+footer .footer-center ul li:nth-child(4) {
+  border: none;
+}
+footer .footer-bottom {
+  text-align: center;
+}
+footer .copyright {
+  padding: 20px 0;
+  margin: 0 10px;
+}
+footer .copyright fieldset {
+  text-align: center;
+  border-top: 1px solid #aaa;
+}
+footer .copyright fieldset legend {
+  padding: 0 15px;
+  color: #999;
+  font-size: 12px;
+}

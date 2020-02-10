@@ -1,0 +1,114 @@
+.page-register {
+  .header {
+    border-bottom: 2px solid #2bb8aa;
+    min-width: 980px;
+    color: #666;
+
+    header {
+      margin: 0 auto;
+      padding: 10px 0;
+      width: 980px;
+
+      .site-logo {
+        display: inline-block;
+        width: 128px;
+        width: 54px;
+        height: 36px;
+        text-indent: -9999px;
+        background-position: -669px -748px;
+        background-image: url(//s0.meituan.net/bs/file/?f=fe-sso-fs:build/assets/sp-normal.2ee5c09.png);
+      }
+
+      .login {
+        float: right;
+        height: 36px;
+        line-height: 36px;
+        a {
+          padding: 5px 10px;
+          background-color: #2db3a6;
+          color: aliceblue;
+          text-decoration: none;
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+
+      .bold {
+        font-style: normal;
+        font-size: 14px;
+      }
+    }
+  }
+
+  >.content {
+    margin: 0 auto 30px;
+    padding-top: 30px;
+    width: 980px;
+    min-height: 300px;
+    padding-right: 550px;
+    box-sizing: border-box;
+    .pw-strength{ 
+      position: relative;
+      width: 330px;
+      top: 10px;
+      left: 0px;
+      background: #eee;
+      .bar {
+        background: #d3ebee;
+        height: 20px;
+        width: 0;
+        overflow: hidden;
+        transition: all .4s linear;
+        &.week {
+          width: 108px;
+          background: #f76120;
+        }
+        &.normal {
+          width: 218px;
+          background: #ff8900;
+        }
+        &.strong {
+          width: 330px;
+          background: #5bab3c;
+        }
+      }
+      .letter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        span {
+          display: block;
+          float: left;
+          text-align: center;
+          font-size: 12px;
+          height: 20px;
+          line-height: 20px;
+          width: 108px;
+          border-right: 2px solid #fff;
+          color: #fff;
+        }
+      }
+    }
+    .status {
+      font-size: 12px;
+      margin-left: 20px;
+      color: #e6a23c;
+    }
+
+    .error {
+      color: red;
+    }
+    .f1 {
+      display: block;
+    }
+  }
+  >footer {
+    color: #999;
+    border-top: 1px solid #EEE;
+    padding-top: 20px;
+    font-size: 13px;
+  }
+  a {
+    text-decoration: none;
+  }
+}

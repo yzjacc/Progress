@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // let arr = [1, 2, 3];
+        // for 
+        // Array.prototype.forEach
+        // arr.forEach((ele) => {
+        //     console.log(ele);
+        // });
+
+
+        // function OuterIterator (o) {
+        //     let curIndex = 0;
+        //     let next = () => {
+        //         return {
+        //             value: o[curIndex],
+        //             done: o.length == ++curIndex,
+        //         }
+        //     }
+        //     return {
+        //         next
+        //     }
+        // };
+        // let oIt = OuterIterator(arr);
+        // // next  {value: 1, done: true}
+
+        
+        // console.log( [...new Set([1, 2, 3])] )
+        
+        //
+        // let os = Symbol('abc');
+        // console.log(os);
+        // let os2 = Symbol({
+        //     name: 'cst',
+        //     toString: function () {
+        //         return 'duyi'
+        //     }
+        // });
+        // console.log(os2);
+
+        // // 
+        // let os2 = Symbol('abc');
+
+        // // 
+        // let prop = 'name';
+
+        // let obj = {
+        //     [os2]: 'cst2',
+        //     [os]: 'cst'
+        // }
+
+        // // arr set map arguments nodelist
+        // // itertor函数
+        // console.log( Symbol.iterator , Symbol('Symbol.iterator'));
+        // ES6 规范 iterator
+
+        let obj = {
+            0: 'a',
+            1: 'b',
+            2: 'c',
+            length: 3,
+            [Symbol.iterator]: function () {
+                let curIndex = 0;
+                let next = () => {
+                    return {
+                        value: this[curIndex],
+                        done: this.length == ++curIndex,
+                    }
+                }
+                return {
+                    next
+                }
+            }
+        };
+
+
+        // let arr = [1, 2]
+        // console.log([...obj]);
+
+        for (let p of obj) {
+            console.log(p)
+        };
+
+
+        // ES6 iterator
+
+        // Generator -> 迭代对象
+        </script>
+</body>
+</html>

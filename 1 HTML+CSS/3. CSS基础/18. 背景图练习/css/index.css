@@ -1,0 +1,110 @@
+body {
+    background: url("../img/bg.jpg") no-repeat center top;
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.header {
+    width: 1198px;
+    height: 73px;
+    line-height: 73px;
+    color: #f8b770;
+    background: red;
+    margin: 0 auto;
+    margin-top: 45px;
+    background: url("../img/bg_nav.jpg") no-repeat 0 0/100% 100%;
+    border: 1px solid #3f2a22;
+    border-left: none;
+    border-right: none;
+    position: relative;
+}
+
+.header nav a {
+    float: left;
+    width: 161px;
+    height: 73px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #3f2a22;
+    border-top: none;
+    border-bottom: none;
+}
+
+.header nav a:nth-child(3) {
+    margin-right: 232px;
+}
+
+.header .logo {
+    position: absolute;
+    width: 238px;
+    height: 118px;
+    background: url("../img/logo.png") no-repeat;
+    left: 7px;
+    top: -37px;
+    right: 0;
+    margin: auto;
+}
+
+.header .logo h1 {
+    display: none;
+}
+
+.menu {
+    text-align: center;
+    margin-top: 473px;
+}
+
+.menu a {
+    display: inline-block;
+    width: 323px;
+    height: 105px;
+    background: url("../img/btns.png") no-repeat;
+}
+
+.menu a span {
+    display: none;
+}
+
+.menu a.download {
+    background-position: -323px 0;
+}
+
+.adv {
+    width: 1203px;
+    margin: 76px auto;
+}
+
+.adv .item{
+    float: left;
+    width: 290px;
+    height: 200px;
+    margin-right: 13px;
+    outline: 1px solid #3f2a22;
+}
+
+.adv .item:last-child{
+    margin-right: 0;
+}
+
+.adv .item .title{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #211510;
+    color: #f8b700;
+    border-bottom: 1px solid #3f2a22;
+    box-sizing: border-box;
+}
+
+.adv .item .img{
+    height: 150px;
+}
+
+.adv .item .img img{
+    width: 290px;
+    height: 150px;
+}

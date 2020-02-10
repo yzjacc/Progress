@@ -1,0 +1,257 @@
+a{
+    text-decoration: none;
+}
+html,body{
+    font-size:14px;
+    color:#333;
+    font-family: 'YouYuan';
+}
+.wrapper{
+    position: relative;
+    width:100vw;
+    min-height:100vh;
+    transform-style: preserve-3d;
+}
+.wrapper nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:4.5rem;
+    background:linear-gradient(90deg,#333,#111,#aaa);
+    padding-left:3rem;
+    box-sizing: border-box;
+    border:none;
+}
+.wrapper nav::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../manager-4/images/bg.png') repeat center center;
+    /* opacity: .4; */
+}
+.wrapper nav .logo{
+    position: absolute;
+    height:100%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+.wrapper nav .logo img{
+    width:3rem;
+    height:3rem;
+}
+.wrapper nav .logo span{
+    margin-left:1rem;
+    font-size:1.7rem;
+    font-weight:bolder;
+    text-shadow:4px 2px 6px #ccc;
+    animation: jumping 0.7s infinite alternate;
+}
+
+.wrapper nav .logo .du{
+    animation-delay:0s;
+}
+.wrapper nav .logo .yi{
+    animation-delay:0.25s;
+}
+.wrapper nav .logo .jiao{
+    animation-delay:0.5s;
+}
+.wrapper nav .logo .yu{
+    animation-delay:0.75s;
+}
+@keyframes jumping{
+    0%{
+        transform: translateY(0);
+        text-shadow:4px 2px 6px #ccc;
+    }
+    100%{
+        transform: translateY(-20px);
+        text-shadow:3px 5px 6px rgba(255,255,255,.5);
+        /* text-shadow:3px 5px 6px red; */
+    }
+}
+#bs-example-navbar-collapse-1 ul a{
+    /* display:none; */
+    opacity:0;
+}
+/* button */
+.navbar-header button {
+    z-index:999;
+} 
+
+
+/* left-menu */
+.wrapper .left-menu{
+    min-height:calc(100vh - 4.5rem);
+    width:200px;
+    background-color:#ddd;
+    position: fixed;
+    top:4.5rem;
+    left:0;
+    padding-top:2rem;
+    padding-left:2rem;
+    box-sizing: border-box;
+    background:linear-gradient(#333,#222,#111);
+}
+.wrapper .left-menu::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('../manager-4/images/bg.png') repeat center center;
+    opacity: .4;
+    z-index:-1;
+}
+.wrapper .left-menu .list{
+    width:100%;
+    font-weight:bolder;
+}
+.wrapper .left-menu .list .title{
+    color:#fff;
+    font-size:1.1rem;
+}
+.wrapper .left-menu .list .list-group{
+    margin-top:2rem;
+    text-align: center;
+} 
+.wrapper .left-menu .list .list-group li{
+    width:100%;
+    display: inline-block;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-bottom:5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.wrapper .left-menu .list .list-group .list-item.active
+{
+    background-color: rgba(255,255,255,.3);
+}
+
+.wrapper .left-menu .list .list-group .list-item.active a,
+.wrapper .left-menu .list .list-group .list-item:hover a{
+    transition: all 0.3s ease-in-out;
+    color: rgba(255,255,255,1.4);
+        
+}
+.wrapper .left-menu .list .list-group a{
+    color:#ccc;
+    line-height:40px;
+    font-size: 1rem;
+}
+
+
+
+/* right-content */
+/* 右侧展示区 */
+.wrapper .right-content{
+    min-width: 990px;    
+    min-height:100vh;
+    background-color: rgba(0,0,0,.1); 
+    padding-left: 200px;
+    box-sizing: border-box;
+    padding-top:4.5rem;
+}
+
+.wrapper .tab-content-item.echarts .area,
+.wrapper .tab-content-item.echarts .sex{
+    display:inline-block;
+    width:500px;
+    height:500px;
+    margin:145px 50px 0 50px;
+    vertical-align: top;
+    border:1px solid #000;
+}
+
+.wrapper .right-content .tab-content-item{
+    position: relative;
+    display:none;
+    padding:20px;
+}
+
+.wrapper .tab-content-item.show-list{
+    display:block;
+}
+
+.table-bordered > thead > tr > th, 
+.table-bordered > tbody > tr > th, 
+.table-bordered > tfoot > tr > th, 
+.table-bordered > thead > tr > td, 
+.table-bordered > tbody > tr > td, 
+.table-bordered > tfoot > tr > td {
+    text-align: center;
+}
+
+/* 新增学生  样式*/
+.wrapper .s-add #student-form{
+    width:400px;
+    /* bordeR:1px solid #000; */
+    display:block;
+    margin:50px auto;
+}
+.wrapper .s-add #student-form .btnCon{
+    width:100%;
+    text-align: center;
+}
+
+#modal-form .btnCon{
+    width:100%;
+    text-align: center;
+}
+
+@media all and (max-width:800px){
+    #bs-example-navbar-collapse-1 .nav.navbar-nav{
+        margin-left:0;
+        background:linear-gradient(90deg,#333,#111,#aaa);
+    }
+    .container > .navbar-header, .container-fluid > .navbar-header, 
+    .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+        margin-right: -15px;
+        margin-left: -73px;
+    }
+    #bs-example-navbar-collapse-1 ul a{
+        opacity:1;
+        line-height: 40px;
+        color:#fff;
+    }
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+        border: none;
+        text-align: center;
+    }
+    .wrapper .left-menu{
+        display:none;
+    }
+    body .wrapper .right-content{
+        padding-top:12rem;
+        padding-left:50px;
+    }
+    .wrapper .right-content .tab-content-item.echarts .area, 
+    .wrapper .right-content .tab-content-item.echarts .sex{
+        margin:0;
+    }
+  
+    #bs-example-navbar-collapse-1 .nav.navbar-nav li.active a{
+        background-color: #333;
+    }
+    .wrapper .s-add #student-form{
+        margin:20px;
+    }
+    #student-form .form-group .control-label{
+        width:18%;
+        text-align: right;
+    }
+    #student-form .form-group div{
+        width: 80%;
+        display: inline-block;
+    }
+    
+} 

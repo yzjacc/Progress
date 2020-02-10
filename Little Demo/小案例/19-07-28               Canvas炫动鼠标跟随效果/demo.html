@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overflow: hidden;
+      }
+
+      #myCanvas {
+        background-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas"></canvas>
+    <script>
+      var myCanvas = document.getElementById("myCanvas");
+      var ctx = myCanvas.getContext("2d");
+      var list = [];
+      function init() {
+        myCanvas.width = window.innerWidth;
+        myCanvas.height = window.innerHeight;
+      }
+      init();
+      window.onresize = init;
+      myCanvas.addEventListener("mousemove", function(e) {
+        list.push(new Circle(e.clientX, e.clientY));
+      });
+      function random(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+      }
+      function Circle(x, y) {
+        this.x = x;
+        this.y = y;
+        this.a = 1;
+        
+        this.vx = (Math.random() - 0.5) * 3;
+            this.vy = (Math.random() - 0.5) * 3;
+        this.color = 'rgb(' + random(0, 256) + ',' + random(0, 256) + ',' + random(0, 256) + ')';
+        this.draw();
+      }
+      Circle.prototype = {
+            draw: function () {
+                ctx.beginPath();
+                ctx.fillStyle = this.color;
+                ctx.globalCompositeOperation = 'lighter'
+                ctx.globalAlpha = this.a;
+                ctx.arc(this.x, this.y, 30, 0, Math.PI * 2, false);
+                ctx.fill();
+                this.updata();
+            },
+            updata() {
+                this.x += this.vx;
+                this.y += this.vy;
+                this.a *= 0.98;
+            }
+        }
+        function render() {
+            ctx.clearRect(0, 0, myCanvas.width, myCanvas.height)\
+            list.forEach(function (ele, i) {
+                ele.draw();
+                if (ele.a < 0.05) {
+                    starlist.splice(i, 1);
+                }
+            });
+            requestAnimationFrame(render);
+        }
+        render();
+    </script>
+  </body>
+</html>

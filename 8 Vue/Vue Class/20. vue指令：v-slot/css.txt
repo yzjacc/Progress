@@ -1,0 +1,82 @@
+<style>
+    .my-button {
+      box-sizing: border-box;
+      cursor: pointer;
+      background: #fff;
+      border: 1px solid #dcdfe6;
+      color: #606266;
+      text-align: center;
+      outline: none;
+      font-weight: 500;
+      padding: 12px 20px;
+      font-size: 14px;
+      border-radius: 4px;
+    }
+
+    .my-button:hover {
+      color: #409eff;
+      border-color: #c6e2ff;
+      background-color: #ecf5ff;
+    }
+
+    .my-button.primary {
+      color: #fff;
+      background-color: #409eff;
+      border-color: #409eff;
+    }
+
+    .my-button.primary:hover {
+      background: #66b1ff;
+      border-color: #66b1ff;
+      color: #fff;
+    }
+
+    .my-button.success {
+      color: #fff;
+      background-color: #67c23a;
+      border-color: #67c23a;
+    }
+
+    .my-button.success:hover {
+      background: #85ce61;
+      border-color: #85ce61;
+      color: #fff;
+    }
+
+    .my-button.info {
+      color: #fff;
+      background-color: rgb(144, 147, 153);
+      border-color: rgb(144, 147, 153);
+    }
+
+    .my-button.info:hover {
+      color: rgb(255, 255, 255);
+      background: rgb(166, 169, 173);
+      border-color: rgb(166, 169, 173);
+    }
+
+    .my-button.warning {
+      color: rgb(255, 255, 255);
+      background-color: rgb(230, 162, 60);
+      border-color: rgb(230, 162, 60);
+    }
+
+    .my-button.warning:hover {
+      color: rgb(255, 255, 255);
+      background: rgb(235, 181, 99);
+      border-color: rgb(235, 181, 99);
+    }
+
+    .my-button.danger {
+      color: rgb(255, 255, 255);
+      background-color: rgb(245, 108, 108);
+      border-color: rgb(245, 108, 108);
+    }
+    
+    .my-button.danger:hover {
+      color: rgb(255, 255, 255);
+      background: rgb(247, 137, 137);
+      border-color: rgb(247, 137, 137);
+    }
+
+  </style>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>装饰者模式</title>
+</head>
+
+<body>
+    <script>
+        // 定义：在不改变远对象的基础上，通过对其进行包装和拓展（添加属性和方法）使原有的对象可以满足用户更复杂的需求。
+        // 买房子，给你交付毛坯房，功能性不强,外观，卧室，客厅，洗手间。。。。
+        // var house = {
+        //     name: '房子',
+        //     xxx: 'k',
+        //     yyy: ''
+        // }
+        // Macbook 没有光驱，内存8G，16G。保险
+        function Macbook() {
+            this.cost = function() {
+                return 1000
+            }
+        }
+        // 内存
+        function Memory(macbook) {
+            this.cost = function() {
+                return macbook.cost() + 100
+            }
+        }
+        // 蓝光驱动器
+        function BlurayDrive(macbook) {
+            this.cost = function() {
+                return macbook.cost() + 300
+            }
+        }
+        // 保险
+        function Insurance(macbook) {
+            this.cost = function() {
+                return macbook.cost() + 200
+            }
+        }
+
+        var myMacBook = new Macbook();
+        var myMacBook1 = new Memory(new Macbook())
+        console.log('我花费了：' + myMacBook1.cost())
+    </script>
+</body>
+
+</html>

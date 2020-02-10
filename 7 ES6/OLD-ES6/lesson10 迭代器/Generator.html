@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // iterator函数的目的 执行返回可以迭代的对象
+        // let obj = {
+        //     0: 'a',
+        //     1: 'b',
+        //     2: 'c',
+        //     length: 3,
+        //     [Symbol.iterator]: function *() {
+        //         let currIndex = 0;
+        //         while (currIndex != this.length) {
+        //             yield this[currIndex];
+        //             currIndex++;
+        //         }
+        //     }
+        // };
+
+        // console.log([...obj]);
+        
+        // Generator 生成这个迭代对象
+        // 
+        // function *test () {
+        //     yield 'a';
+        //     console.log('1');
+        //     yield 'b';
+        //     console.log('2');
+        //     yield 'c';
+        //     console.log('3');
+        //     return 'd';
+        // }
+        // let oG = test();
+        
+        // console.log( oG.next() );
+        // console.log( oG.next() );
+        // console.log( oG.next() );
+        // console.log( oG.next() );
+
+
+        // function *test () {
+                            
+        //     let value1 = yield 'a';
+
+        //     console.log(value1);          
+        //     let value2 = yield 'b';
+
+        //     console.log(value2);         
+        //     let value3 = yield 'c';
+
+        //     console.log(value3);
+        //     return 'd';
+        // }
+
+        // let oG = test();
+        // // 
+        // console.log( oG.next() );
+        // oG.next();
+        // oG.next();
+        // oG.next();
+    </script>
+</body>
+</html>

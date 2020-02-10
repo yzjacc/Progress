@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body> 
+  <!-- 组件 -->
+  <!-- 好处：实现复用、方便维护 -->
+
+  <!-- 分类 -->
+  <!-- 全局组件：定义在Vue构造函数上，可以在多个模板中使用 -->
+  <!-- 局部组件：定义在vue实例上，在哪个实例上定义的，就在哪里使用 -->
+
+  <!-- 命名 -->
+  <!-- 起名为大驼峰/小驼峰，用时可以为连字符 -->
+  <!-- 注意：-->
+  <!-- 1. 在html文件中不能将组件写为自闭合标签， 多个组件只能渲染一个，因为不符合html规范，html规范只允许个别标签可以自闭合，如：<img /> <input /> <br /> <hr />  -->
+  <!-- 2. 不要在html中将组件写成大驼峰式，因为html会将其解析为小驼峰式，以致于找不到组件而报错，最好写成连字符的形式 -->
+
+  <!-- 组件数据 -->
+  <!-- data 要写为函数，让每一个组件中的数据都不互相影响 -->
+
+  <div id="app">
+    <hello-world></hello-world>
+
+  </div>
+
+
+  <script> 
+    // 全局组件 data写在组建中应该为一个函数 原因是组建数据为了相互独立 所以写在该函数作用域内
+    // Vue.component('hello-world', {
+    //   data () {
+    //     return {
+    //       msg: 'hello world'
+    //     }
+    //   },
+    //   template: `<div>{{ msg }}</div>`
+    // })
+    const vm = new Vue({
+      el: '#app',
+      components: {
+        helloWorld: {
+          data () {
+            return {
+              msg: 'hello world'
+            }
+          },
+          template: `<div>{{ msg }}</div>`
+        }
+      }
+    }) 
+  </script>
+</body>
+</html>

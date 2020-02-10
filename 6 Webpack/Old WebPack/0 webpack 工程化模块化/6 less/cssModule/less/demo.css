@@ -1,0 +1,6 @@
+/*包裹注释 会被编译到C's's文件中*/
+.box {
+  width: 200px;
+  height: 300px;
+  border: 4px dashed red;
+}

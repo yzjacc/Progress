@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>外观模式</title>
+</head>
+
+<body>
+    <!-- 我们调用了一个方法，结果发现，调用了好几个方法 -->
+    <!-- 使用起来更方便 -->
+    <div id="myDiv">23r243423432432</div>
+    <script>
+        // onclick 
+        // document.onclick = function(e) {
+        //         e.preventDefault();
+        //         if (e.target !== document.getElementById('myDiv')) {
+        //             console.log('111111')
+        //         }
+        //     }
+        // dom0级的事件
+        // addEventListener
+        // IE (IE9)以下  attachEvent
+        // onclick
+        var addMyEvent = function(el, ev, fn) {
+            if (el.addEventListener) {
+                el.addEventListener(ev, fn, false)
+            } else if (el.attachEvent) {
+                el.attachEvent('on' + ev, fn)
+            } else {
+                el['on' + ev] = fn
+            }
+        }
+        var myDiv = document.getElementById('myDiv');
+        addMyEvent(myDiv, 'click', function() {
+            console.log('绑定了')
+        })
+
+        addMyEvent(myDiv, 'click', function() {
+            console.log('绑定了11')
+        })
+    </script>
+</body>
+
+</html>

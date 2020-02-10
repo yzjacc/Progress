@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script>
+		var a = 10000.231321;
+		var a1 = 1000;
+		var a2 = "gdhjkldhjkl";
+		console.log(a,a1,a2);
+		/*
+			 1、全局对象
+			 2、内置对象
+			 3、自定义对象（面向对象）
+
+
+			 对象相关的概念
+			 	1、构造函数
+				2、实例（对象）
+					constructor、instanceof
+				3、继承
+				4、构造函数的属性与方法（私有属性与方法）
+				5、实例的属性与方法（公用属性与方法）
+				6、prototype	是构造函数身上的，指向原型
+				7、__proto__	对象身上的，指向原型
+					实例.__proto__===构造函数.prototype
+				8、原型链
+
+		 */
+
+		 /* function show(){
+
+		 }
+		 function Show(){
+
+		 } */
+
+		var arr=[];	//实例
+		console.log(arr.constructor===Array);	//找父母
+		console.log(arr instanceof Array);		//验证孩子是不是亲生的
+		
+		var arr=[1,2];
+		arr.push(3),console.log(arr);	//[1, 2, 3]
+
+
+		//私有属性与方法
+		console.log(Array.name);	//Array
+		console.log(arr.name);		//undefined
+
+		console.log(Array.of(5));	//[5]
+		//console.log(arr.of(5));		//报错
+
+
+		//公用属性与方法
+		 console.log(arr.concat(['a','b']));	// [1, 2, 3, "a", "b"]
+		 //console.log(Array.concat(['a','b']));	//报错
+		 console.log(Array.prototype.concat(['a','b']));	//报错
+		
+		 console.log(Array.prototype);
+		 /* Array.prototype.push-+=null;
+		 arr.push(6); */
+
+
+		var str=new String('kaivon');
+		console.dir(str);
+
+		//str?===String.prototype
+		console.log(str.constructor===String);	//true	通过实例找到构造函数
+		console.log(str.constructor.prototype===String.prototype);	//true	通过实例找到构造函数，再找到原型
+		console.log(__proto__===constructor.prototype);	//true	浏览器添加了一条属性，这条属性代表构造函数身上的原型
+		console.log(str.__proto__===String.prototype);	//true
+
+		console.dir(String);
+		console.dir(Array.prototype);	//函数
+			//函数
+
+		//String.__proto__===String.prototype
+		//function.__proto__===Function.prototype
+		//Function.prototype={}	是一个对象
+
+
+		//String => Function => Object => Null
+		console.dir(Function.prototype);
+		console.log(String.__proto__.__proto__===Object.prototype);	//true
+		
+
+		function fn(){
+
+		}
+		console.log(fn.constructor)		//Function
+
+		var obj={};
+		console.log(obj.constructor);	//Object
+
+		
+		//Object.create(null,'abc');'
+
+
+		/* function Person(name,age){
+			this.name=name;
+			this.age=age;
+		}
+		Person.prototype.showName=function(){
+			console.log(this.name);
+		};
+
+		var p1=new Person('kaivon',18);
+		p1.showName();	//kaivon */
+
+
+		//ES6里的class(类)
+		class Person{
+			constructor(name,age){
+				this.name=name;
+				this.age=age;
+			}
+			showName(){
+				console.log(this.name);
+			}
+		}
+		var p1 = new Person('kaivon',18);
+		p1.showName();	//kaivon
+	</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      canvas {
+        border: 1px solid #000;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas"></canvas>
+  </body>
+  <script>
+    var myCanvas = document.getElementById("myCanvas");
+    var ctx = myCanvas.getContext("2d");
+    var lastX, lastY, nowX, nowY;
+
+    function init() {
+      ctx.beginPath();
+      myCanvas.width = 500;
+      myCanvas.height = 500;
+      ctx.fillStyle = "#ccc";
+      ctx.fillRect(0, 0, 500, 500);
+      ctx.closePath();
+      var r = Math.floor(Math.random() * 10);
+      var oImg = new Image();
+      oImg.src = "./img/pic" + r + ".jpg";
+      oImg.onload = function() {
+        myCanvas.style.backgroundImage = "url(" + oImg.src + ")";
+        ctx.globalCompositeOperation = "destination-out";
+        myCanvas.addEventListener("mousedown", downFun);
+      };
+    }
+    init();
+    function downFun(e) {
+      lastX = e.clientX;
+      lastY = e.clientY;
+      myCanvas.addEventListener("mousemove", moveFun);
+      myCanvas.addEventListener("mouseup", upFun);
+    }
+    function moveFun(e) {
+      nowX = e.clientX;
+      nowY = e.clientY;
+      ctx.beginPath();
+      ctx.strokeStyle = "red";
+      ctx.lineWidth = 60;
+      ctx.lineCap = "round";
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(nowX, nowY);
+      ctx.stroke();
+      ctx.closePath();
+      lastX = nowX;
+      lastY = nowY;
+    }
+    function upFun(e) {
+      myCanvas.removeEventListener("mousemove", moveFun);
+      clearAll();
+    }
+
+    function clearAll() {
+      var d = ctx.getImageData(0, 0, 500, 500);
+      c = 0;
+      len = d.data.length;
+      for (var i = 0; i < len; i += 4) {
+        if (d.data[i] === 0) {
+          c++;
+        }
+      }
+      if (c > 500 * 500 * 0.7) {
+        ctx.clearRect(0, 0, 500, 500);
+      }
+    }
+  </script>
+</html>

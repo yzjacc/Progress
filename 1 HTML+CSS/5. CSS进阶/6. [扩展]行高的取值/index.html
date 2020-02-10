@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            /* 行高为字体大小的两倍 */
+            /* 先计算像素值，再继承 */
+            /* line-height: 2em; */
+
+            /* 行高为字体大小的两倍 */
+            /* 先继承，再计算 */
+            line-height: 2;
+        }
+        .p1{
+            font-size: 40px;
+        }
+
+        .p2{
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p class="p1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet molestiae sed doloremque sapiente? Explicabo, quidem itaque, repudiandae fugiat impedit suscipit, amet inventore necessitatibus pariatur iste quisquam laborum hic aperiam ab.
+        </p>
+        <p class="p2">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur earum corporis, eius, ut ratione nihil exercitationem cum voluptatibus et velit repellat debitis esse praesentium odio provident ex totam, delectus expedita.
+        </p>
+    </div>
+</body>
+
+</html>

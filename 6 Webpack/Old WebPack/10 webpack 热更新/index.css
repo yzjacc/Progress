@@ -1,0 +1,7 @@
+.box{
+    width:200px;
+    height:200px;
+    bordeR:3px solid red;
+    margin:200px auto;
+    background:url('./logo.png') 100% 100% no-repeat;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 万能充 -->
+    <!-- 定义：将一个类（对象）的接口（方法或者属性）转化成另外一个接口，
+        以满足用户需求，使对象（类）之间接口不兼容的问题，通过适配器得以解决 -->
+    <!-- 16进制 -->
+    <script>
+        function doThing(name, age, title, color, size) {
+
+        }
+        // obj.name
+        // obj.age
+        // obj.title
+        // obj.color
+        // obj.size 
+        function doThing(obj) {
+            var _obj = {
+                name: '于大爷',
+                age: '18',
+                title: '设计模式',
+                color: 'red',
+                size: 100
+            }
+            for (var i in _obj) {
+                _obj[i] = obj[i] || _obj[i]
+            }
+            console.log(_obj)
+        }
+        var obj = {};
+        obj.name = '邓哥'
+        doThing(obj);
+    </script>
+</body>
+
+</html>

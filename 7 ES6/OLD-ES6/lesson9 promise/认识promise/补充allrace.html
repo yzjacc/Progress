@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Promise.all可以将多个Promise实例包装成一个新的Promise实例。
+        // 同时，成功和失败的返回值是不同的，成功的时候返回的是一个结果数组，
+        // 而失败的时候则返回最先被reject失败状态的值。
+        
+        function test (x) {
+            return new Promise((res, rej) => {
+               setTimeout(() => {
+                   Math.random() * 100 > 50 ? res(x) : rej(x);
+               }, 100)
+            });
+        }
+
+        // let oP = Promise.all([test('a'), test('b'), test('c')]);
+        // oP.then((val) => {
+        //     console.log(val)
+        // }, (reason) => {
+        //     console.log(reason);
+        // });
+
+
+
+        // 顾名思义，Promise.race就是赛跑的意思，意思就是说，
+        // Promise.race([p1, p2, p3])里面哪个结果获得的快，就返回那个结果，
+        // 不管结果本身是成功状态还是失败状态。
+        //  Promise.race([test('a'), test('b'), test('c')]).then((val) => {
+        //      console.log(val, 'ok');
+        //  }, (reason) => {
+        //      console.log(reason, 'no');
+        //  });
+    </script>
+</body>
+</html>

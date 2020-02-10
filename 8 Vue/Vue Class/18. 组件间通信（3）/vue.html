@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <my-input></my-input>
+    <hr />
+    <my-content></my-content>
+  </div>
+  
+
+  <script> 
+    // 兄弟组件的属性传递
+    // event bus 事件总线
+    // vue 实例
+    Vue.prototype.bus = new Vue();
+
+    const vm = new Vue({
+      el: '#app',
+      components: {
+        myContent: {
+          data () {
+            return {
+              content: ''
+            }
+          },
+          created () {
+            this.bus.$on('click', content => {
+              this.content = content;
+            })
+          },
+          template: `<div>{{ content }}</div>`
+        },
+
+        myInput: {
+          data () {
+            return {
+              inputVal: ''
+            }
+          },
+          methods: {
+            handleClick () {
+              // console.log(this.inputVal);
+              this.bus.$emit('click', this.inputVal);
+            }
+          },
+          template: `<div>
+                      <input type="text" v-model.lazy="inputVal"/>
+                      <button @click="handleClick">提交</button>
+                    </div>`
+        }
+      }
+    })
+  </script> 
+</body>
+</html>

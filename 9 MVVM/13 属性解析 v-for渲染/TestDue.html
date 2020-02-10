@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="test">
+      hello    {{content}},{{content}}
+      <span> {{description}} </span>
+      <br>{{obj.x}}
+      <input type="text" v-model = "obj.x" >
+      <ul>
+        <li v-for="{key} in list">
+          姓名：{{key.a}},年龄：{{key.b}}
+        </li>
+      </ul>
+    </div>
+    <script type="module">
+      import Due from "./index.js";
+      window.test = new Due({
+        el: "test",
+        data: {
+          content: "monkey",
+          description: "hello world",
+          obj: {
+            x: 1,
+            y: 2
+          },
+          list: [
+            { a: "panda", b: 18 },
+            { a: "monkey", b: 20 }
+          ]
+        }
+      });
+    </script>
+  </body>
+</html>

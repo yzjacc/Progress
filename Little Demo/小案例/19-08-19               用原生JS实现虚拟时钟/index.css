@@ -1,0 +1,91 @@
+body{
+    background: #000;
+}
+
+.clock{
+    width: 500px;
+    height: 500px;
+    margin: 30px auto;
+    position: relative;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.board div{
+    background: #fff;
+    width: 6px;
+    height: 2px;
+    box-shadow: 0 0 10px #ffeab0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: 250px 0px;
+}
+
+.board div.bold{
+    width: 8px;
+    height: 4px;
+}
+
+.number{
+    font-size: 20px;
+    position: absolute;
+    left: 250px;
+    top: 250px;
+    width: 24px;
+    height: 24px;
+}
+
+.number div{
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-shadow: 0 0 10px #ffeab0;
+    font-weight: bold;
+    position: absolute;
+    transform: translate(-12px, -12px);
+    text-align: center;
+}
+.pointers{
+    position: absolute;
+    left: 250px;
+    top: 250px;
+}
+.pointers div{
+    box-shadow: 2px 2px 5px #ffeab0;
+    position: absolute;
+    background: #fff;
+}
+
+.h{
+    width: 140px;
+    height: 6px;
+    left: -40px;
+    top: -3px;
+    transform-origin: 40px center;
+}
+
+.m{
+    width: 190px;
+    height: 4px;
+    left: -50px;
+    top: -2px;
+    transform-origin: 50px center;
+}
+.s{
+    width: 250px;
+    height: 2px;
+    left: -60px;
+    top: -1px;
+    transform-origin: 60px center;
+}
+.dot{
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    left: 250px;
+    top: 250px;
+    transform: translate(-4px,-4px);
+    background: #f40;
+    border-radius: 50%;
+}

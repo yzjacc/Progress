@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <div id="test"></div>
+
+    <script>
+        var xhr = null;
+        if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest();
+        } else {
+            xhr = new ActiveXObject("Microsoft.XMLHttp");
+        }
+        xhr.open("get", "http://developer.duyiedu.com/edu/testAjaxCrossOrigin", false);
+        xhr.onreadystatechange = function () {
+            //readyState == 4表示请求完成，已经接收到数据。+
+            //status == 200  网络请求，结果都会有一个状态码。来表示这个请求是否正常
+            //200表示请求成功
+            // http状态码
+            //2**表示成功
+            //3**表示重定向
+            //4**表示客户端错误,404页面没找到。
+            //5**表示服务端错误
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                document.getElementById("test").innerText = xhr.responseText;
+                var data = JSON.parse(xhr.responseText);
+                console.log(data);
+            }
+        }
+        xhr.send();//如果open第三个参数传true，或者不传，为异步模式。如果传false，为同步模式。
+        console.log("====");
+        console.log("+++");
+
+        //在计算机的世界里，异步与同步和现实世界中是相反的。
+        // 在计算机的世界里，同步表示串行。异步表示同时进行。可以理解为同线程和异线程。
+    </script>
+</body>
+</html>

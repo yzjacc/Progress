@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script>
+            //1. 在浏览器中直接输入网址（无法用代码控制）
+            //2. location.href="url",可以发出网络请求，但是页面会发生跳转。(页面会跳转)
+			//3. 带有src属性的标签。请求是可以发出的，服务端是可以处理的也是可以返回的。但是返回之后，能否被应用，还要看浏览器。(页面无法处理返回结果)
+			//4. 带有href属性的标签。请求是可以发出的，服务端是可以处理的也是可以返回的。但是返回之后，能否被应用，还要看浏览器。（页面无法处理返回结果）
+			//5. 带有action属性的标签。例如form表单，也可以向后端发出请求。但是form表单发出请求之后，也会页面跳转。（页面会跳转）
+			// 希望有一种方式，可以用代码控制，页面不会跳转，服务端返回的结果我可以用js继续处理。
+			//6. ajax
+
+			//要素
+			//(1)请求方式，get,post
+			//(2)url
+			var xhr = null;
+			if (window.XMLHttpRequest) {
+				xhr = new XMLHttpRequest();
+			} else {
+			    xhr = new ActiveXObject("Microsoft.XMLHttp");
+			}
+			xhr.open("get", "http://developer.duyiedu.com/edu/testAjaxCrossOrigin");
+			//xhr.send();
+		</script>
+	</head>
+	<body>
+		hello, world
+		<!--<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1563046187297&di=794ad62636c333887ea40fd5b0e2142f&imgtype=0&src=http%3A%2F%2Fs08.lmbang.com%2FM00%2FB8%2FBF%2FecloD1viwF-AZvtDAABcsRk2Fzw797.jpg">-->
+		<!--<iframe src="http://www.baidu.com"></iframe>-->
+	</body>
+</html>
+
+//Sublime Server

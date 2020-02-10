@@ -1,0 +1,78 @@
+/* * {
+    color: red;
+} */
+
+/* 选中所有具有href属性的元素 */
+/* [href]{
+    color:red;
+} */
+
+/* [href="https://www.sina.com"]{
+    color:red;
+}
+
+a[href$="baidu.com"]{
+    color:#008c8c;
+} */
+
+/* [class*="b"]{
+    color:green;
+} */
+
+/* a:link {
+    color: chocolate;
+}
+
+a:visited {
+    color: rgb(113, 133, 0);
+}
+*/
+/* 选中鼠标悬停时的a元素 */
+/* a:hover{
+    color:red;
+} */
+
+/* 鼠标按下时的a元素 */
+/* a:active{
+    color:#008c8c;
+} */
+
+/* span::before {
+    content: "《";
+    color: red;
+}
+
+span::after {
+    content: "》";
+    color: red;
+} */
+
+p {
+    text-indent: 2em;
+    line-height: 2;
+}
+
+/* p.red {
+    color: red;
+}
+
+.red li {
+    color: #008c8c;
+} */
+
+/* .abc>.bcd{
+    color:red;
+} */
+
+/* div>ul li{
+    color:red;
+} */
+
+.special {
+    color: red;
+}
+
+.special~li,
+p {
+    color: #008c8c;
+}

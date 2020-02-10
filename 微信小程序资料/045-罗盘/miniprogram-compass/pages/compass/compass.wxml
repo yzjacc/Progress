@@ -1,0 +1,9 @@
+<view class='container'>
+  <view class='text'>
+    <text>{{direction}}</text>
+    <text>{{angle}}°</text>
+  </view>
+  <view class='pic'>
+    <image src='../../images/compass.png' style='transform:rotate({{rotate}}deg)'></image>
+  </view>
+</view>

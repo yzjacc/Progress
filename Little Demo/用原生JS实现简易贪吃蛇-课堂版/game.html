@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .game{
+            width: 500px;
+            height: 500px;
+            background: #000;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .game div{
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            position: absolute;
+        }
+
+        .game div.head{
+            background: #f40;
+        }
+    </style>
+</head>
+<body>
+    <div class="game">
+    </div>
+    <script src="./game.js"></script>
+</body>
+</html>

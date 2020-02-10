@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>迭代器模式</title>
+</head>
+
+<body>
+    <script>
+        // var a = [2, 3, 4, 5, 6, 7, 8]
+        // for (var i = 0; i < a.length; i++) {
+        //     console.log(a[i])
+        // }
+        // 迭代器模式：提供一种方法顺序去访问一个聚合对象中的各个元素，而且不暴露该对象的内部表示。
+        // 
+        var agg = (function() {
+            var data = [1, 2, 3, {
+                1: 2
+            }];
+            var length = data.length;
+            var index = 0; //计数器
+            // hasNext(boolean)  Next(下一个值)
+            return {
+                next: function() {
+                    var element;
+                    if (!this.hasNext()) {
+                        return null;
+                    }
+                    element = data[index]
+                    index++;
+                    return element;
+                },
+                hasNext: function() {
+                    return index < length
+                },
+                current: function() {
+                    return data[index]
+                }
+            }
+        })()
+
+        while (agg.hasNext()) {
+            console.log(agg.next())
+        }
+        console.log(agg.current())
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+#swiper ul,
+#swiper ul li{
+    margin:0;
+    padding:0;
+    font-size:0;
+}
+#swiper img{
+    font-size:0;
+}
+#swiper{
+    position: relative;
+    overflow: hidden;
+}
+
+#swiper .img-box{
+    position: absolute;
+    top: 0;
+    left: 0px;
+}
+
+#swiper .img-box li{
+    display: inline-block;
+}
+
+#swiper .order{
+    position: absolute;
+    width:100%;
+    height:30px;
+    bottom: 2%;
+    text-align: center;
+}
+
+#swiper .order ul {
+    display: inline-block;
+    border-radius: 8px;
+}
+
+#swiper .order ul li{
+    display: inline-block;
+    width: 12px;
+    height:12px;
+    margin-right: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color:lightgray;
+}
+
+#swiper .order ul li.active{
+    background-color: #be926f;
+}
+

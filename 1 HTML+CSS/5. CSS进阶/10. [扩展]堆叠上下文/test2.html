@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html{
+            background: lightblue;
+        }
+        .container{
+            background: #008c8c;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin: 50px;
+        }
+
+        .item{
+            width: 100px;
+            height: 100px;
+            background: red;
+            z-index: -1;
+            position: absolute;
+            left: -30px;
+            top: -30px;
+        }
+
+        .normal{
+            width: 200px;
+            height: 200px;
+            background: chocolate;
+        }
+        .float{
+            width: 200px;
+            height: 200px;
+            background: brown;
+            float: left;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <p style="background: lightyellow">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque suscipit ullam nam corporis at placeat, tempore tenetur? Impedit, aliquid provident officiis aspernatur ea pariatur optio! Laudantium dolor voluptatibus explicabo quae?
+    </p>
+    <div class="container">
+        <div class="item"></div>
+    </div>
+    <!-- <div class="float"></div> -->
+    <div class="normal">
+
+    </div>
+   
+</body>
+</html>
