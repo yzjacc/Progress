@@ -99,6 +99,9 @@
     <property name="settings.editor.selected.configurable" value="liveEdit" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/8 Vue/Vue Class/12. 生命周期" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/7 ES6/NEW-ES6/.vscode" />
       <recent name="$PROJECT_DIR$/7 ES6/NEW-ES6" />
@@ -130,6 +133,8 @@
       <updated>1581318525609</updated>
       <workItem from="1581318528164" duration="6170000" />
       <workItem from="1581339709745" duration="2159000" />
+      <workItem from="1581346893886" duration="35000" />
+      <workItem from="1581381868651" duration="3962000" />
     </task>
     <servers />
   </component>

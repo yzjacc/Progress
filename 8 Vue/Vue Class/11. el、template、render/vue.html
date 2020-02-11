@@ -12,9 +12,9 @@
 
   <script>
     // el  --y--> div#app.outerHTML("<div id="app">{{msg}}</div>"作为模板) --> AST({}) --> render -->Vnode--> 真实的dom(<div id="app">hello</div>) -》 替换
-        //  --n--> $mount  --y--> div#app.outerHTML("<div id="app">{{msg}}</div>"作为模板) -> ....
+        // --n--> $mount  --y--> div#app.outerHTML("<div id="app">{{msg}}</div>"作为模板) -> ....
                         // --n--> X
-    // el --y --> template  --> y --> '<h2>{{ msg }}</h2>'  -> AST --> 。。。
+    // el  --y--> template  --> y --> '<h2>{{ msg }}</h2>'  -> AST --> 。。。
     //                      --> n-->  el.outerHTml         -> AST  -> 。。。
 
     // jsx { js } <dom> {} <>
