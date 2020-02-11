@@ -100,6 +100,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/14 React" />
       <recent name="$PROJECT_DIR$/8 Vue/Vue Class/12. 生命周期" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -107,15 +108,19 @@
       <recent name="$PROJECT_DIR$/7 ES6/NEW-ES6" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.demo.js">
+  <component name="RunManager" selected="Node.js.index.js">
     <configuration name="vue.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Progress/8 Vue/Vue Class/7. vue指令：v-model/vue.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="demo.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/测试/demo.js" working-dir="$PROJECT_DIR$/测试">
       <method v="2" />
     </configuration>
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/14 React/2-1.JSX/react-learn/src/index.js" working-dir="$PROJECT_DIR$/14 React/2-1.JSX/react-learn/src">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.index.js" />
         <item itemvalue="Node.js.demo.js" />
         <item itemvalue="JavaScript Debug.vue.html" />
       </list>
@@ -134,7 +139,7 @@
       <workItem from="1581318528164" duration="6170000" />
       <workItem from="1581339709745" duration="2159000" />
       <workItem from="1581346893886" duration="35000" />
-      <workItem from="1581381868651" duration="3962000" />
+      <workItem from="1581381868651" duration="8977000" />
     </task>
     <servers />
   </component>
@@ -156,22 +161,22 @@
       <screen x="0" y="23" width="1440" height="799" />
     </state>
     <state x="536" y="239" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.799@0.23.1440.799" timestamp="1581320854342" />
-    <state width="913" height="204" key="GridCell.Tab.0.bottom" timestamp="1581346739078">
+    <state width="1088" height="204" key="GridCell.Tab.0.bottom" timestamp="1581403736400">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="913" height="204" key="GridCell.Tab.0.bottom/0.23.1440.799@0.23.1440.799" timestamp="1581346739078" />
-    <state width="913" height="204" key="GridCell.Tab.0.center" timestamp="1581346739077">
+    <state width="1088" height="204" key="GridCell.Tab.0.bottom/0.23.1440.799@0.23.1440.799" timestamp="1581403736400" />
+    <state width="1088" height="204" key="GridCell.Tab.0.center" timestamp="1581403736399">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="913" height="204" key="GridCell.Tab.0.center/0.23.1440.799@0.23.1440.799" timestamp="1581346739077" />
-    <state width="913" height="204" key="GridCell.Tab.0.left" timestamp="1581346739077">
+    <state width="1088" height="204" key="GridCell.Tab.0.center/0.23.1440.799@0.23.1440.799" timestamp="1581403736399" />
+    <state width="1088" height="204" key="GridCell.Tab.0.left" timestamp="1581403736398">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="913" height="204" key="GridCell.Tab.0.left/0.23.1440.799@0.23.1440.799" timestamp="1581346739077" />
-    <state width="913" height="204" key="GridCell.Tab.0.right" timestamp="1581346739078">
+    <state width="1088" height="204" key="GridCell.Tab.0.left/0.23.1440.799@0.23.1440.799" timestamp="1581403736398" />
+    <state width="1088" height="204" key="GridCell.Tab.0.right" timestamp="1581403736400">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="913" height="204" key="GridCell.Tab.0.right/0.23.1440.799@0.23.1440.799" timestamp="1581346739078" />
+    <state width="1088" height="204" key="GridCell.Tab.0.right/0.23.1440.799@0.23.1440.799" timestamp="1581403736400" />
     <state width="981" height="254" key="GridCell.Tab.1.bottom" timestamp="1581328652163">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
