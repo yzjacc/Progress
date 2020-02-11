@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./vue.js"></script>
+</head>
+<body>
+
+  <div id="app">
+    <!-- <div @click="alert('div')" :style="{backgroundColor: 'red'}">
+      <button @click.stop="alert('button')">点击</button>
+    </div> -->
+
+    <!-- <form @submit.prevent="onSubmit">
+      <input type="submit">
+    </form> -->
+
+    <!-- <div @click.capture="alert('div')" :style="{backgroundColor: 'red'}">
+      <button @click="alert('button')">点击</button>
+    </div> -->
+
+    <!-- <div @click.self="alert('div')" :style="{backgroundColor: 'red'}">
+      <button @click="alert('button')">点击</button>
+    </div> -->
+    
+    <!-- <div @click.once="alert('div')" :style="{backgroundColor: 'red'}">
+      <button @click="alert('button')">点击</button>
+    </div> -->
+
+    <!-- <div @click.passive="handleClick" :style="{backgroundColor: 'red'}"></div> -->
+
+    <!-- <div @click.prevent.self="handleClick">点击</div>
+    <div @click.self.prevent="handleClick">点击</div> -->
+
+    <!-- <input type="text" @keyup.enter="onSubmit" /> -->
+    <!-- <input type="text" @keyup.caps-lock="onSubmit"> -->
+    <!-- <input type="text" @keyup.13="onSubmit"> -->
+    <!-- <input type="text" @keyup.up="onSubmit">
+    <input type="text" @keyup.arrow-up="onSubmit"> -->
+    <!-- <input type="text" @keyup.v="onSubmit"> -->
+
+    <!-- <input type="text" @keyup.ctrl="onSubmit"> -->
+
+    <!-- <input type="text" @keyup.alt.67="onSubmit"> -->
+
+    <!-- <div @click.ctrl.exact="onSubmit">dianji</div> -->
+
+    <div @click.exact="onSubmit">dianji</div>
+
+
+  </div>
+
+  <script>
+    // Vue.config.keyCodes.v = 86;
+    const vm = new Vue({
+      el: '#app',
+      methods: {
+        alert(str) { 
+          alert(str) 
+        },
+        onSubmit () { 
+          console.log('a') 
+        },
+        handleClick () {
+
+        }
+      }
+    })
+
+    
+  </script>
+</body>
+</html>

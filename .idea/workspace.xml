@@ -99,13 +99,14 @@
     <property name="settings.editor.selected.configurable" value="liveEdit" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/14 React" />
-      <recent name="$PROJECT_DIR$/8 Vue/Vue Class/12. 生命周期" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/7 ES6/NEW-ES6/.vscode" />
       <recent name="$PROJECT_DIR$/7 ES6/NEW-ES6" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/8 Vue/VUE六日集训资料/第3天" />
+      <recent name="$PROJECT_DIR$/14 React" />
+      <recent name="$PROJECT_DIR$/8 Vue/Vue Class/12. 生命周期" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.index.js">
@@ -141,7 +142,8 @@
       <workItem from="1581346893886" duration="35000" />
       <workItem from="1581381868651" duration="9368000" />
       <workItem from="1581408169404" duration="18000" />
-      <workItem from="1581408367386" duration="1176000" />
+      <workItem from="1581408367386" duration="3062000" />
+      <workItem from="1581432727297" duration="1766000" />
     </task>
     <servers />
   </component>
@@ -215,5 +217,9 @@
       <screen x="0" y="23" width="1440" height="799" />
     </state>
     <state x="413" y="61" key="SettingsEditor/0.23.1440.799@0.23.1440.799" timestamp="1581322953712" />
+    <state x="466" y="146" width="670" height="676" key="search.everywhere.popup" timestamp="1581410988324">
+      <screen x="0" y="23" width="1440" height="799" />
+    </state>
+    <state x="466" y="146" width="670" height="676" key="search.everywhere.popup/0.23.1440.799@0.23.1440.799" timestamp="1581410988324" />
   </component>
 </project>

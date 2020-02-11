@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- <my-cmp>这是写在组件标签内的文字</my-cmp> -->
+    <!-- <my-cmp>{{ name }}</my-cmp> -->
+    <!-- <my-button>Button</my-button> -->
+    <!-- <my-cmp>
+      <template v-slot:header>
+        <div>頭部</div>
+      </template>
+
+      <template v-slot:default>
+        <div>主要内容</div>
+      </template>
+
+      
+      <template v-slot:footer>
+        <div>底部</div>
+      </template>
+    </my-cmp> -->
+    <!-- <my-cmp>
+      <template v-slot:default="slotProps">
+        {{ slotProps.user.name }}
+      </template>
+    </my-cmp> -->
+
+    <my-cmp v-slot="{ user: person }">
+      {{ person.name }}
+    </my-cmp>
+  </div>
+
+  <script>
+    // 插槽 slot
+    // 知识点 微多 杂 
+    // 默认 有 用你的 没有 用我的
+    // v-slot
+    // <slot></slot> name"default"
+    Vue.component('my-cmp', {
+      data () {
+        return {
+          user: {
+            name: '杉杉',
+            age: 18
+          }
+        }
+      },
+      template: `
+        <div>
+          <slot :user="user"></slot>
+        </div>
+      `
+    })
+
+    // Vue.component('my-cmp', {
+    //   template: `
+    //     <div class="container">
+    //       <header>
+    //         <slot name="header"></slot>            
+    //       </header>
+    //       <main>
+    //         <slot></slot>
+    //       </main>
+    //       <footer>
+    //         <slot name="footer"></slot>            
+    //       </footer>
+    //     </div>
+    //   `
+    // })
+    // Vue.component('my-button', {
+      
+    //   template: `
+    //     <button>
+    //       <slot>Submit</slot>
+    //     </button>
+    //   `
+    // });
+
+    // Vue.component('my-cmp', {
+    //   data () {
+    //     return {
+    //       name: '杉杉'
+    //     }
+    //   },
+    //   template: `
+    //     <div>
+    //       xxx
+    //       <slot></slot>
+    //     </div>
+    //   `
+    // });
+
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        name: '渡一'
+      },
+    })
+  </script>
+</body>
+
+</html>

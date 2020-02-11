@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    {{ msg }}
+  </div>
+
+  <script>
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        msg: '邓哥：风姿绰约、花枝招展',
+        mrDeng: {
+          name: '邓旭明',
+          age: 88,
+          height: '140cm'
+        }
+      }
+    });
+
+    vm.msg = '手如柔荑';
+    console.log(vm.msg, vm.$el.innerText);
+    vm.msg = '肤如凝脂';
+    console.log(vm.msg, vm.$el.innerText);
+    vm.msg = '唇红齿白';
+    console.log(vm.msg, vm.$el.innerText);
+
+    // setTimeout(() => {
+    //   console.log(vm.msg, vm.$el.innerText);
+    // }, 0)
+
+    vm.$nextTick(function () {
+      console.log(this);
+      console.log(vm.msg, vm.$el.innerText);
+    });
+
+    Vue.nextTick(function () {
+      console.log(this);
+
+      console.log(vm.msg, vm.$el.innerText);
+    })
+
+      // vm.$nextTick().then(() => {
+      //   console.log(vm.msg, vm.$el.innerText);
+      // })
+
+      // Vue.nextTick().then(() => {
+      //   console.log(vm.msg, vm.$el.innerText);
+      // })
+
+    // function Ceshi(config) {
+    //   // const this = {};
+    //   // config = {data: {xxx: 'jjj'}}
+
+    //   this.data = config.data;
+    //   this.otherData = config.otherData;
+    //   // for(let key in config.data) {
+    //   //   this[key] = config.data[key];
+    //   // }
+    //   // return this;
+    // }
+
+    // const ceshi = new Ceshi({
+    //   data: {
+    //     msg: 'xxx'
+    //   }
+    // })
+    // console.log(ceshi.data);
+  </script>
+</body>
+</html>

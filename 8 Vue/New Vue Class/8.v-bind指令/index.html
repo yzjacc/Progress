@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./vue.js"></script>
+  
+</head>
+<body>
+
+  <div id="app">
+    <!-- <div :[attr]="type" :b="xx" :c="ss"></div> -->
+    <!-- <div v-bind="{name: xx, age: '18', height: '163cm'}"></div> -->
+    <!-- <img :src="'https://' + imgUrl" alt=""> -->
+    <!-- <div :class="{red: isRed}"></div> -->
+    <!-- <div :class="[isRed ? red : '', green]"></div> -->
+    <!-- <div :class="[{ redClass: isRed }, green]"></div> -->
+    <!-- <div :class="{red: isRed}" class="red"></div> -->
+    <!-- <div :style="{color: 'red', width: '100px', 'background-color': 'yellow'}">shanshan</div> -->
+    <!-- <div :style="styleObj">杉杉</div> -->
+    <!-- <div :style="[styleObjA, styleObjB]">shanshan</div> -->
+    <!-- <div :style="{display: ['-webkit-box', '-ms-flexbox', 'flex']}"></div> -->
+    <!-- <svg :view-box.camel="viewBox"></svg> -->
+    <div :text-content.prop="'杉杉'"></div>
+  </div>
+
+  <div id="demo"></div>
+
+  <script>
+    const demo = document.getElementById('demo');
+    for(let key in demo) {
+      console.log(key);
+    }
+
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        viewBox: '0 0 100 100',
+        type: 'D',
+        attr: 'a',
+        xx: 'sss',
+        ss: 'xxx',
+        isRed: false,
+        imgUrl: 'pics0.baidu.com/feed/9358d109b3de9c820016661ee87d280f18d84336.png?token=58491d91c77e537d6e006c1ba051239d&s=BF9143874023390108A4B9F103008031',
+        red: 'redClass',
+        green: 'greenClass',
+        styleObjA: {
+          color: 'red',
+          width: '100px',
+          backgroundColor: 'yellow'
+        },
+        styleObjB: {
+          cursor: 'pointer',
+          transform: 'translateX(90px)'
+        }
+      }
+    })
+
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    father: {{ array }}
+    <button @click="array.push(4)">father 點擊</button>
+    <my-array :array="array"></my-array>
+
+    <!-- {{ count }}
+    <my-count :count="count"></my-count> -->
+  </div>
+
+  <script>
+    Vue.component('my-array', {
+      props: {
+        array: Array
+      },
+      data () {
+        return {
+          myArray: this.array, // 引用 深度克隆
+        }
+      },
+      template: `
+        <div>
+          son: {{ myArray }}
+          <button @click="myArray.push(4)">son 點擊</button>
+        </div>
+      `
+    })
+
+    size="str"
+    str = "    xxXX    ";
+
+    Vue.component('my-count', {
+      props: {
+        count: Number
+      },
+      data () {
+        return {
+          myCount: this.count
+        }
+      },
+      template: `
+        <div>
+          son: {{ myCount }}
+          <button @click="myCount ++">son 點擊</button>
+        </div>
+      `
+    })
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        count: 0,
+        array: [1, 2, 3]
+      }
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!-- <my-cmp v-focus></my-cmp> -->
+    <input type="text" v-slice:[slicenum].number="content">
+    {{ content }}
+  </div>
+
+  <script>
+    // v-on v-bind:src v-model  v-
+    // 全局
+    Vue.component('my-cmp', {
+      template: `<div><p>mr Deng is a p </p></div>`
+    })
+    Vue.directive('focus', {
+      // ..
+      bind (el, binding, vnode) {
+        console.log(el);
+        console.log(binding.name);
+        console.log(binding.value);
+        console.log(binding.expression);
+        console.log(binding.arg);
+        console.log(binding.modifiers);
+
+        console.log(vnode.context);
+      },
+      inserted (el) {
+        // el.focus();
+        // console.log('inserted');
+      },
+      update () {
+        console.log('update');
+      },
+      componentUpdated () {
+        console.log('componentUpdated');
+      },
+      unbind () {
+        console.log('unbind');
+      },
+    })
+
+    // v-show
+    // show -> true -> 显示
+    // show -> false -> 隐藏 display: none
+    Vue.directive('myshow', (el, binding) => {
+      const { value } = binding;
+      const display = value ? '' : 'none';
+      el.style.display = display;
+    })
+
+    // v-model
+    // 1. 通过绑定的数据，给元素设置value
+    // 2. 当触发input事件时，更改绑定的数据值
+    // 3. 更改数据后，同步input的value值
+    Vue.directive('mymodel', {
+      bind (el, binding, vnode) {
+        const vm = vnode.context;
+        const { value, expression } = binding;
+        el.value = value;
+
+        el.oninput = function () {
+          const inputVal = el.value;
+          vm[expression] = inputVal;
+        }
+      },
+      update (el, binding) {
+        const { value } = binding;
+        el.value = value;
+      },
+    })
+    
+    // 截取input框内的文字  
+    // v-slice:5.number
+    Vue.directive('slice', (el, binding, vnode) => {
+      const vm = vnode.context;
+      let { value, expression, arg, modifiers } = binding;
+      arg = arg || 5;
+
+      if(modifiers.number) {
+        value = value.replace(/[^0-9]/g, '');
+      }
+
+      el.value = value.slice(0, arg);
+      vm[expression] = value.slice(0, arg);
+
+      el.oninput = function () {
+        let { value } = el;
+
+        if(modifiers.number) {
+          value = value.replace(/[^0-9]/g, '');
+        }
+        vm[expression] = value.slice(0, arg);
+        el.value = value.slice(0, arg);
+      }
+    })
+
+
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        name: 'shanshan',
+        show: false,
+        content: 'shanshan',
+        slicenum: 3
+      },
+      // directives: {
+      //   focus: {
+      //     // ..
+      //   }
+      // }
+    })
+  </script>
+</body>
+
+</html>

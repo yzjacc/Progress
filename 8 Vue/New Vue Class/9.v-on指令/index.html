@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./vue.js"></script>
+  
+</head>
+<body>
+
+  <div id="app">
+    <button @click="addCounter(5, $event)">点击+1</button>
+    <!-- <button v-on="{click: addCounter}">点击+1</button> -->
+    <p>按钮被点击了{{ counter }}次</p>
+  </div>
+
+  <script>
+    // counter
+    // vm.addCounter
+
+    // $event
+    // viewModel
+
+    const vm = new Vue({
+      el: '#app',
+      data: {
+        counter: 0,
+        event: 'click'
+      },
+      methods: {
+        addCounter (num, e) {
+          // this  Vue实例对象
+          this.counter += num;
+          console.log(e.target);
+        },
+        a () {
+          console.log('a');
+        }
+      }
+    })
+
+    
+  </script>
+</body>
+</html>
