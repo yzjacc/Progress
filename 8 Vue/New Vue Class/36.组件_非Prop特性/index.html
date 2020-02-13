@@ -12,13 +12,13 @@
 <body>
   <!-- 非prop特性会替换/合并（class、style）已有特性 -->
   <div id="app">
-    <my-cmp type="radio" class="haha"></my-cmp>
+    <my-cmp type="radio" class="haha" ></my-cmp>
   </div>
 
   <script>
     Vue.component('my-cmp', {
       props: ['a'],
-      inheritAttrs: false,
+      inheritAttrs: true,
       mounted () {
         console.log(this.$attrs);
       },

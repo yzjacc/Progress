@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .sel{
+        background-color: #ff4400;
+        text-align: center;
+    }
+    #app {
+        margin: auto;
+        width: 1000px;
+        height: 500px;
+    }
+    .content{
+        width:800px;
+        height: 50px;
+    }
+    li{
+        list-style: none;
+        margin: 0 10px;
+        float: left;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    li:not(.sel):not(.header):hover{
+        color: #00a1d6;
+        cursor: pointer;
+    }
+
+</style>
+<script src="../vue.js"></script>
+<body>
+    <div id="app">
+
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            goodsList: [
+                {
+                    title: '上装',
+                    typeList: ['全部', '针织衫', '毛呢外套', 'T恤', '羽绒服', '棉衣', '卫衣', '风衣' ],
+                    id: 1,
+                },
+                {
+                    title: '裤装',
+                    typeList: ['全部', '牛仔裤', '小脚/铅笔裤', '休闲裤' ,'打底裤', '哈伦裤'],
+                    id: 2,
+                },
+                {
+                    title: '裙装',
+                    typeList: ['全部', '连衣裙', '半身裙', '长袖连衣裙', '中长款连衣裙'],
+                    id: 3,
+                }
+            ],
+            isSel:false,
+
+        },
+        methods:{
+          handleClick(e){
+                console.log(e);
+          }
+        },
+        template:`<div id="app">
+                     <div v-for="(obj,id) in goodsList" :key="id" class="content">
+                      <ul>
+                          <li class="header">{{obj.title}}:</li>
+                          <li v-for="(type,id) in obj.typeList" :key="id" :class="{sel:isSel||id==0}" @click="handleClick(isSel)">{{type}}</li>
+                      </ul>
+                      </div>
+                 </div>`
+
+    })
+</script>
+</html>

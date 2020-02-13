@@ -1,85 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ac09fe6-6049-4353-828c-c86839c5a4e5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/yarn-error.log" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/yarn-error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS/笔记.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/components/ImgUploader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/components/ImgUploader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/components/MovieForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/components/MovieForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/components/MovieTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/components/MovieTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/components/Test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/components/Test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/pages/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/pages/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/pages/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/pages/movie/AddMovie.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/pages/movie/AddMovie.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/pages/movie/EditMovie.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/pages/movie/EditMovie.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/pages/movie/MovieList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/pages/movie/MovieList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/react-app-env.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/redux/actions/MovieAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/redux/actions/MovieAction.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/redux/reducers/MovieReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/redux/reducers/MovieReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/redux/reducers/RootReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/redux/reducers/RootReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/redux/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/services/CommonTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/services/CommonTypes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/services/MovieService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/src/services/MovieService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/client/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/server/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/server/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/server/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/server/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/server/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/server/tslint.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/server/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/server/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/moviesys/分析.md" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/moviesys/分析.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/teris-game/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/teris-game/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/teris-game/src/core/GameConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/teris-game/src/core/GameConfig.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/teris-game/src/core/viewer/GamePageViewer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/teris-game/src/core/viewer/GamePageViewer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/teris-game/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/teris-game/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/teris-game/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/teris-game/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/teris-game/笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/teris-game/笔记.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/ts-react-game/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/ts-react-game/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/ts-react-game/src/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/ts-react-game/src/react-app-env.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/ts-react-game/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/ts-react-game/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15 TypeScript/ts-react-game/笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/15 TypeScript/ts-react-game/笔记.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2 JavaScript/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2 JavaScript/1. 概述/1. 课程概述/笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/2 JavaScript/1. 概述/1. 课程概述/笔记.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2 JavaScript/10. JS进阶/1. 原型和原型链/笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/2 JavaScript/10. JS进阶/1. 原型和原型链/笔记.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._.DS_Store" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_adding.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_cart_01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_cart_02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_cart_03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_cart_04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_del.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_icon_01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_icon_02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_logo.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_minus.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_relation.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2 JavaScript/11. 案例实训/5. 购物车/images/._taobao_subtn.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2 JavaScript/4. 流程控制/8. 数组/test4.html" beforeDir="false" afterPath="$PROJECT_DIR$/2 JavaScript/4. 流程控制/8. 数组/test4.html" afterDir="false" />
+    <list default="true" id="eb76fdf8-0a82-471f-9a65-8897524003d5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7 ES6/NEW-ES6/8. 异步处理/8-6. [扩展]手写Promise/Promise.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6 Webpack/New WebPack/2. 常用扩展/2-7. webpack内置插件/课件.html" beforeDir="false" afterPath="$PROJECT_DIR$/6 Webpack/New WebPack/2. 常用扩展/2-7. webpack内置插件/课件.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/8 Vue/New Vue Class/12.练习_仿淘宝商品筛选/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/8 Vue/New Vue Class/12.练习_仿淘宝商品筛选/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/8 Vue/New Vue Class/36.组件_非Prop特性/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/8 Vue/New Vue Class/36.组件_非Prop特性/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/测试/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/测试/demo.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PackageJsonUpdateNotifier">
-    <dismissed value="$PROJECT_DIR$/6 Webpack/New WebPack/2. 常用扩展/2-8. [练习]区域查询/工程/package.json" />
-    <dismissed value="$PROJECT_DIR$/8 Vue/Vue循环迭代 项目/3/vue/package.json" />
-  </component>
-  <component name="ProjectId" id="1Xbd35cRKX6xFwCoysn1o5uhM8d" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1XjPBw8nheImupxFEukp0RZiaCi" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -87,8 +34,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/7 ES6/NEW-ES6/.vscode" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -96,130 +43,109 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="liveEdit" />
   </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/7 ES6/NEW-ES6/.vscode" />
-      <recent name="$PROJECT_DIR$/7 ES6/NEW-ES6" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/8 Vue/VUE六日集训资料/第3天" />
-      <recent name="$PROJECT_DIR$/14 React" />
-      <recent name="$PROJECT_DIR$/8 Vue/Vue Class/12. 生命周期" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Node.js.index.js">
-    <configuration name="vue.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Progress/8 Vue/Vue Class/7. vue指令：v-model/vue.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="Node.js.Promise.js">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Progress/8 Vue/New Vue Class/16.练习_调查问卷/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="demo.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/测试/demo.js" working-dir="$PROJECT_DIR$/测试">
-      <method v="2" />
-    </configuration>
-    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/14 React/2-1.JSX/react-learn/src/index.js" working-dir="$PROJECT_DIR$/14 React/2-1.JSX/react-learn/src">
+    <configuration name="Promise.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/7 ES6/NEW-ES6/8. 异步处理/8-6. [扩展]手写Promise/Promise.js" working-dir="$PROJECT_DIR$/7 ES6/NEW-ES6/8. 异步处理/8-6. [扩展]手写Promise">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.index.js" />
-        <item itemvalue="Node.js.demo.js" />
-        <item itemvalue="JavaScript Debug.vue.html" />
+        <item itemvalue="Node.js.Promise.js" />
+        <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",HTML5_OUTLINE_MODE" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5ac09fe6-6049-4353-828c-c86839c5a4e5" name="Default Changelist" comment="" />
-      <created>1581318525609</created>
+      <changelist id="eb76fdf8-0a82-471f-9a65-8897524003d5" name="Default Changelist" comment="" />
+      <created>1581556398983</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1581318525609</updated>
-      <workItem from="1581318528164" duration="6170000" />
-      <workItem from="1581339709745" duration="2159000" />
-      <workItem from="1581346893886" duration="35000" />
-      <workItem from="1581381868651" duration="9368000" />
-      <workItem from="1581408169404" duration="18000" />
-      <workItem from="1581408367386" duration="3062000" />
-      <workItem from="1581432727297" duration="1766000" />
+      <updated>1581556398983</updated>
+      <workItem from="1581556403231" duration="7219000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$PROJECT_DIR$" />
-      <path value="$PROJECT_DIR$/15 TypeScript/$ git log -p -2VS" />
-      <path value="$PROJECT_DIR$/15 TypeScript/moviesys" />
-      <path value="$PROJECT_DIR$/15 TypeScript/teris-game" />
-      <path value="$PROJECT_DIR$/15 TypeScript/ts-react-game" />
-      <path value="$PROJECT_DIR$/2 JavaScript" />
-    </ignored-roots>
-  </component>
   <component name="WindowStateProjectService">
-    <state x="536" y="239" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581320854342">
+    <state x="281" y="81" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581556670020">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state x="536" y="239" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.799@0.23.1440.799" timestamp="1581320854342" />
-    <state width="1088" height="204" key="GridCell.Tab.0.bottom" timestamp="1581408075187">
+    <state x="281" y="81" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.799@0.23.1440.799" timestamp="1581556670020" />
+    <state width="1325" height="54" key="GridCell.Tab.0.bottom" timestamp="1581579263862">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="1088" height="204" key="GridCell.Tab.0.bottom/0.23.1440.799@0.23.1440.799" timestamp="1581408075187" />
-    <state width="1088" height="204" key="GridCell.Tab.0.center" timestamp="1581408075187">
+    <state width="1419" height="183" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1581559530813" />
+    <state width="1325" height="54" key="GridCell.Tab.0.bottom/0.23.1440.799/-2560.-456.2560.1440@0.23.1440.799" timestamp="1581579263862" />
+    <state width="1325" height="54" key="GridCell.Tab.0.center" timestamp="1581579263861">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="1088" height="204" key="GridCell.Tab.0.center/0.23.1440.799@0.23.1440.799" timestamp="1581408075187" />
-    <state width="1088" height="204" key="GridCell.Tab.0.left" timestamp="1581408075186">
+    <state width="1419" height="183" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1581559530812" />
+    <state width="1325" height="54" key="GridCell.Tab.0.center/0.23.1440.799/-2560.-456.2560.1440@0.23.1440.799" timestamp="1581579263861" />
+    <state width="1325" height="54" key="GridCell.Tab.0.left" timestamp="1581579263859">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="1088" height="204" key="GridCell.Tab.0.left/0.23.1440.799@0.23.1440.799" timestamp="1581408075186" />
-    <state width="1088" height="204" key="GridCell.Tab.0.right" timestamp="1581408075187">
+    <state width="1419" height="183" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1581559530811" />
+    <state width="1325" height="54" key="GridCell.Tab.0.left/0.23.1440.799/-2560.-456.2560.1440@0.23.1440.799" timestamp="1581579263859" />
+    <state width="1325" height="54" key="GridCell.Tab.0.right" timestamp="1581579263861">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="1088" height="204" key="GridCell.Tab.0.right/0.23.1440.799@0.23.1440.799" timestamp="1581408075187" />
-    <state width="981" height="254" key="GridCell.Tab.1.bottom" timestamp="1581328652163">
+    <state width="1419" height="183" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1581559530812" />
+    <state width="1325" height="54" key="GridCell.Tab.0.right/0.23.1440.799/-2560.-456.2560.1440@0.23.1440.799" timestamp="1581579263861" />
+    <state width="1140" height="122" key="GridCell.Tab.1.bottom" timestamp="1581572877589">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="981" height="254" key="GridCell.Tab.1.bottom/0.23.1440.799@0.23.1440.799" timestamp="1581328652163" />
-    <state width="981" height="254" key="GridCell.Tab.1.center" timestamp="1581328652163">
+    <state width="1419" height="183" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1581559536656" />
+    <state width="1140" height="122" key="GridCell.Tab.1.bottom/0.23.1440.799/-2560.-456.2560.1440@0.23.1440.799" timestamp="1581572877589" />
+    <state width="1140" height="122" key="GridCell.Tab.1.center" timestamp="1581572877587">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="981" height="254" key="GridCell.Tab.1.center/0.23.1440.799@0.23.1440.799" timestamp="1581328652163" />
-    <state width="981" height="254" key="GridCell.Tab.1.left" timestamp="1581328652162">
+    <state width="1419" height="183" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1581559536654" />
+    <state width="1140" height="122" key="GridCell.Tab.1.center/0.23.1440.799/-2560.-456.2560.1440@0.23.1440.799" timestamp="1581572877587" />
+    <state width="1140" height="122" key="GridCell.Tab.1.left" timestamp="1581572877587">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="981" height="254" key="GridCell.Tab.1.left/0.23.1440.799@0.23.1440.799" timestamp="1581328652162" />
-    <state width="981" height="254" key="GridCell.Tab.1.right" timestamp="1581328652163">
+    <state width="1419" height="183" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1581559536653" />
+    <state width="1140" height="122" key="GridCell.Tab.1.left/0.23.1440.799/-2560.-456.2560.1440@0.23.1440.799" timestamp="1581572877587" />
+    <state width="1140" height="122" key="GridCell.Tab.1.right" timestamp="1581572877588">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="981" height="254" key="GridCell.Tab.1.right/0.23.1440.799@0.23.1440.799" timestamp="1581328652163" />
-    <state width="981" height="254" key="GridCell.Tab.2.bottom" timestamp="1581328652165">
+    <state width="1419" height="183" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1581559536655" />
+    <state width="1140" height="122" key="GridCell.Tab.1.right/0.23.1440.799/-2560.-456.2560.1440@0.23.1440.799" timestamp="1581572877588" />
+    <state width="1140" height="122" key="GridCell.Tab.2.bottom" timestamp="1581572877591">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="981" height="254" key="GridCell.Tab.2.bottom/0.23.1440.799@0.23.1440.799" timestamp="1581328652165" />
-    <state width="981" height="254" key="GridCell.Tab.2.center" timestamp="1581328652164">
+    <state width="1419" height="183" key="GridCell.Tab.2.bottom/0.0.1440.900@0.0.1440.900" timestamp="1581559539156" />
+    <state width="1140" height="122" key="GridCell.Tab.2.bottom/0.23.1440.799/-2560.-456.2560.1440@0.23.1440.799" timestamp="1581572877591" />
+    <state width="1140" height="122" key="GridCell.Tab.2.center" timestamp="1581572877590">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="981" height="254" key="GridCell.Tab.2.center/0.23.1440.799@0.23.1440.799" timestamp="1581328652164" />
-    <state width="981" height="254" key="GridCell.Tab.2.left" timestamp="1581328652164">
+    <state width="1419" height="183" key="GridCell.Tab.2.center/0.0.1440.900@0.0.1440.900" timestamp="1581559539155" />
+    <state width="1140" height="122" key="GridCell.Tab.2.center/0.23.1440.799/-2560.-456.2560.1440@0.23.1440.799" timestamp="1581572877590" />
+    <state width="1140" height="122" key="GridCell.Tab.2.left" timestamp="1581572877589">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="981" height="254" key="GridCell.Tab.2.left/0.23.1440.799@0.23.1440.799" timestamp="1581328652164" />
-    <state width="981" height="254" key="GridCell.Tab.2.right" timestamp="1581328652164">
+    <state width="1419" height="183" key="GridCell.Tab.2.left/0.0.1440.900@0.0.1440.900" timestamp="1581559539154" />
+    <state width="1140" height="122" key="GridCell.Tab.2.left/0.23.1440.799/-2560.-456.2560.1440@0.23.1440.799" timestamp="1581572877589" />
+    <state width="1140" height="122" key="GridCell.Tab.2.right" timestamp="1581572877590">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state width="981" height="254" key="GridCell.Tab.2.right/0.23.1440.799@0.23.1440.799" timestamp="1581328652164" />
-    <state x="413" y="61" key="SettingsEditor" timestamp="1581322953712">
+    <state width="1419" height="183" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1581559539155" />
+    <state width="1140" height="122" key="GridCell.Tab.2.right/0.23.1440.799/-2560.-456.2560.1440@0.23.1440.799" timestamp="1581572877590" />
+    <state x="384" y="146" width="670" height="676" key="search.everywhere.popup" timestamp="1581573660615">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
-    <state x="413" y="61" key="SettingsEditor/0.23.1440.799@0.23.1440.799" timestamp="1581322953712" />
-    <state x="466" y="146" width="670" height="676" key="search.everywhere.popup" timestamp="1581410988324">
-      <screen x="0" y="23" width="1440" height="799" />
-    </state>
-    <state x="466" y="146" width="670" height="676" key="search.everywhere.popup/0.23.1440.799@0.23.1440.799" timestamp="1581410988324" />
+    <state x="384" y="146" width="670" height="676" key="search.everywhere.popup/0.23.1440.799/-2560.-456.2560.1440@0.23.1440.799" timestamp="1581573660615" />
   </component>
 </project>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="./vue.js"></script>
+<body>
+    <div id="app">
+        <div class="header">
+            <div class="title">toDoList</div>
+            <input type="text" v-model="value">
+            <button @click="handleChange(value)">提交</button>
+        </div>
+        <div class="ing">
+            <div>正在进行</div>
+            <div class="content" v-for="(ctx,index) in arr" >
+                <input type="checkbox" @change="handleGet(ctx,index)">
+                {{ctx}}
+                <button @click="handleDel(index)">删除</button>
+            </div>
+            <div class="get" v-for="(ctx,ss,id) in arrOther" :key="id">{{ctx}}</div>
+        </div>
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data:{       
+            arr:[],
+            arrOther:[],
+            value:"请提交"
+        },
+        methods:{
+            handleChange(value){
+                this.value = value;
+                this.arr.push(this.value);
+            },
+            handleDel(id){
+                this.arr.splice(id,1);
+            },
+            handleGet(ctx,id){
+                this.arr.splice(id,1);
+                this.arrOther.push(ctx);
+            }
+        }
+    })
+</script>
+</html>
