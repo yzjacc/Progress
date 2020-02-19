@@ -34,7 +34,12 @@
 <script src="../vue.js"></script>
 <body>
     <div id="app">
-
+        <div v-for="(obj,id) in goodsList" :key="id" class="content">
+            <ul>
+                <li class="header">{{obj.title}}:</li>
+                <li v-for="(type,id) in obj.typeList" :key="id" :class="{sel:id==0}" @click="handleClick(id)">{{type}}</li>
+            </ul>
+        </div>
     </div>
 </body>
 <script>
@@ -57,24 +62,25 @@
                     typeList: ['全部', '连衣裙', '半身裙', '长袖连衣裙', '中长款连衣裙'],
                     id: 3,
                 }
-            ],
-            isSel:false,
-
+            ]
         },
+        created(){
+            this.goodsList.map(item =>{
+             this.arry = item.typeList.map(e => {
+                    return {
+                        e,
+                        istrue:false
+                    }
+                })
+
+            })
+        }
+        ,
         methods:{
-          handleClick(e){
-                console.log(e);
-          }
-        },
-        template:`<div id="app">
-                     <div v-for="(obj,id) in goodsList" :key="id" class="content">
-                      <ul>
-                          <li class="header">{{obj.title}}:</li>
-                          <li v-for="(type,id) in obj.typeList" :key="id" :class="{sel:isSel||id==0}" @click="handleClick(isSel)">{{type}}</li>
-                      </ul>
-                      </div>
-                 </div>`
+          handleClick(id){
 
+          }
+        }
     })
 </script>
 </html>

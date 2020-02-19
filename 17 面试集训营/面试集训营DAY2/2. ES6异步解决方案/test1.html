@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var task = new Promise((resolve, reject) => {
+            //任务在未决阶段的代码
+            //立即执行
+            console.log("开始一百米长跑");
+            setTimeout(() => {
+                if (Math.random() < 0.5) {
+                    //失败：腿摔断了
+                    //推向rejected
+                    reject("腿摔断了");
+                } else {
+                    var rad = Math.floor(Math.random() * 100); //跑了多少秒
+                    //推向resolve
+                    resolve(rad);
+                }
+            }, 3000);
+        });
+
+        task.then(data => { //thenable
+            console.log("跑步完成，用时：" + data)
+        })
+
+        task.catch(err => {
+            console.log("出错了，错误原因是：" + err)
+        })
+    </script>
+</body>
+
+</html>

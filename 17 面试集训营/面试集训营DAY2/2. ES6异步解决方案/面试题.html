@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        setTimeout(() => {
+            console.log(1)
+        }, 0);
+
+        var pro = new Promise(resolve => {
+            console.log(2);
+            resolve(3);
+            console.log(4)
+            reject(5);
+            console.log(6)
+        })
+
+        pro.then(data => {
+            console.log(data)
+        }, err => {
+            console.log(err)
+        })
+        console.log(7)
+    </script>
+</body>
+
+</html>

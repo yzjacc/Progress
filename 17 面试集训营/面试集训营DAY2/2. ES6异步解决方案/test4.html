@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        setTimeout(() => {
+            console.log(1)
+        }, 0);
+        var pro = new Promise((resolve, reject) => {
+            console.log(2)
+            resolve(3); //只是简单的把任务推向了resolved，数据为3
+            reject(4); //无效
+            console.log(8)
+        })
+        //现在，任务已经是resolved
+        pro.then(result => {
+            console.log(result)
+        }, err => {
+            console.log(err)
+        })
+        console.log(5)
+    </script>
+</body>
+
+</html>

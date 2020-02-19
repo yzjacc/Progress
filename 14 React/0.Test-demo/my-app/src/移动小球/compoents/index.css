@@ -1,0 +1,6 @@
+div {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border-radius: 50%;
+}

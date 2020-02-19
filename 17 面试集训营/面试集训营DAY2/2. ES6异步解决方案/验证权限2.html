@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //是否拥有权限
+        function hasPermission(options) {
+            //向服务器询问username是否有权限
+            setTimeout(() => {
+                var rad = Math.random();
+                if (rad < 0.1) {
+                    //网络连接失败
+                    options.onEnd(0)
+                } else if (rad < 0.5) {
+                    //没有权限
+                    options.onEnd(2)
+                } else {
+                    //有权限
+                    options.onEnd(1)
+                }
+            }, 1000)
+        }
+
+        //评论
+        hasPermission({
+            username: "张三",
+            onEnd: function(result) {
+                if (result === 0) {
+                    //网络有问题：弹出提示
+                } else if (result === 1) {
+                    //有权限
+                    //评论
+                } else {
+                    //没有权限：弹出提示
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>

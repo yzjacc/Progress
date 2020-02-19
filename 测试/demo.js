@@ -151,19 +151,29 @@
 // //
 // // console.log(newCal2(
 
-class Test {
+// class Test {
+//
+//     constructor() {
+//         this.a = 123;
+//     }
+//
+//     print = () => {
+//         console.log(this.a)
+//     }
+// }
+//
+// const t1 = new Test();
+// const t2 = new Test();
+// console.log(t1.print === t2.print)
 
-    constructor() {
-        this.a = 123;
-    }
 
-    print = () => {
-        console.log(this.a)
-    }
+async function f1() {
+
 }
+function f() {
 
-const t1 = new Test();
-const t2 = new Test();
-console.log(t1.print === t2.print)
-
-
+}
+f.fun = function (a) {
+    console.log(a);
+}
+f.fun()

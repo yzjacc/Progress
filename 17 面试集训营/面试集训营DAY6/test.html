@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        async function test2() {
+
+        }
+
+        async function test() {
+            var result = await test()
+            console.log(result);
+            return result;
+        }
+
+        // function test() {
+        //     return new Promise((resolve, reject) => {
+        //         // var result = await test()
+        //         // console.log(result);
+        //         test().then(function(data) {
+        //             var result = data;
+        //             console.log(result);
+        //             resolve(result);
+        //         })
+        //     })
+        // }
+
+        var result = test();
+        console.log(result)
+    </script>
+</body>
+
+</html>
