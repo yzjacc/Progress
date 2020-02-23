@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from "./分页组件/components/PageTest";
+import App from "./App";
 
 ReactDOM.render(<App></App>,document.getElementById('root'));

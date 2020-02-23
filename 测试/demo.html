@@ -5,13 +5,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
 </head>
+<style>
+.outer {
+    width: 100%;
+    height: 500px;
+    background-color: yellow;
+}
+.left {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+	float: left;
+	opacity: 0.2;
+}
+.right {
+    height: 200px;
+    background-color: blue;
+}
+</style>
 <body>
-
-<div id="app">{{ hehename }} {{ age }}</div>
-
-<script>
+	<div class="outer">
+		<div class="left">固定宽度</div>
+		<div class="right">自适应宽度</div>
+	</div>
+<!-- <script>
 	const vm = new Vue({
 		el: '#app',
 		data: {
@@ -27,6 +46,6 @@
 		}
 
 	})
-</script>
+</script> -->
 </body>
 </html>
