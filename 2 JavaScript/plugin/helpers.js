@@ -86,7 +86,7 @@ this.myPlugin.debounce = function (callback, time) {
 }
 
 /**
- * 函数节流
+ * 函数节流 节流和防抖区别 防抖是运行结束后 运行函数 节流是隔一段时间运行一次
  */
 this.myPlugin.throttle = function (callback, time, immediately) {
     if (immediately === undefined) {

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .easy {
+            width: 200px;
+            height: 200px;
+            background: lightgoldenrodyellow;
+        }
+        .hard {
+            background: lightsalmon;
+            transition: 2s all;
+        }
+    </style>
+    </head>
+    <body></body>
+    
+    <script>
+        var body = document.querySelector('body');
+        console.log(`1`);
+        var cDiv = document.createElement('div');
+        console.log(cDiv);
+        console.log(`2`);
+        body.appendChild(cDiv)
+        console.log(body);
+        cDiv.classList.add('easy')
+        console.log(`3`);
+     // ======================
+        for(var i = 0;i<300000;i++);
+        cDiv.classList.add('hard')
+        console.log(cDiv)
+     // ======================
+    </script>
+    
+    
+</html>

@@ -2,82 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb76fdf8-0a82-471f-9a65-8897524003d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/6 Webpack/New WebPack/4. js兼容性/4-1. babel的安装和使用/assets/2020-02-07-10-12-01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6 Webpack/New WebPack/4. js兼容性/4-1. babel的安装和使用/assets/2020-02-07-10-25-56.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6 Webpack/New WebPack/4. js兼容性/4-1. babel的安装和使用/assets/2020-02-07-10-27-30.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/1.起步/1-2.HelloWorld /.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/0.Test-demo/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/2.React核心概念/2-1.JSX/笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/2.React核心概念/2-1.JSX/笔记.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.-组件和组件属性/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.组件和组件属性/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.-组件和组件属性/react-learn/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.组件和组件属性/react-learn/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.-组件和组件属性/react-learn/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.组件和组件属性/react-learn/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.-组件和组件属性/react-learn/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.组件和组件属性/react-learn/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.-组件和组件属性/react-learn/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.组件和组件属性/react-learn/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.-组件和组件属性/react-learn/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.组件和组件属性/react-learn/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.-组件和组件属性/react-learn/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.组件和组件属性/react-learn/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.-组件和组件属性/react-learn/src/MyClassComp.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.组件和组件属性/react-learn/src/MyClassComp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.-组件和组件属性/react-learn/src/MyFuncComp.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.组件和组件属性/react-learn/src/MyFuncComp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.-组件和组件属性/react-learn/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.组件和组件属性/react-learn/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.-组件和组件属性/react-learn/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.组件和组件属性/react-learn/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.-组件和组件属性/笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/2.React核心概念/2-3.组件和组件属性/笔记.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-4.reducer/react-learn/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-4.reducer/react-learn/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-4.reducer/react-learn/src/redux/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-4.reducer/react-learn/src/redux/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/Banner/ImgContainer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/Banner/ImgContainer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/Banner/SwitchArrow/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/Banner/SwitchArrow/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/Banner/SwitchArrow/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/Banner/SwitchArrow/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/Banner/SwitchDot/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/Banner/SwitchDot/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/Banner/SwitchDot/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/Banner/SwitchDot/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/Banner/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/Banner/Test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/Banner/img/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/Banner/img/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/Banner/img/2.webp" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/Banner/img/2.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/Banner/img/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/Banner/img/3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/Banner/img/4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/Banner/img/4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/Banner/img/5.webp" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/Banner/img/5.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/Banner/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/Banner/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/Banner/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/Banner/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/CheckBoxGroup/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/CheckBoxGroup/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/CheckBoxGroup/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/CheckBoxGroup/Test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/CheckBoxGroup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/CheckBoxGroup/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/ErrorBound/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/ErrorBound/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/Modal/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/Modal/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/Modal/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/Modal/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/Pager/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/Pager/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/Pager/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/Pager/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/RadioBoxGroup/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/RadioBoxGroup/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/RadioBoxGroup/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/RadioBoxGroup/Test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/RadioBoxGroup/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/RadioBoxGroup/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/Select/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/Select/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/Select/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/Select/Test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/Select/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/Select/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/ThreeLayout/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/ThreeLayout/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/ThreeLayout/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/ThreeLayout/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/ThreeLayout/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/ThreeLayout/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/components/common/hoc/withDataGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/components/common/hoc/withDataGroup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/redux/createStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/redux/createStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/redux/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/redux/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/services/student.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/services/student.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/store/action/loginUserAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/store/action/loginUserAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/store/action/usersAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/store/action/usersAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/store/reducer/index copy.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/store/reducer/index copy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/store/reducer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/store/reducer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/store/reducer/loginUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/store/reducer/loginUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/store/reducer/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/store/reducer/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/src/utils/commonTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/src/utils/commonTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/react-learn/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/react-learn/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14 React/7.Redux/7-6.-createStore/笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/7.Redux/7-6.手写createStore/笔记.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/6 Webpack/New WebPack/3. css工程化/3-3. BEM/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/6 Webpack/New WebPack/3. css工程化/3-3. BEM/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/8 Vue/New Vue Class/12.练习_仿淘宝商品筛选/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/8 Vue/New Vue Class/12.练习_仿淘宝商品筛选/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/测试/demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/测试/demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1 HTML+CSS/3. CSS基础/17. 更多的样式/笔记.md" beforeDir="false" afterPath="$PROJECT_DIR$/1 HTML+CSS/3. CSS基础/17. 更多的样式/笔记.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/14 React/0.Test-demo/my-app/src/App copy 2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/14 React/0.Test-demo/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/0.Test-demo/my-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/14 React/0.Test-demo/my-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/14 React/0.Test-demo/my-app/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,8 +24,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1XjPBw8nheImupxFEukp0RZiaCi" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -109,7 +44,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/14 React/0.Test-demo/my-app/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/People Blog/data-management/src/pages" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
@@ -124,22 +59,22 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.jscs" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/14 React/0.Test-demo/my-app/src/分页组件" />
-      <recent name="$PROJECT_DIR$/14 React/0.Test-demo/my-app/src/移动小球" />
-      <recent name="$PROJECT_DIR$/14 React/0.Test-demo/my-app/src/setState倒计时" />
-      <recent name="$PROJECT_DIR$/14 React/0.Test-demo/my-app/src/显示学生列表" />
-      <recent name="$PROJECT_DIR$/14 React/0.Test-demo/my-app/src/图片切换" />
+      <recent name="$PROJECT_DIR$/People Blog" />
+      <recent name="$PROJECT_DIR$/People Blog/data-management/src/redux/reducer" />
+      <recent name="$PROJECT_DIR$/People Blog/data-management/src/redux/action" />
+      <recent name="$PROJECT_DIR$/People Blog/data-management/src/common" />
+      <recent name="$PROJECT_DIR$/People Blog/data-management/src/components" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/14 React/0.Test-demo/my-app/src" />
-      <recent name="$PROJECT_DIR$/14 React/0.Test-demo/my-app/src/分页组件/components" />
-      <recent name="$PROJECT_DIR$/14 React/0.Test-demo/my-app/src/移动小球" />
-      <recent name="$PROJECT_DIR$/14 React/0.Test-demo/my-app/src/setState倒计时" />
-      <recent name="$PROJECT_DIR$/14 React/0.Test-demo/my-app/src/显示学生列表" />
+      <recent name="$PROJECT_DIR$/People Blog/data-management/src/pages" />
+      <recent name="$PROJECT_DIR$/People Blog/data-management/src/components" />
+      <recent name="$PROJECT_DIR$/People Blog/data-management/src/api" />
+      <recent name="$PROJECT_DIR$/People Blog/data-management/src/redux" />
+      <recent name="$PROJECT_DIR$/People Blog/data-management" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html (1)">
@@ -184,11 +119,22 @@
       <workItem from="1581818125788" duration="102000" />
       <workItem from="1581818616435" duration="365000" />
       <workItem from="1581833326215" duration="24254000" />
+      <workItem from="1582766496795" duration="7000" />
+      <workItem from="1583828178768" duration="4000" />
+      <workItem from="1583828202509" duration="1345000" />
+      <workItem from="1583901747584" duration="3779000" />
+      <workItem from="1583905913472" duration="5295000" />
+      <workItem from="1583982185678" duration="2317000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="115" key="#ESLint" timestamp="1582035855071">
@@ -199,6 +145,10 @@
       <screen x="0" y="23" width="1440" height="799" />
     </state>
     <state x="281" y="81" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.799@0.23.1440.799" timestamp="1581556670020" />
+    <state x="326" y="232" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583909814232">
+      <screen x="0" y="23" width="1440" height="799" />
+    </state>
+    <state x="326" y="232" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.799@0.23.1440.799" timestamp="1583909814232" />
     <state x="723" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582007319156">
       <screen x="0" y="23" width="1440" height="799" />
     </state>
@@ -275,11 +225,11 @@
     <state width="674" height="116" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1582040954276" />
     <state width="1140" height="122" key="GridCell.Tab.2.right/0.23.1440.799/-2560.-456.2560.1440@0.23.1440.799" timestamp="1581572877590" />
     <state width="674" height="116" key="GridCell.Tab.2.right/0.23.1440.799@0.23.1440.799" timestamp="1582005837077" />
-    <state x="443" y="29" key="SettingsEditor" timestamp="1582040901925">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="186" y="85" key="SettingsEditor" timestamp="1583901954833">
+      <screen x="0" y="23" width="1440" height="799" />
     </state>
     <state x="443" y="29" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1582040901925" />
-    <state x="443" y="49" key="SettingsEditor/0.23.1440.799@0.23.1440.799" timestamp="1582009563238" />
+    <state x="186" y="85" key="SettingsEditor/0.23.1440.799@0.23.1440.799" timestamp="1583901954833" />
     <state x="384" y="146" width="670" height="676" key="search.everywhere.popup" timestamp="1581573660615">
       <screen x="0" y="23" width="1440" height="799" />
     </state>

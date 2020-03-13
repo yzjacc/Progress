@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{Component} from 'react'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 
 function News(props) {
@@ -11,13 +11,9 @@ function News(props) {
 function NotFound() {
     return <h1>找不到页面</h1>
 }
-export default function App() {
-    return (
-        <Router>
-            <Switch>
-                <Route path="/news/:year?/:month?/:day?" component={News} />
-                <Route component={NotFound} />
-            </Switch>
-        </Router>
-    )
+var a = 10 ;
+
+class A extends Component{
+    
 }
+export default new A;
