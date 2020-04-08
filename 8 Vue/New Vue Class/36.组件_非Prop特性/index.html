@@ -18,12 +18,12 @@
   <script>
     Vue.component('my-cmp', {
       props: ['a'],
-      inheritAttrs: true,
+      inheritAttrs: false,
       mounted () {
         console.log(this.$attrs);
       },
       template: `
-        <label>
+        <label class="dd">
           选择：
           <input v-bind="$attrs" />
         </label>

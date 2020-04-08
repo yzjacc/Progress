@@ -5,8 +5,8 @@ if (!this.myPlugin) {
  * 继承
  */
 this.myPlugin.inherit = (function () {
-    var Temp = function () { }
     return function (son, father) {
+        var Temp = function () { }
         Temp.prototype = father.prototype;
         son.prototype = new Temp();
         son.prototype.constructor = son;
