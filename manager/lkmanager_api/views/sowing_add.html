@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block style %}
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="body advert">
+        <!-- 面包屑 -->
+        <ol class="breadcrumb">
+            <li><a href="/sowing_list">轮播图管理</a></li>
+            <li class="active">添加轮播图</li>
+        </ol>
+        <div class="advert-add">
+            <form action="/sowing/api/add" method="post" class="form-horizontal">
+                <div class="form-group">
+                    <label for="" class="col-md-3 control-label">图片名称</label>
+                    <div class="col-md-5">
+                        <input name="image_title" required type="text" class="form-control input-sm" placeholder="填写图片名称">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-md-3 control-label">大图片</label>
+                    <div class="col-md-5">
+                        <input  name="image_url" required type="file" class="form-control input-sm" placeholder="填写大图片">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-md-3 control-label">小图片</label>
+                    <div class="col-md-5">
+                        <input  name="image_small_url" required type="file" class="form-control input-sm" placeholder="填写小图片">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-md-3 control-label">跳转页面链接</label>
+                    <div class="col-md-5">
+                        <input  name="image_link" required type="text" class="form-control input-sm" placeholder="填写跳转链接">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-md-3 control-label">计划上架时间</label>
+                    <div class="col-md-5">
+                        <input  name="s_time" required type="text" class="form-control input-sm" placeholder="填写上架时间">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-md-3 control-label">计划下架时间</label>
+                    <div class="col-md-5">
+                        <input  name="e_time" required type="text" class="form-control input-sm" placeholder="填写下架时间">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-8">
+                        <input type="submit" class="btn btn-danger btn-sm pull-right" value="添加轮播图">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script>
+    $('form').on('submit', function (e) {
+        $.ajax({
+            url: $(this).attr('action'),
+            type: $(this).attr('method'),
+            data: new FormData($(this)[0]),
+            // 不要让jQuery给我们发送的数据进行序列化
+            processData: false,
+            // 不要给我们设置请求头
+            contentType: false,
+            success: function (data) {
+                if(data.status_code === 200){
+                    debugger;
+                    window.location.href = '/sowing_list';
+                }
+            }
+        });
+        return false;
+    })
+</script>
+{% endblock %}
+
+

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>撩课-后台管理系统</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="node_modules/nprogress/nprogress.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- 管理系统头部 -->
+    <div class="header">
+    <nav class="navbar navbar-custom">
+        <div class="navbar-header">
+            <a href="index.html" class="navbar-brand">撩课数据分发管理系统</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="javascript:;"><i class="fa fa-cloud-upload"></i>教育云中心</a></li>
+            <li><a href="javascript:;"><i class="fa fa-yelp"></i>分销中心</a></li>
+            <li><a href="javascript:;"><i class="fa fa-xing"></i>CRM对接中心</a></li>
+            <li><a href="./setting.html"><i class="fa fa-user"></i>个人中心</a></li>
+            <li><a href="javascript:;"><i class="fa fa-bell"></i><span class="badge">20</span></a></li>
+            <li><a href="javascript:;"><i class="fa fa-sign-out"></i>退出</a></li>
+        </ul>
+    </nav>
+</div>
+    <!-- 主体 -->
+    <div class="main">
+        <!-- 侧边栏 -->
+        <div class="aside">
+            <!-- 个人资料 -->
+            <div class="profile">
+                <!-- 头像 -->
+                <div class="avatar img-circle">
+                    <img src="./uploads/avatar.png">
+                </div>
+                <h4>旋之华</h4>
+            </div>
+            <!-- 导航菜单 -->
+            <div class="navs">
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="index.html" class="active">
+                            <i class="fa fa-area-chart"></i>
+                            数据分析
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./user_list.html">
+                            <i class="fa fa-users"></i>
+                            用户中心
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-object-group"></i>
+                            课程管理
+                            <i class="arrow fa fa-angle-right"></i>
+                        </a>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="./course_add.html">
+                                    课程添加
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./course_list.html">
+                                    课程列表
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./course_category.html">
+                                    课程分类
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./course_topic.html">
+                                    课程专题
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="docent_list.html">
+                            <i class="fa fa-bars"></i>
+                            运营中心
+                        </a>
+                    </li>
+                    <li>
+                        <a href="sowing_list.html">
+                            <i class="fa fa-calculator"></i>
+                            LK建模中心
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <i class="fa fa-cog"></i>
+                            设置中心
+                            <i class="arrow fa fa-angle-right"></i>
+                        </a>
+                        <ul class="list-unstyled">
+                            <li><a href="javascript:;">站点设置</a></li>
+                            <li><a href="javascript:;">用户设置</a></li>
+                            <li><a href="javascript:;">角色管理</a></li>
+                            <li><a href="javascript:;">课程设置</a></li>
+                            <li><a href="javascript:;">运营设置</a></li>
+                            <li><a href="javascript:;">财务设置</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <!-- 讲师资料 -->
+            <div class="body teacher-profile">
+                <div class="settings">
+                    <form action="" class="form-horizontal">
+                        <div class="form-group">
+                            <label for="" class="col-md-3 control-label">姓名</label>
+                            <div class="col-md-5">
+                                <p class="form-control-static">旋之华</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-3 control-label">头像</label>
+                            <div class="col-md-2 preview">
+                                <img src="./images/default.png" style="border: 1px solid #e0e0e0;">
+                                <input type="file" id="upfile">
+                                <div class="cover">
+                                    <i class="fa fa-upload"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-3 control-label">性别</label>
+                            <div class="col-md-3">
+                                <label class="radio-inline">
+                                    <input type="radio" checked> 男
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio"> 女
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-3 control-label">用户名</label>
+                            <div class="col-md-5">
+                                <input type="text" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-3 control-label">手机号码</label>
+                            <div class="col-md-5">
+                                <input type="text" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-3 control-label">Email</label>
+                            <div class="col-md-5">
+                                <input type="text" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-3 control-label">加入日期</label>
+                            <div class="col-md-5">
+                                <input type="date" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-3 control-label">出生日期</label>
+                            <div class="col-md-5">
+                                <input type="date" class="form-control input-sm">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-3 control-label">住址</label>
+                            <div class="col-md-5">
+                                <select name="" class="form-control input-sm">
+                                    <option value="">安徽省</option>
+                                    <option value="">江苏省</option>
+                                    <option value="">广东省</option>
+                                </select>
+                                <select name="" class="form-control input-sm">
+                                    <option value="">黄山市</option>
+                                    <option value="">上海市</option>
+                                    <option value="">广州市</option>
+                                </select>
+                                <select name="" class="form-control input-sm">
+                                    <option value="">徽州区</option>
+                                    <option value="">徐汇区</option>
+                                    <option value="">天河区</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="col-md-3 control-label">自我介绍</label>
+                            <div class="col-md-5 ckeditor">
+                                <textarea name="" rows="15" class="form-control input-sm"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-8">
+                                <a href="course_add_two.html" class="btn btn-danger pull-right">保 存</a>
+                                <a href="reset_pwd.html" class="btn btn-link btn-success pull-right">修改密码？</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="node_modules/nprogress/nprogress.js"></script>
+    <script src="js/base.js"></script>
+</body>
+</html>
