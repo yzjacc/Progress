@@ -12,6 +12,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "umi": "^2.1.1",
         "umi-plugin-react": "^1.9.19"
     }
 }

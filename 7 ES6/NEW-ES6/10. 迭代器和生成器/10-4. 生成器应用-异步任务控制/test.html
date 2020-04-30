@@ -14,7 +14,7 @@
             const d = yield 1;
             console.log(d)
             // //d : 1
-            const resp = yield fetch("http://101.132.72.36:5100/api/local")
+            const resp = yield fetch(`http://localhost:8080/blog/getblogs`)
             const result = yield resp.json();
             console.log(result);
         }
