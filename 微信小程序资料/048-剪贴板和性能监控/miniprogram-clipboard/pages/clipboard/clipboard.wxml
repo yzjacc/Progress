@@ -1,5 +1,0 @@
-<view class='container'>
-  <text>{{detail}}</text>
-  <button bindtap='copyTBL'>一键复制</button>
-  <button bindtap='show'>显示</button>
-</view>

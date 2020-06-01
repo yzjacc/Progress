@@ -1,4 +1,0 @@
-<view class='container'>
-  
-  <button bindtap='setBGColor'>动态设置背景的颜色</button>
-</view>

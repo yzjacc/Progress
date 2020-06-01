@@ -1,7 +1,0 @@
-<form bindsubmit='formSubmit' bindreset='formReset'>
-<input name="inputName"></input>
-
-
-<button form-type='submit'>Submit</button>
-<button form-type='reset'>Reset</button>
-</form>

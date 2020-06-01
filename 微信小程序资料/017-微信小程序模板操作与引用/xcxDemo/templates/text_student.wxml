@@ -1,4 +1,0 @@
-<template name='text_student'>
-  <text>name:{{studentName}}</text>
-  <text>age:{{age}}</text>
-</template>

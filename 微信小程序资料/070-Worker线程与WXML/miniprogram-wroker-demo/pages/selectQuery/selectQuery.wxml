@@ -1,3 +1,0 @@
-<!--pages/selectQuery/selectQuery.wxml-->
-<text id="thd-id">pages/selectQuery/selectQuery.wxml</text>
-<button bindtap='selectQuery'>selectQuery</button>

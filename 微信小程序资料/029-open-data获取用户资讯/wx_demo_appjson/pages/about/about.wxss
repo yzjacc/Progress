@@ -1,8 +1,0 @@
-/* pages/about/about.wxss */
-.fnt-red{
-  color: red
-}
-
-.area{
-  height: 700px;
-}

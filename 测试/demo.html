@@ -8,28 +8,38 @@
 	<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
 </head>
 <style>
-.outer {
-    width: 100%;
-    height: 500px;
-    background-color: yellow;
-}
-.left {
-    width: 200px;
-    height: 200px;
-    background-color: red;
-	float: left;
-	opacity: 0.2;
-}
-.right {
-    height: 200px;
-    background-color: blue;
-}
+	.content {
+		float: left;
+		width: 100%;
+	}
+	.main {
+		height: 200px;
+		margin-left: 110px;
+		margin-right: 220px;
+		background: green;
+	}
+
+	.left {
+		float:left;
+		height: 200px;
+		width: 100px;
+		margin-left: -100%;
+		background: red;
+	}
+	.right {
+		float: right;
+		height: 200px;
+		width: 200px;
+		margin-left: -200px;
+		background: blue;
+	}
 </style>
 <body>
-	<div class="outer">
-		<div class="left">固定宽度</div>
-		<div class="right">自适应宽度</div>
-	</div>
+<div class="content">
+	<div class="main"></div>
+</div>
+<div class="left"></div>
+<div class="right"></div>
 <!-- <script>
 	const vm = new Vue({
 		el: '#app',

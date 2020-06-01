@@ -1,3 +1,0 @@
-<!--pages/share/share.wxml-->
-<text>pages/share/share.wxml</text>
-<button bindtap='onshare' open-type='share'>分享</button>

@@ -1,2 +1,0 @@
-<button bindtap='requestOpt'>请求</button>
-<button bindtap='requestAbort'>请求终止</button>

@@ -1,3 +1,0 @@
-<input bindblur='functionString'></input>
-<button bindtap='isCanUse'>提交按钮</button>
-{{canUse}}
