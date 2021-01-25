@@ -24,7 +24,7 @@ export default class Comp extends Component {
 
     handleClick = () => {
         this.setState(cur => {
-            //参数prev表示当前的状态
+            //参数cur表示当前的状态
             //该函数的返回结果，会混合（覆盖）掉之前的状态
             //该函数是异步执行
             return {

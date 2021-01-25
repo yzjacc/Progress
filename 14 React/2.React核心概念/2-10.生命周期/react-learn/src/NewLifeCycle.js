@@ -6,13 +6,13 @@ export default class NewLifeCycle extends Component {
         n: this.props.n
     }
 
-    // static getDerivedStateFromProps(props, state) {
-    //     console.log("getDerivedStateFromProps");
-    //     // return null;//不改变当前状态
-    //     return { //用新的对象替换掉之前的状态
-    //         n: props.n
-    //     }
-    // }
+    static getDerivedStateFromProps(props, state) {
+        console.log("getDerivedStateFromProps");
+        // return null;//不改变当前状态
+        return { //用新的对象替换掉之前的状态
+            n: props.n
+        }
+    }
 
     getSnapshotBeforeUpdate = (prevProps, prevState) => {
         console.log("getSnapshotBeforeUpdate");
