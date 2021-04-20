@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <title>Document</title>
+    <head></head>
+    <body>
+        <div id="d1">
+            div1
+            <div id="d2">
+                div2
+                <div id="d3">
+                    div3
+                    <div id="d4">
+                        div4
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <iframe src="https://boe-teacher.gogokid.com/teacher/forget/" frameborder="0"></iframe> -->
+        <script>
+            document.getElementById('d1').addEventListener('click', function(){
+                console.log('div1 capture')
+            }, true)
+            document.getElementById('d1').addEventListener('click', function(){
+                console.log('div1 bubble')
+            }, false)
+            document.getElementById('d2').addEventListener('click', function(){
+                console.log('div2 capture')
+            }, true)
+            document.getElementById('d2').addEventListener('click', function(){
+                console.log('div2 bubble')
+            }, false)
+            document.getElementById('d3').addEventListener('click', function(){
+                console.log('div3 capture')
+            }, true)
+            document.getElementById('d3').addEventListener('click', function(){
+                console.log('div3 bubble')
+            }, false)
+            document.getElementById('d4').addEventListener('click', function(){
+                console.log('div4 capture')
+            }, true)
+            document.getElementById('d4').addEventListener('click', function(){
+                console.log('div4 bubble')
+            }, false)
+        </script>
+    </body>
+</html>
