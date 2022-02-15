@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./wangEditor/wangEditor.js"></script>
+    <script src="./js/axios.js"></script>
+    <link href="./wangEditor/wangEditor.css">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .edit_blog {
+            position: relative;
+            display: block;
+            width: 1000px;
+            margin: 0px auto 0px auto;
+        }
+        h1 {
+            margin: 20px 0px 20px 0px   ;
+        }
+        input {
+            width: 200px;
+            height: 30px;
+            font-size: 20px;
+            padding: 3px 10px 3px 10px;
+            border-radius: 5px;
+            margin: 0px 0px 20px 0px;
+        }
+        button {
+            position: relative;
+            display: block;
+            height: 50px;
+            width: 500px;
+            line-height: 50px;
+            text-align: center;
+            background: #1e88e5;
+            color: white;
+            font-size: 24px;
+            border-radius: 8px;
+            margin: 20px 0px 0px 0px;
+        }
+        textarea {
+            width: 500px;
+            height: 300px;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        function submit() {
+            var content = document.getElementById("content").value;
+
+            axios({
+                url: "/blog/addEveryDay?content=" + content,
+                method: "get",
+            }).then(function (resp) {
+                alert(resp.data.msg);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="edit_blog">
+        <h1>编辑每日一句</h1>
+        <textarea placeholder="请输入每日一句" id="content"></textarea>
+        <button onclick="submit()">提交</button>
+    </div>
+</body>
+</html>

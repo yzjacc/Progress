@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css">
+    <title>聊天室</title>
+</head>
+
+<body>
+    <div class="home-container">
+        <div class="main-container flex">
+            <div class="left-wrapper">
+                <h2 class="left-title">人工智能聊天机器人</h2>
+                <div class="content-body">
+                    <div class="chat-container robot-container">
+                        <img src="./img/robot.jpg" alt="">
+                        <div class="chat-txt">
+                            您好！我是腾讯机器人，非常欢迎您的到来，有什么想和我聊聊的吗？
+                        </div>
+                    </div>
+                    <div class="chat-container avatar-container">
+
+                        <img src="/img/avatar.png" alt="">
+                        <div class="chat-txt">你好</div>
+                    </div>
+                    <div class="chat-container avatar-container">
+
+                        <img src="/img/avatar.png" alt="">
+                        <div class="chat-txt">哈哈哈</div>
+                    </div>
+                    <div class="chat-container robot-container">
+                        <img src="./img/robot.jpg" alt="">
+                        <div class="chat-txt">
+                            看到你那么开心，我就功德圆满了
+                        </div>
+                    </div>
+                    <div class="chat-container avatar-container">
+                        <img src="/img/avatar.png" alt="">
+                        <div class="chat-txt">北京</div>
+                    </div>
+                    <div class="chat-container robot-container">
+                        <img src="./img/robot.jpg" alt="">
+                        <div class="chat-txt">
+                            北京今天最高温度26度,最低温度13度,多云
+                        </div>
+                    </div>
+                    <div class="chat-container avatar-container">
+
+                        <img src="/img/avatar.png" alt="">
+                        <div class="chat-txt">南京天气</div>
+                    </div>
+                    <div class="chat-container robot-container">
+                        <img src="./img/robot.jpg" alt="">
+                        <div class="chat-txt">
+                            南京今天最高温度25度,最低温度18度,阴
+                        </div>
+                    </div>
+                </div>
+                <div class="left-footer">
+                    <textarea placeholder="在这里输入要发送的消息" class="input-container" name="" id="" cols="30" rows="10"></textarea>
+                    <div class="handle-container">
+                        <div class="clear btn">清除</div>
+                        <div class="send-btn btn">发送</div>
+                        <div class="arrow-container"></div>
+                        <div class="select-container">
+                            <div type="enter" class="select-item on">
+                                按Enter键发送
+                            </div>
+                            <div type="ctrlEnter" class="select-item">按Ctrl+Enter键发送</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 右半部分内容 -->
+            <div class="right-wrapper">
+                <div class="close">×</div>
+                <div class="user-info">
+                    <% if(userInfo.avatar_url) { %>
+                        <img width="50" src="<%- userInfo.avatar_url %>" alt="">
+                        <% } else {%>
+                            <img src="/img/avatar.png" alt="">
+                            <%}%>
+                                <span class="nick-name">123</span>
+                </div>
+                <div class="user-description">
+                    <div class="level-container">
+                        <span class="label">账户名:</span>
+                        <span class="account-name">123qwe</span>
+                    </div>
+                    <div class="level-container">
+                        <span class="label">最后登录时间:</span>
+                        <span class="login-time">2021-05-24 12:00:48</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-for="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml"
+      xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet"/>
+</head>
+<body>
+    <nav class="header">
+        <div class="header_content" id="search">
+            <span>Panda个人博客 | 技术博客</span>
+            <ul>
+                <li><a href="/">首页</a></li>
+                <li><a href="/map.html">地图</a></li>
+                <li><a href="/about.html">关于</a></li>
+                <li><a href="/comment.html">留言</a></li>
+            </ul>
+            <input type="text" placeholder="输入关键词查找" v-model="search"/>
+            <button v-on:click="sendSearch">搜索</button>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="content_left">
+            <div id="everyDay">
+                <span class="everyDayTitle">每日一句</span>
+                <p>{{content}}</p>
+            </div>
+            <div id="blogList">
+                <ul>
+                    <li v-for="(key, index) of list">
+                        <span @click="jumpTo(key.id)">{{key.title}}</span>
+                        <p>{{key.content}}</p>
+                        <div><span>发布于{{key.ctime}} |  浏览({{key.views}}) | Tags：{{key.tags}}</span></div>
+                    </li>
+                </ul>
+            </div>
+            <div id="pageTools">
+                <ul>
+                    <li v-for="(key, index) of pageList">
+                        <span @click="changePage(key.pageNum)" v-bind:class="{selectOn: key.text==nowPage}">{{key.text}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content_right">
+            <div id="tags_cloud">
+                <span>随机标签云</span>
+                <div><a v-for="(key, index) of tags" v-bind:href="key.url" :style="{color:randColor(), fontSize: randSize()}">{{key.tag}}</a></div>
+            </div>
+            <div id="hot_blog">
+                <span>最近热门</span>
+                <ul>
+                    <li v-for="(key, index) of blogList"><a v-bind:href="key.url">{{key.name}}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<footer>Copyright © 2010-2019 郑晓个人博客 All rights reserved. 由免费开源的WordPress强力驱动. 鲁ICP备14017955号站长统计</footer>-->
+    <script src="./js/axios.js"></script>
+    <script type="text/javascript" src="./js/vue.js"></script>
+    <script src="./js/base.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

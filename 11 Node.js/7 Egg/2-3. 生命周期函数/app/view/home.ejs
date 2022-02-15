@@ -1,0 +1,10 @@
+<% include common/header.ejs %>
+
+<h1>你好，<%= user.nickname %></h1>
+<ul>
+  <% provinces.forEach(p => { %>
+  <li><%= p.simpleName %></li>
+  <% }) %>
+</ul>
+
+<% include common/footer.ejs %>

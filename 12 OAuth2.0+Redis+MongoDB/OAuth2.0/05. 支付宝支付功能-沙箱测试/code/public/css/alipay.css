@@ -1,0 +1,430 @@
+body,
+html,
+img,
+ul,
+li,
+input,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.transfer-account-dialog {
+    border-radius: 3px
+}
+
+.transfer-account-dialog .el-dialog__body {
+    padding: 0 40px 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row
+}
+
+.transfer-account-dialog .el-dialog__body .left {
+    position: relative
+}
+
+.transfer-account-dialog .el-dialog__body .left .number {
+    position: absolute;
+    color: #c12d2b;
+    font-size: 24px;
+    top: 123px;
+    left: 65px
+}
+
+.transfer-account-dialog .el-dialog__body .right {
+    margin-left: 25px
+}
+
+.transfer-account-dialog .el-dialog__body .right .right-bottom {
+    margin: 25px auto 0;
+    font-size: 16px;
+    width: 108px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    background: #f69916;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s ease
+}
+
+.transfer-account-dialog .el-dialog__body .right .right-bottom:hover {
+    opacity: .9
+}
+
+.transfer-account-dialog .el-dialog__footer {
+    background: #dcd5cb;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding: 0 75px;
+    text-align: center
+}
+
+.transfer-account-dialog .el-dialog__footer .number {
+    color: #c12d2b;
+    font-size: 24px
+}
+
+.transfer-account-dialog .el-dialog__footer .tip {
+    color: #fff;
+    background-color: #be2c2c;
+    padding: 2px 7px;
+    border-radius: 5px;
+    position: relative
+}
+
+.transfer-account-dialog .el-dialog__footer .tip:before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 7px;
+    border: 5px solid transparent;
+    border-right-color: #be2c2c
+}
+
+.recharge-container .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    height: 52px;
+    border-bottom: 2px solid #e99c3d;
+    background-color: #f1efec
+}
+
+.recharge-container .nav-header .nav-item {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    cursor: pointer;
+    height: 100%;
+    flex-shrink: 0;
+    position: relative;
+    transition: all .3s ease
+}
+
+.recharge-container .nav-header .nav-item .logo-img {
+    height: 35px;
+    width: auto;
+    margin-right: 10px
+}
+
+.recharge-container .nav-header .nav-item .active-arrow {
+    background-size: 100%;
+    position: absolute;
+    color: #e99c3d;
+    height: 25px;
+    width: 25px;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all .3s ease
+}
+
+.recharge-container .nav-header .nav-item.on,
+.recharge-container .nav-header .nav-item:hover {
+    background-color: #dbd5cc
+}
+
+.recharge-container .nav-header .nav-item.on .active-arrow,
+.recharge-container .nav-header .nav-item:hover .active-arrow {
+    opacity: 1
+}
+
+.recharge-container .pay-body {
+    padding: 35px 0 0 80px
+}
+
+.recharge-container .pay-body .label {
+    font-size: 16px;
+    color: #111;
+    display: inline-block;
+    margin: 5px 15px 0 0;
+    font-weight: 700;
+    flex-shrink: 0
+}
+
+.recharge-container .pay-body .pay-method-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 25px;
+    align-items: flex-start
+}
+
+.recharge-container .pay-body .pay-method-container .pay-method-item {
+    border-radius: 5px;
+    width: 250px;
+    height: 75px;
+    cursor: pointer;
+    border: 1px solid #f1efed;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    padding-left: 10px;
+    position: relative
+}
+
+.recharge-container .pay-body .pay-method-container .pay-method-item:nth-child(4n+1) {
+    margin-left: 78px
+}
+
+.recharge-container .pay-body .pay-method-container .pay-method-item .pay-img {
+    margin-right: 12px;
+    height: 35px;
+    width: auto
+}
+
+.recharge-container .pay-body .pay-method-container .pay-method-item .pay-content .title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333
+}
+
+.recharge-container .pay-body .pay-method-container .pay-method-item .pay-content .desc {
+    font-size: 12px;
+    color: #666
+}
+
+.recharge-container .pay-body .pay-method-container .pay-method-item.on {
+    background-color: #fdf2e9;
+    border: 1px solid #ff7c10
+}
+
+.recharge-container .pay-body .pay-money-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    position: relative
+}
+
+.recharge-container .pay-body .pay-money-container .label {
+    margin-top: 0
+}
+
+.recharge-container .pay-body .pay-money-container .money-input {
+    width: 300px;
+    height: 40px;
+    border: 1px solid #ddd;
+    padding-left: 10px;
+    font-size: 16px;
+    color: #333
+}
+
+.recharge-container .pay-body .pay-money-container .error-info {
+    color: red;
+    position: absolute;
+    bottom: -23px;
+    left: 80px;
+    opacity: 0;
+    transition: all .3s ease
+}
+
+.recharge-container .pay-body .pay-money-container .error-info.show {
+    opacity: 1
+}
+
+.recharge-container .pay-body .pay-money-container .channel {
+    margin-left: 10px;
+    cursor: pointer
+}
+
+.recharge-container .pay-body .money-handler-container {
+    margin: 20px 0 0 80px;
+    max-width: 590px
+}
+
+.recharge-container .pay-body .money-handler-container .money-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row
+}
+
+.recharge-container .pay-body .money-handler-container .money-list .money-list-item {
+    color: #333;
+    cursor: pointer;
+    text-align: center;
+    margin: 5px 7px 5px 0;
+    border: 1px solid #ececec;
+    width: 90px;
+    height: 40px;
+    line-height: 40px
+}
+
+.recharge-container .pay-body .money-handler-container .money-list .money-list-item.on,
+.recharge-container .pay-body .money-handler-container .money-list .money-list-item:hover {
+    border: 1px solid #ed6f2d;
+}
+
+.recharge-container .pay-body .money-handler-container .money-show {
+    margin: 20px 0 30px;
+    color: #999
+}
+
+.recharge-container .pay-body .money-handler-container .money-show span:last-child {
+    margin-left: 5px;
+    font-weight: 700
+}
+
+.recharge-container .pay-body .money-handler-container .pay-btn {
+    background: #ed6f2d;
+    width: 180px;
+    line-height: 55px;
+    padding: 0 25px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.recharge-container .pay-body .money-handler-container .pay-btn.is-disabled {
+    background: #ddd;
+    color: #888;
+    border: none
+}
+
+.recharge-container .pay-body .money-handler-container .notice {
+    line-height: 1.8;
+    padding: 12px;
+    border: 1px solid #f0f0f0;
+    color: #999;
+    width: 600px
+}
+
+.recharge-container .logo-imgage {
+    display: block;
+    margin: 30px auto;
+    cursor: pointer
+}
+
+.recharge-container .icon-zn {
+    width: 55px;
+    text-align: center;
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(90deg, #f35910, #fa9000);
+    color: #fff;
+    border-radius: 0 5px 0 10px;
+    padding: 0 3px;
+    line-height: 20px
+}
+
+.pay-popper {
+    border-radius: 5px;
+    padding: 0;
+    border: 1px solid #d1d1d1;
+    overflow: hidden
+}
+
+.pay-popper .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    font-size: 16px;
+    background-color: #ededee;
+    height: 40px;
+    padding: 0 10px
+}
+
+.pay-popper .channel-notice {
+    background: #fbfbfb;
+    padding: 5px 15px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #888;
+    height: 50px
+}
+
+.pay-popper .channel-list-container {
+    padding: 5px 0 10px;
+    overflow: auto;
+    max-height: 200px;
+    width: 100%;
+    background: #fff
+}
+
+.pay-popper .channel-list-container .channel-list-item {
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    color: #111;
+    border-bottom: 1px solid #ccc;
+    padding: 0 40px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row
+}
+
+.pay-popper .channel-list-container .channel-list-item:last-child {
+    border-bottom: none
+}
+
+.pay-popper .channel-list-container .channel-list-item .right {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    color: #fff;
+    line-height: 16px;
+    text-align: center;
+    font-weight: 700;
+    border: 2px solid #e1e1e1;
+    box-sizing: border-box
+}
+
+.pay-popper .channel-list-container .channel-list-item .right.el-icon-check {
+    background: #f45e0e;
+    border-color: #f45e0e
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支付界面</title>
+    <link rel="stylesheet" href="/css/alipay.css">
+</head>
+
+<body class="recharge-container">
+    <div class="zfb-container pay-body">
+        <div class="pay-method-container">
+            <div class="label">充值方式</div>
+            <div class="pay-method-item on"><img src="https://tg.shdunjiusy.com/at/paySpecial/34850885-32e2-497f-a177-7e3283469e64.png" alt="" class="pay-img">
+                <div class="pay-content">
+                    <div class="title">支付宝扫码</div>
+                    <div class="desc">限额100-20000元</div>
+                </div><span class="icon-zn">赠1%</span></div>
+        </div>
+        <div class="pay-money-container">
+            <div class="label">充值金额</div>
+            <input id="inputNode" type="text" placeholder="请输入支付金额" class="money-input">
+        </div>
+        <div class="money-handler-container">
+            <div class="money-list">
+                <div class="money-list-item">1000</div>
+                <div class="money-list-item">2000</div>
+                <div class="money-list-item">3000</div>
+                <div class="money-list-item">5000</div>
+                <div class="money-list-item">10000</div>
+            </div>
+            <button id="payBtn" type="button" class="el-button pay-btn el-button--warning ">
+        立即充值
+        </button>
+            <div class="notice">
+                <p>转账后，如未能及时到账，请联系在线客服进行处理。</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/alipay.js"></script>
+</body>
+
+</html>

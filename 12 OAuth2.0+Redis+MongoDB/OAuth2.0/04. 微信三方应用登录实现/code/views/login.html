@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录界面</title>
+    <link rel="stylesheet" href="/css/user.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h1 class="title">用户登录</h1>
+        <form id="formContainer" class="form-wrapper">
+            <div class="form-item">
+                <input id="userName" class="text" type="text" placeholder="请输入登录账号">
+            </div>
+            <div class="form-item password-container">
+                <input id="userPassword" type="password" placeholder="请输入登录密码">
+            </div>
+            <input type="submit" class="signin" value="登录">
+        </form>
+        <div class="other-login-methods-container">
+            <a href="/loginByGithub" class="other-login-methods">使用github账户进行登录</a>
+            <span id="loginByWechat" class="other-login-methods">使用微信扫码形式进行登录</span>
+        </div>
+        <div class="copy-rights">
+            <p>Copyright © 2015.Company name All rights reserved.<a class="switch-register" href="/register.html">还没有有账号，立即注册</a></p>
+        </div>
+    </div>
+    <div id="maskerContainer" class="masker-container">
+        <div id="qrcode"></div>
+    </div>
+
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/qrcodejs/1.0.0/qrcode.js"></script>
+    <script>
+        loginByWechat.addEventListener('click', async() => {
+            const res = await fetch('/test/wechat/getQrCodeUrl')
+            const result = await res.json()
+            const qrcode = new QRCode("qrcode", {
+                text: result.data.qrCodeReturnUrl,
+                width: 200,
+                height: 200,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+            });
+            maskerContainer.style.display = 'flex'
+            checkUserInfo()
+        })
+
+        /* 轮询获取用户信息 */
+        const checkUserInfo = () => {
+            const timer = setInterval(async() => {
+                const res = await fetch('/test/wechat/getUserInfo')
+                const result = await res.json()
+                if (result.userInfo) {
+                    window.location.href = '/test/wechat/home'
+                    clearInterval(timer)
+                }
+            }, 2000)
+        }
+    </script>
+</body>
+
+</html>

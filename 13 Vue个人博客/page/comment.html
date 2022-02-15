@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/comment.css" rel="stylesheet" />
+</head>
+<body>
+<nav class="header">
+    <div class="header_content">
+        <span>Panda个人博客 | 技术博客</span>
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/map.html">地图</a></li>
+            <li><a href="/about.html">关于</a></li>
+            <li><a href="/comment.html">留言</a></li>
+        </ul>
+        <input type="text" placeholder="输入关键词查找" />
+        <button>搜索</button>
+    </div>
+</nav>
+<div class="content">
+    <div class="content_left">
+        <div id="comment">
+            <p>
+                欢迎灌水交流，别看我长时间不发博，博主可一直都在线~<br/>
+                <br/>
+                友链只交换技术类个人博客。<br/>
+                <br/>
+                不要皮，谢谢。<br/>
+                <br/>
+                博主联系:MzcxNjA0Nzg1<br/>
+            </p>
+        </div>
+        <div id="blogComment">
+            <ul>
+                <li v-for="(key, index) of commentList">
+                    <span> {{key.name}}：发表于 {{key.ctime}}<a href="#" @click="huifu(key.id)">[回复]</a></span>
+                    <p>{{key.content}}</p>
+                </li>
+            </ul>
+            <div class="addComment" id="addComment">
+                <input type="hidden" v-model="commentId">
+                <input type="text" placeholder="昵称" v-model="name"/>
+                <input type="text" placeholder="邮箱" v-model="email"/>
+                <textarea placeholder="无意义的内容我可能不会回复你" v-model="comment"></textarea>
+                <input type="text" placeholder="请在这里输入验证码" v-model="inputRandomCode"><span v-html="randomSvg" v-on:click="changeCode"></span>
+                <button @click="sendComment">提交留言</button>
+            </div>
+        </div>
+    </div>
+    <div class="content_right">
+        <div id="tags_cloud">
+            <span>随机标签云</span>
+            <div><a v-for="(key, index) of tags" v-bind:href="key.url" :style="{color:randColor(), fontSize: randSize()}">{{key.tag}}</a></div>
+        </div>
+        <div id="hot_blog">
+            <span>最近热门</span>
+            <ul>
+                <li v-for="(key, index) of blogList"><a v-bind:href="key.url">{{key.name}}</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script src="./js/axios.js"></script>
+<script type="text/javascript" src="./js/vue.js"></script>
+<script src="./js/base.js"></script>
+<script src="./js/comment.js"></script>
+</body>
+</html>

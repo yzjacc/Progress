@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/map.css" rel="stylesheet">
+</head>
+<body>
+    <h1>个人博客's Map</h1>
+    <div><a href="/">个人博客首页</a> &gt;&gt; <a href="#">站点地图</a>  </div>
+    <div>
+        <h2>最新文章</h2>
+        <ul id="blogs">
+            <li v-for="(key, index) of blogList"><a @click="jumpTo(key.id)">{{key.title}}</a></li>
+        </ul>
+    </div>
+
+    <script src="./js/axios.js"></script>
+    <script type="text/javascript" src="./js/vue.js"></script>
+    <script src="./js/map.js"></script>
+</body>
+</html>

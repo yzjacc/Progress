@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./wangEditor/wangEditor.js"></script>
+    <script src="./js/axios.js"></script>
+    <link href="./wangEditor/wangEditor.css">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .edit_blog {
+            position: relative;
+            display: block;
+            width: 1000px;
+            margin: 0px auto 0px auto;
+        }
+        h1 {
+            margin: 20px 0px 20px 0px   ;
+        }
+        input {
+            width: 200px;
+            height: 30px;
+            font-size: 20px;
+            padding: 3px 10px 3px 10px;
+            border-radius: 5px;
+            margin: 0px 0px 20px 0px;
+        }
+        button {
+            position: relative;
+            display: block;
+            height: 50px;
+            width: 500px;
+            line-height: 50px;
+            text-align: center;
+            background: #1e88e5;
+            color: white;
+            font-size: 24px;
+            border-radius: 8px;
+            margin: 20px auto 0px auto;
+        }
+    </style>
+    <script>
+        function submit() {
+            var title = document.getElementById("title").value;
+            var author = document.getElementById("author").value;
+            var tags = document.getElementById("tags").value;
+            var content = encodeURI(editor.txt.html());
+
+            var data = {
+                title: title,
+                author: author,
+                tags: tags,
+                content: content
+            }
+
+            axios({
+                url: "/blog/addBlog",
+                method: "post",
+                data: data
+            }).then(function (resp) {
+                alert(resp.data);
+            });
+
+            // var form = new FormData();
+            // form.append("title", title);
+            // form.append("author", author);
+            // form.append("tags", tags);
+            // form.append("content", content);
+            //
+            // var xhr = new XMLHttpRequest();
+            // xhr.open("post", "/blog/addBlog");
+            // // xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+            // xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded;charset=utf-8');
+            // xhr.onreadystatechange = function() {
+            //     if (xhr.status == 200 && xhr.readyState == 4) {
+            //         console.log(xhr.responseText);
+            //     }
+            // }
+            // xhr.send(form);
+        }
+    </script>
+</head>
+<body>
+    <div class="edit_blog">
+        <h1>编辑文章</h1>
+        <input type="text" placeholder="标题" id="title"/>
+        <input type="text" placeholder="作者" id="author"/>
+        <input type="text" placeholder="标签，用逗号隔开" id="tags"/>
+        <!--以下为富文本-->
+        <div id="content"></div>
+        <button onclick="submit()">提交</button>
+        <script>
+            var E = window.wangEditor;
+            var editor = new E('#content');
+            editor.customConfig.uploadImgShowBase64 = true;   // 使用 base64 保存图片
+            editor.create();
+        </script>
+    </div>
+</body>
+</html>

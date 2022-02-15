@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/base.css" rel="stylesheet" />
+    <link href="css/about.css" rel="stylesheet" />
+</head>
+<body>
+<nav class="header">
+    <div class="header_content">
+        <span>Panda个人博客 | 技术博客</span>
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/map.html">地图</a></li>
+            <li><a href="/about.html">关于</a></li>
+            <li><a href="/comment.html">留言</a></li>
+        </ul>
+        <input type="text" placeholder="输入关键词查找" />
+        <button>搜索</button>
+    </div>
+</nav>
+<div class="content">
+    <div class="content_left">
+        <div id="about">
+            <h1>关于我</h1>
+            <p>
+                博主郑晓，性别男，卷葱省。<br/>
+                <br/>
+                会修电脑的野生程序员<br/>
+                认为PHP是世界上最好的语言<br/>
+                花括号不换行<br/>
+                7年PHP开发<br/>
+                电商行业<br/>
+                <br/>
+                我的书单：https://book.douban.com/people/58553308/<br/>
+                我的知乎：https://www.zhihu.com/people/zheng-xiao-93-51/activities</p><br/>
+        </div>
+        <div id="blogComment">
+            <ul>
+                <li v-for="(key, index) of commentList">
+                    <span> {{key.name}}：发表于 {{key.ctime}}<a href="#" @click="huifu(key.id)">[回复]</a></span>
+                    <p>{{key.content}}</p>
+                </li>
+            </ul>
+            <div class="addComment" id="addComment">
+                <input type="hidden" v-model="commentId">
+                <input type="text" placeholder="昵称" v-model="name"/>
+                <input type="text" placeholder="邮箱" v-model="email"/>
+                <textarea placeholder="无意义的内容我可能不会回复你" v-model="comment"></textarea>
+                <input type="text" placeholder="请在这里输入验证码" v-model="inputRandomCode"><span v-html="randomSvg" v-on:click="changeCode"></span>
+                <button @click="sendComment">提交留言</button>
+            </div>
+        </div>
+    </div>
+    <div class="content_right">
+        <div id="tags_cloud">
+            <span>随机标签云</span>
+            <div><a v-for="(key, index) of tags" v-bind:href="key.url" :style="{color:randColor(), fontSize: randSize()}">{{key.tag}}</a></div>
+        </div>
+        <div id="hot_blog">
+            <span>最近热门</span>
+            <ul>
+                <li v-for="(key, index) of blogList"><a v-bind:href="key.url">{{key.name}}</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script src="./js/axios.js"></script>
+<script type="text/javascript" src="./js/vue.js"></script>
+<script src="./js/base.js"></script>
+<script src="./js/about.js"></script>
+</body>
+</html>

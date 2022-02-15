@@ -1,0 +1,21 @@
+h1 {
+    text-align: center;
+}
+
+div {
+    position: relative;
+    margin: 20px auto 0px auto;
+    width: 90%;
+    border: 1px solid #eeeeee;
+    padding: 10px 0px 10px 20px;
+}
+
+ul {
+    width: 100%;
+}
+
+li {
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+}
