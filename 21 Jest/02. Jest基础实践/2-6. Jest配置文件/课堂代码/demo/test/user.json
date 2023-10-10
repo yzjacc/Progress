@@ -1,0 +1,32 @@
+[
+    {
+        "name": "张三",
+        "age": 18,
+        "gneder": "男",
+        "score": 100
+    },
+    {
+        "name": "李四",
+        "age": 20,
+        "gneder": "男",
+        "score": 99
+    },
+    {
+        "name": "王武",
+        "age": 17,
+        "gneder": "女",
+        "score": 92
+    },
+    {
+        "name": "赵六",
+        "age": 19,
+        "gneder": "男",
+        "score": 96
+    },
+    {
+        "name": "露西",
+        "age": 18,
+        "gneder": "女",
+        "score": 97
+    }
+]

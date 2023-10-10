@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1686105978433" clover="3.2.0">
+  <project timestamp="1686105978433" name="All files">
+    <metrics statements="54" coveredstatements="54" conditionals="31" coveredconditionals="31" methods="3" coveredmethods="3" elements="88" coveredelements="88" complexity="0" loc="54" ncloc="54" packages="1" files="3" classes="3"/>
+    <file name="array.ts" path="/Users/jie/Desktop/jstoolpack/src/array.ts">
+      <metrics statements="22" coveredstatements="22" conditionals="20" coveredconditionals="20" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="10" type="cond" truecount="1" falsecount="0"/>
+      <line num="6" count="10" type="stmt"/>
+      <line num="7" count="10" type="cond" truecount="4" falsecount="0"/>
+      <line num="8" count="10" type="cond" truecount="4" falsecount="0"/>
+      <line num="9" count="10" type="cond" truecount="4" falsecount="0"/>
+      <line num="10" count="10" type="stmt"/>
+      <line num="11" count="10" type="stmt"/>
+      <line num="12" count="10" type="cond" truecount="4" falsecount="0"/>
+      <line num="13" count="4" type="stmt"/>
+      <line num="14" count="4" type="stmt"/>
+      <line num="15" count="10" type="stmt"/>
+      <line num="16" count="10" type="stmt"/>
+      <line num="17" count="10" type="cond" truecount="3" falsecount="0"/>
+      <line num="18" count="26" type="stmt"/>
+      <line num="19" count="26" type="stmt"/>
+      <line num="20" count="10" type="stmt"/>
+      <line num="21" count="10" type="stmt"/>
+      <line num="22" count="10" type="stmt"/>
+    </file>
+    <file name="function.ts" path="/Users/jie/Desktop/jstoolpack/src/function.ts">
+      <metrics statements="15" coveredstatements="15" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="2" count="3" type="cond" truecount="1" falsecount="0"/>
+      <line num="3" count="3" type="stmt"/>
+      <line num="4" count="3" type="stmt"/>
+      <line num="5" count="3" type="stmt"/>
+      <line num="6" count="3" type="stmt"/>
+      <line num="7" count="3" type="cond" truecount="1" falsecount="0"/>
+      <line num="8" count="6" type="cond" truecount="1" falsecount="0"/>
+      <line num="9" count="3" type="stmt"/>
+      <line num="10" count="3" type="stmt"/>
+      <line num="11" count="6" type="cond" truecount="1" falsecount="0"/>
+      <line num="12" count="3" type="stmt"/>
+      <line num="13" count="6" type="stmt"/>
+      <line num="14" count="3" type="stmt"/>
+      <line num="15" count="3" type="stmt"/>
+    </file>
+    <file name="string.ts" path="/Users/jie/Desktop/jstoolpack/src/string.ts">
+      <metrics statements="17" coveredstatements="17" conditionals="7" coveredconditionals="7" methods="1" coveredmethods="1"/>
+      <line num="1" count="16" type="cond" truecount="1" falsecount="0"/>
+      <line num="2" count="16" type="stmt"/>
+      <line num="3" count="16" type="stmt"/>
+      <line num="4" count="16" type="stmt"/>
+      <line num="5" count="16" type="cond" truecount="2" falsecount="0"/>
+      <line num="6" count="16" type="stmt"/>
+      <line num="7" count="16" type="cond" truecount="1" falsecount="0"/>
+      <line num="8" count="3" type="stmt"/>
+      <line num="9" count="3" type="stmt"/>
+      <line num="10" count="13" type="cond" truecount="1" falsecount="0"/>
+      <line num="11" count="16" type="cond" truecount="1" falsecount="0"/>
+      <line num="12" count="9" type="stmt"/>
+      <line num="13" count="9" type="stmt"/>
+      <line num="14" count="9" type="stmt"/>
+      <line num="15" count="13" type="cond" truecount="1" falsecount="0"/>
+      <line num="16" count="13" type="stmt"/>
+      <line num="17" count="13" type="stmt"/>
+    </file>
+  </project>
+</coverage>

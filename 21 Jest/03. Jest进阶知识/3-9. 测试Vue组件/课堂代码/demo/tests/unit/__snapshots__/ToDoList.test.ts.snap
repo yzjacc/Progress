@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`测试新增待办事项 1`] = `
+<div>
+  <!-- 渲染待办事项每一条项目 -->
+  
+  <div
+    data-test="todo"
+  >
+    Learn Vue.js 3
+  </div>
+  
+  <form
+    data-test="form"
+  >
+    <input
+      data-test="new-todo"
+    />
+  </form>
+</div>
+`;

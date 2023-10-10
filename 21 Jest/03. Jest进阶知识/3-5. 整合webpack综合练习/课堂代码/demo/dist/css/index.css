@@ -1,0 +1,108 @@
+/*!*********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/index.css ***!
+  \*********************************************************************/
+/* 整个游戏的样式 */
+
+#game{
+    width: 800px;
+    height: 600px;
+    border: 2px solid;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 设置游戏背景图样式 */
+
+#game .sky{
+    width: 1600px;
+    height: 600px;
+    background: url(../c39946328a77598594a5.png);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* 游戏大地的样式 */
+
+#game .land{
+    width: 1600px;
+    height: 112px;
+    background: url(../381ac3ae94a6623f8ca9.png);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+/* 游戏提示的样式 */
+
+.msg{
+    text-align: center;
+}
+
+
+/* 水管的样式 */
+
+#game .pipeup{
+    background: url(../93f79e3e4d04570e88e8.png) no-repeat left bottom;
+    width: 52px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#game .pipedown{
+    background: url(../9091e81d779983a13a58.png) no-repeat;
+    width: 52px;
+    height: 200px;
+    position: absolute;
+    bottom: 112px;
+    right: 0;
+}
+
+
+/* 小鸟的样式 */
+
+#game .bird{
+    width: 33px;
+    height: 26px;
+    background: url(../e87cb57892e9af3b5645.png);
+    position: absolute;
+    left: 200px;
+    top: 150px;
+    background-position: -113px -10px;
+    z-index: 1;
+}
+
+/* 计分的容器样式 */
+
+#game .score{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 4em;
+    text-align: center;
+    line-height: 600px;
+    z-index: 2;
+}
+
+/* 游戏总分样式 */
+
+#game .over{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    font-size: 4em;
+    text-align: center;
+    line-height: 600px;
+    z-index : 2;
+    display: none;
+}

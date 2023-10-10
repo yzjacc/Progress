@@ -1,0 +1,4 @@
+node_modules
+coverage
+# dist 目录下存放构建代码
+dist
