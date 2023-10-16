@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" class="text-35">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Tailwind CSS Project</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="m-0 p-0 w-screen h-screen flex items-center justify-center">
+    <!-- 最外层容器 -->
+    <div class="w-32 h-4 flex justify-between">
+      <!-- 粉红色方块 -->
+      <!-- <div class="w-4 h-4 relative slide">
+        <div class="w-4 h-4 rounded-[15%] shadow-custom bg-pink-500 absolute"></div>
+      </div> -->
+      <span class="spanStyle before:bg-pink-500 slide"></span>
+      <!-- 蓝色方块容器 -->
+      <div class="flex justify-between w-24">
+        <!-- 蓝色方块 -->
+        <!-- <div class="w-4 h-4 jump-off-1">
+          <div class="w-4 h-4 rounded-[15%] shadow-custom bg-blue-500 jump-down-1 brightness-100"></div>
+        </div>
+        <div class="w-4 h-4 jump-off-2">
+          <div class="w-4 h-4 rounded-[15%] shadow-custom bg-blue-500 jump-down-2 brightness-115"></div>
+        </div>
+        <div class="w-4 h-4 jump-off-3">
+          <div class="w-4 h-4 rounded-[15%] shadow-custom bg-blue-500 jump-down-3 brightness-130"></div>
+        </div>
+        <div class="w-4 h-4 jump-off-4">
+          <div class="w-4 h-4 rounded-[15%] shadow-custom bg-blue-500 jump-down-4 brightness-145"></div>
+        </div> -->
+        <span class="spanStyle before:bg-blue-500 jump-off-1 before:jump-down-1 before:brightness-100"></span>
+        <span class="spanStyle before:bg-blue-500 jump-off-2 before:jump-down-2 before:brightness-115"></span>
+        <span class="spanStyle before:bg-blue-500 jump-off-3 before:jump-down-3 before:brightness-130"></span>
+        <span class="spanStyle before:bg-blue-500 jump-off-4 before:jump-down-4 before:brightness-145"></span>
+      </div>
+    </div>
+  </body>
+</html>

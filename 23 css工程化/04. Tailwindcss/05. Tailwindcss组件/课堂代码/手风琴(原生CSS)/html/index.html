@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>纯CSS实现手风琴效果</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+    <!-- 最外层容器 -->
+    <div class="list">
+        <!-- ul 为手风琴容器 -->
+        <ul>
+            <!-- li 为手风琴项目，每一个 li 就是中间的一张图片 -->
+            <li>
+                <!-- 单选框按钮只是为了可以点击 -->
+                <!-- name 属性一定要写，表示是一组单选框按钮，只能选中一个 -->
+                <input type="radio" name="swith">
+                <!-- 该 div 是后面显示的大图 -->
+                <div class="bg"></div>
+            </li>
+            <li>
+                <input type="radio" name="swith" checked>
+                <div class="bg"></div>
+            </li>
+            <li>
+                <input type="radio" name="swith">
+                <div class="bg"></div>
+            </li>
+            <li>
+                <input type="radio" name="swith">
+                <div class="bg"></div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

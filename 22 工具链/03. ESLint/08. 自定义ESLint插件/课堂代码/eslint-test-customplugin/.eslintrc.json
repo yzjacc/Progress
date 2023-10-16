@@ -1,0 +1,7 @@
+{
+  "plugins": ["customrules"],
+  "rules": {
+    "customrules/no-console-log": "warn",
+    "customrules/no-alert": "error"
+  }
+}

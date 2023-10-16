@@ -1,0 +1,13 @@
+$color:#4caf50;
+
+.div1{
+  width: 200px;
+  height: 200px;
+  background-color: saturate($color, 10%); // 饱和度增加10%
+}
+
+.div2{
+  width: 200px;
+  height: 200px;
+  background-color: desaturate($color, 10%); // 饱和度减少10%
+}

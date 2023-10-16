@@ -1,0 +1,6 @@
+.test .mixin {
+  content: "mixin";
+}
+.test .content {
+  content: "test";
+}

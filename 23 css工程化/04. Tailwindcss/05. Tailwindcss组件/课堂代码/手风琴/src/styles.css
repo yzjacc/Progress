@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.item{
+    @apply float-left max-w-[700px] h-40 shadow-md;
+}
+
+.btn{
+    @apply opacity-0 cursor-pointer w-8 h-40 transition-width duration-200 checked:w-56;
+}
+
+.bg-img-1{
+    @apply bg-no-repeat bg-center bg-cover;
+    background-image: url("/src/img/1.jpg");
+}
+
+.bg-img-2{
+    @apply bg-no-repeat bg-center bg-cover;
+    background-image: url("/src/img/2.jpg");
+}
+
+.bg-img-3{
+    @apply bg-no-repeat bg-center bg-cover;
+    background-image: url("/src/img/3.jpg");
+}
+
+.bg-img-4{
+    @apply bg-no-repeat bg-center bg-cover;
+    background-image: url("/src/img/4.jpg");
+}
+
+.bg{
+    @apply opacity-0 absolute top-0 left-0 w-screen h-screen -z-50 blur-[2.5px];
+}

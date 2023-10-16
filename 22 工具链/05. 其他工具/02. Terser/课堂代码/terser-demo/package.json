@@ -1,0 +1,19 @@
+{
+  "name": "terser-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compress": "terser ./src/index.js -o ./dist/index.js --source-map -o ./dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "terser": "^5.19.2"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}

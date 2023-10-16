@@ -1,0 +1,6 @@
+$min-font-size: 16px;
+$max-font-size: 24px;
+
+body {
+  font-size: clamp($min-font-size, 1.25vw + 1rem, $max-font-size);
+}

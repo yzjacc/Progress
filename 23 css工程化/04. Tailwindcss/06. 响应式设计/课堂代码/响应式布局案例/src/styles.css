@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.logo {
+  @apply w-logo h-full bg-no-repeat bg-center;
+  background-image: url("/src/img/logo.png");
+  background-size: contain;
+}
+
+nav li::after {
+  @apply w-0 h-2px absolute left-0 bottom-1 bg-custom-black transition-all duration-700 ease-linear;
+  content: "";
+}
+
+nav li:hover::after {
+  @apply w-full;
+}
+
+.nav-bar{
+  @apply px-1.2vw py-0 relative max-sm:w-full max-sm:bg-custom-white max-sm:text-center max-sm:border-b max-sm:border-sky-50 sm:leading-50 md:leading-80;
+}
+
+.btn-bg{
+    @apply bg-no-repeat bg-center;
+    background-image: url("/src/img/btn.png");
+}
+
+#pic li:nth-child(1){
+    @apply bg-no-repeat bg-center;
+    background: url('/src/img/1.jpg');
+}
+
+#pic li:nth-child(2){
+    @apply bg-no-repeat bg-center;
+    background: url('/src/img/2.jpg');
+}
+
+#pic li:nth-child(3){
+    @apply bg-no-repeat bg-center;
+    background: url('/src/img/3.jpg');
+}
+
+.footer-bg{
+  @apply bg-no-repeat bg-center;
+  background-image: url("/src/img/bottom.jpg");
+}
+
+.item{
+  @apply m-10 p-20 border border-solid border-gray-300 text-center md:w-46 lg:w-30 xl:w-22;
+}
+
+.img{
+  @apply opacity-90 cursor-pointer text-center rounded-xl transition-all duration-300 hover:opacity-100 hover:scale-110;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode Example</title>
+    <link rel="stylesheet" href="/dist/output.css" />
+  </head>
+  <body class="bg-gray-100 dark:bg-gray-900">
+    <div class="container mx-auto px-4 py-12">
+      <div
+        class="bg-white dark:bg-gray-800 shadow-lg rounded-lg max-w-md mx-auto p-8"
+      >
+        <h2 class="text-2xl font-bold text-gray-800 dark:text-white">
+          Card Title
+        </h2>
+        <p class="mt-4 text-gray-600 dark:text-gray-300">
+          This is a sample card with a title, paragraph, and a button. The card
+          will automatically switch between light and dark modes based on your
+          system settings.
+        </p>
+        <button
+          id="btn"
+          class="mt-6 inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 border border-transparent rounded-md shadow-sm dark:bg-yellow-400 dark:hover:bg-yellow-500 dark:text-gray-900"
+        >
+          Click me
+        </button>
+      </div>
+    </div>
+    <script>
+      const btn = document.getElementById('btn');
+      btn.onclick = function() {
+        const htmlEl = document.documentElement;
+        htmlEl.classList.toggle('dark');
+      }
+    </script>
+  </body>
+</html>

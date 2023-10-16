@@ -1,0 +1,3 @@
+body {
+  font-size: clamp(16px, 1.25vw + 1rem, 24px);
+}

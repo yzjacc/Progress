@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 设置最外层容器宽高、水平居中 */
+
+.list {
+    width: 1000px;
+    height: 500px;
+    margin: 150px auto 0;
+    /* outline: 1px solid; */
+}
+
+/* 设置每一个手风琴项目样式 */
+
+.list li {
+    float: left;
+    max-width: 700px;
+    /* 不给宽是因为内容会撑开宽度，所以指设置一个最大宽度 */
+    height: 500px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+/* 未选中时可以点击范围 */
+
+input {
+    opacity: 0;
+    /* 点击框透明度为 0，所以看不到单选框 */
+    cursor: pointer;
+    width: 100px;
+    height: 500px;
+    /* 这里设置了 input 的宽高，就把父元素 li 的宽给撑开了 */
+    transition: all 0.2s;
+    /* 点击时过渡效果 */
+}
+
+/* 选中是宽 700px */
+
+input:checked {
+    width: 700px;
+}
+
+/* 
+ * 下面开始设置背景图
+ * 背景图的设置分为两个部分（1）每一个 li 设置背景图（2）div.bg 设置背景图
+ * 每一个 li 的背景图就是中间显示的每一张图片
+ * div.bg 就是背后的大图
+ */
+
+.list li:nth-child(1), .list li:nth-child(1)>.bg {
+    background: url('../img/1.jpg') no-repeat center/cover;
+}
+
+.list li:nth-child(2), .list li:nth-child(2)>.bg {
+    background: url('../img/2.jpg') no-repeat center/cover;
+}
+
+.list li:nth-child(3), .list li:nth-child(3)>.bg {
+    background: url('../img/3.jpg') no-repeat center/cover;
+}
+
+.list li:nth-child(4), .list li:nth-child(4)>.bg {
+    background: url('../img/4.jpg') no-repeat center/cover;
+}
+
+/* 设置背景大图的样式 */
+
+.bg {
+    opacity: 0;
+    /* 让全部 .bg 的背景变透明不显示于页面之上 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* 设置宽高占满整个视口 */
+    z-index: -1;
+    /* 此时背景层级太高盖住 .list 了，用 z-index 让层级变成负数 */
+    filter: blur(2.5px);
+    /* CSS3滤镜效果 */
+}
+
+/* 
+ * 当点击某一个单选框的时候，对应 div.bg 背景就不透明了
+ * div.bg 和单选框是兄弟元素，所以这里使用了兄弟选择器 
+ */
+
+input[name="swith"]:checked~.bg {
+    opacity: 1;
+}

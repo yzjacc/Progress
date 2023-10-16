@@ -1,0 +1,19 @@
+.box {
+  content: "Value type: number";
+}
+
+.length-label {
+  content: "Length unit: px";
+}
+
+.unitless-label {
+  content: "Is unitless: true";
+}
+
+.comparable-label {
+  content: "Can compare: false";
+}
+
+.comparable-label2 {
+  content: "Can compare: true";
+}

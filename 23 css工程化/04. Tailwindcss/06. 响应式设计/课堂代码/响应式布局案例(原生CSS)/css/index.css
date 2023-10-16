@@ -1,0 +1,288 @@
+/* 初始化样式 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* header 部分样式开始 */
+
+#header {
+    width: 100vw;
+    height: 80px;
+    padding: 0 10vw;
+    /* outline: 1px solid red; */
+    box-sizing: border-box;
+    background-color: rgb(249, 249, 249);
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    width: 70px;
+    height: 100%;
+    background: url('../img/logo.png') center/contain no-repeat;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    line-height: 80px;
+    padding: 0 1.2vw;
+    position: relative;
+}
+
+nav li a {
+    color: #777;
+}
+
+/* 下划线，利用伪元素选择器 after 来制作 */
+nav li:after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    background-color: #222;
+    transition: .8s linear;
+}
+
+
+nav li:hover::after {
+    width: 100%;
+}
+
+/* 汉堡按钮 */
+nav button {
+    width: 50px;
+    height: 50px;
+    background: url('../img/btn.png') center no-repeat;
+    display: none;
+}
+
+/* header 部分样式结束 */
+
+/* 轮播图样式开始 */
+
+#pic{
+    width: 100vw;
+    height: 70vh;
+    position: relative;
+    /* outline: 1px solid red; */
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+#pic ul{
+    width: 300vw;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: all 1s;
+}
+
+#pic li{
+    width: 100vw;
+    height: 100%;
+}
+
+#pic li:nth-child(1){
+    background: url('../img/1.jpg') center/cover no-repeat;
+}
+
+#pic li:nth-child(2){
+    background: url('../img/2.jpg') center/cover no-repeat;
+}
+
+#pic li:nth-child(3){
+    background: url('../img/3.jpg') center/cover no-repeat;
+}
+
+/* 轮播图样式结束 */
+
+/* 热销项目样式开始 */
+
+#project{
+    margin: 50px 0;
+    /* outline: 1px solid red; */
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #bbb;
+}
+
+.title h2{
+    font-size: 36px;
+    font-weight: 100;
+}
+
+/* 项目列表容器 */
+.list{
+    width: 80%;
+    margin: 0 auto;
+    /* outline: 1px solid blue; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* 项目列表中的项目 */
+.list>div{
+    /* 这里不能够给 div 设置宽度
+    因为之后我们需要通过媒体查询
+    查询到浏览器的宽度之后，才能定义 div 的宽度 */
+    /* width: 20%; */
+    margin: 15px 0;
+    padding: 20px 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.list img{
+    width: 90%;
+    opacity: .9;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.list img:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.list p{
+    font-weight: 100;
+    margin-top: 10px;
+}
+
+
+/* 热销项目样式结束 */
+
+/* 页尾部分样式开始 */
+#footer{
+    width: 100%;
+    height: 500px;
+    background: url('../img/bottom.jpg') center/cover no-repeat;
+}
+/* 页尾部分样式结束 */
+
+/* 接下来就是媒体查询相关的代码 */
+
+/* 首先是除了项目列表以外部分的媒体查询 */
+
+@media all and (max-width:768px){
+    /* 宽度小于 768px 的时候会应用此样式 */
+    #header{
+        height: 50px;
+    }
+    nav li {
+        line-height: 50px;
+    }
+    #pic{
+        height: 50vh;
+        margin-top: 50px;
+    }
+    #footer{
+        height: 400px;
+    }
+}
+
+@media all and (max-width:576px){
+    /* 宽度小于 576px 的时候会应用此样式 */
+    nav button{
+        display: block;
+    }
+    nav ul{
+        height: 0;
+        overflow: hidden;
+        transition: .5s;
+        flex-wrap: wrap;
+        /* 这里相对定位是为了调整 ul 的位置 */
+        position: relative;
+        /* 之所以设置 top 值为 25px 是因为 header 的高度是 50px
+        并且设置了垂直居中，所以 50px 取一半就是 25px */
+        top: 25px;
+        /* outline: 1px solid red; */
+    }
+    nav li{
+        width: 100%;
+        background: #eee;
+        text-align: center;
+        border-bottom: 1px solid #fff;
+    }
+
+    nav li::after{
+        bottom: 0;
+    }
+
+    #pic{
+        height: 40vh;
+    }
+
+    #footer{
+        height: 300px;
+    }
+}
+
+/* 最后是项目列表部分的媒体查询代码 */
+
+@media all and (min-width:768px){
+    /* 当屏幕宽度大于 768px 时会应用此样式 */
+    #project .list{
+        width: 720px;
+    }
+    #project .list div{
+        width: 46%;
+    }
+}
+
+@media all and (min-width:992px){
+    /* 当屏幕宽度大于 992px 时会应用此样式 */
+    #project .list{
+        width: 960px;
+    }
+    #project .list div{
+        width: 30%;
+    }
+}
+
+@media all and (min-width:1200px){
+    /* 当屏幕宽度大于 1200px 时会应用此样式 */
+    #project .list{
+        width: 1140px;
+    }
+    #project .list div{
+        width: 22%;
+    }
+}

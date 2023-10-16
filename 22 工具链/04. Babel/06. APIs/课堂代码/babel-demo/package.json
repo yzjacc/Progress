@@ -1,0 +1,23 @@
+{
+  "name": "babel-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel": "babel src",
+    "babel-one-file": "babel src --out-file output.js",
+    "babel-dir": "babel src --out-dir lib",
+    "babel-source-map": "babel src --out-dir lib --source-maps",
+    "babel-ignore": "babel src --out-dir lib --ignore 'src/index2.js'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.22.9",
+    "@babel/core": "^7.22.9",
+    "@babel/plugin-transform-arrow-functions": "^7.22.5",
+    "@babel/preset-env": "^7.22.9"
+  }
+}

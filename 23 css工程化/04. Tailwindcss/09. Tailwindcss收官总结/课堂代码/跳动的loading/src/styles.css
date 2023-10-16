@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.spanStyle{
+    @apply w-4 h-4 before:content-[''] before:w-4 before:h-4 before:rounded-[15%] before:shadow-custom before:absolute;
+}

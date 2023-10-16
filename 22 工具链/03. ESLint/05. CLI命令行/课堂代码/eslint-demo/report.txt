@@ -1,0 +1,9 @@
+[0m[0m
+[0m[4m/Users/jie/Desktop/eslint-demo/src/index.js[24m[0m
+[0m  [2m1:1[22m   [33mwarning[39m  Unexpected console statement  [2mno-console[22m[0m
+[0m  [2m1:13[22m  [33mwarning[39m  Strings must use singlequote  [2mquotes[22m[0m
+[0m  [2m1:28[22m  [31merror[39m    Extra semicolon               [2msemi[22m[0m
+[0m[0m
+[0m[31m[1m✖ 3 problems (1 error, 2 warnings)[22m[39m[0m
+[0m[31m[1m[22m[39m[31m[1m  1 error and 1 warning potentially fixable with the `--fix` option.[22m[39m[0m
+[0m[31m[1m[22m[39m[0m

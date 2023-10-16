@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" class="text-50">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>手风琴</title>
+    <link rel="stylesheet" href="/dist/output.css" />
+  </head>
+  <body class="m-0 p-0">
+    <!-- 最外层容器 -->
+    <div class="w-80 h-40 mt-12 mx-auto">
+      <!-- ul 为手风琴容器 -->
+      <ul>
+        <!-- li 为手风琴项目，每一个 li 就是中间的一张图片 -->
+        <li class="item bg-img-1">
+          <!-- 单选框按钮只是为了可以点击 -->
+          <!-- name 属性一定要写，表示是一组单选框按钮，只能选中一个 -->
+          <input type="radio" name="swith" class="btn peer"/>
+          <!-- 该 div 是后面显示的大图 -->
+          <div class="bg-img-1 bg peer-checked:opacity-100"></div>
+        </li>
+        <li class="item bg-img-2">
+          <input type="radio" name="swith" checked class="btn peer"/>
+          <div class="bg-img-2 bg peer-checked:opacity-100"></div>
+        </li>
+        <li class="item bg-img-3">
+          <input type="radio" name="swith" class="btn peer"/>
+          <div class="bg-img-3 bg peer-checked:opacity-100"></div>
+        </li>
+        <li class="item bg-img-4">
+          <input type="radio" name="swith" class="btn peer"/>
+          <div class="bg-img-4 bg peer-checked:opacity-100"></div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
