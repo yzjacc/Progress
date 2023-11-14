@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  class EventCenter{
+    eventList = new Map(); //绑定数据和函数
+    //监听事件
+    on(name,f){
+      //直接先从map中取出对应的事件列表
+      let eventInfo = this.eventList.get(name);
+      //如果没有对应的事件列表，就创建一个
+      if(!eventInfo){
+        eventInfo = {
+          data:{}, //存放数据
+          callback:new Set() //存放函数
+        }
+
+        //将创建的事件列表放入map中
+        this.eventList.set(name,eventInfo);
+      }
+      //记录绑定的函数
+      eventInfo.callback.add(f);
+    }
+
+    //触发事件
+    dispatch(name,data){
+      //先从map中取出对应的事件列表
+      let eventInfo = this.eventList.get(name);
+      
+      if(eventInfo && eventInfo.data !== data){
+        eventInfo.data = data;
+        eventInfo.callback.forEach(f=>{
+          f(data);
+        })
+      }
+    }
+
+    //移除事件
+    off(name,f){
+      let eventInfo = this.eventList.get(name);
+      if(eventInfo && eventInfo.callback.has(f)){
+        eventInfo.callback.delete(f);
+      }
+    }
+  }
+
+  // const eventCenter = new EventCenter();
+  // eventCenter.on('test1',data=>{
+  //   console.log('test1--->',data);
+  // })
+  // eventCenter.on('test1',data=>{
+  //   console.log('test1===>',data);
+  // })
+
+  // eventCenter.dispatch('test1','hello world');
+
+
+  const eventCenter = new EventCenter();
+
+  //模拟基座应用
+  class BaseApp{
+    setData(name,data){
+      eventCenter.dispatch(name,data);
+    }
+  }
+
+  //模拟子应用
+  class SubApp{
+    constructor(appName){
+      this.appName = appName;
+    }
+    //子应用的事件监听
+    addDataListener(cb){
+      eventCenter.on(this.appName,cb);
+    }
+
+    //子应用触发数据
+    //子应用希望以事件的方式触发数据传递
+    dispatch(data){
+      //自定义事件
+      const event = new CustomEvent('datachange',{
+        detail:{
+          data
+        }
+      })
+      //触发事件,实际应用的时候，可以绑定任意的dom对象触发事件
+      window.dispatchEvent(event)
+    }
+  }
+
+  //window直接监听事件
+  window.addEventListener('datachange',e=>{
+    console.log('window监听到了datachange事件',e.detail.data);
+  })
+
+  const subApp = new SubApp('subApp');
+  subApp.dispatch('---hello world---');
+
+
+  //子应用监听
+  subApp.addDataListener(data=>{
+    console.log('subApp',data);
+  })
+
+  const baseApp = new BaseApp();
+  //主应用发布数据
+  baseApp.setData('subApp','hello subApp');
+</script>
+</html>

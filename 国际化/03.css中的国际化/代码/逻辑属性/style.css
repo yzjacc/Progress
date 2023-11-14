@@ -1,0 +1,87 @@
+[class$="boxes"] {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1em;
+}
+
+article {
+  margin-bottom: 1em;
+}
+
+article > div,
+[class$="box"] {
+  width: 200px;
+  height: 200px;
+  border: 1em solid;
+  position: relative;
+  margin: 1em;
+}
+
+.phy-box1 {
+  border-top-color: #FF6347; /*提香红*/
+  border-right-color: #2e8b57; /*马尔斯绿*/
+  border-bottom-color: #00a0b0; /*蒂芙尼蓝*/
+  border-left-color: #F9DC24;/*申布伦黄*/
+}
+
+.phy-box2 {
+  border-top-color: #FF6347;
+  border-left-color: #2e8b57;
+  border-bottom-color: #00a0b0;
+  border-right-color: #F9DC24;
+}
+
+.phy-box3 {
+  border-left-color: #FF6347;
+  border-bottom-color: #2e8b57;
+  border-right-color: #00a0b0;
+  border-top-color: #F9DC24;
+}
+
+.phy-box4 {
+  border-left-color: #FF6347;
+  border-top-color: #2e8b57;
+  border-right-color: #00a0b0;
+  border-bottom-color: #F9DC24;
+}
+
+.phy-box5 {
+  border-right-color: #FF6347;
+  border-bottom-color: #2e8b57;
+  border-left-color: #00a0b0;
+  border-top-color: #F9DC24;
+}
+
+.phy-box6 {
+  border-right-color: #FF6347;
+  border-top-color: #2e8b57;
+  border-left-color: #00a0b0;
+  border-bottom-color: #F9DC24;
+}
+
+.log-box {
+  border-block-start-color: #FF6347;
+  border-inline-end-color: #2e8b57;
+  border-block-end-color: #00a0b0;
+  border-inline-start-color: #F9DC24;
+}
+
+.vlr {
+  writing-mode: vertical-lr;
+}
+
+.vrl {
+  writing-mode: vertical-rl;
+}
+
+pre {
+  background: #2d2d2d;
+  padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+  color: #ccc;
+  border-radius: 4px;
+  width: max-content;
+  margin: auto;
+}

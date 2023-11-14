@@ -1,0 +1,10 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About"
+  },
+  "home": {
+    "header": "Welcome to Vue3 I18n Tutorial",
+    "content": "This tutorial teaches you how to use vue-I18n in Vue3---{company}"
+  }
+}

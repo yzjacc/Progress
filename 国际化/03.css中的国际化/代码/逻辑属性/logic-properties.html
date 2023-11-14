@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>逻辑属性</h1>
+    <p>网页上的所有东西都是一个盒子，CSS总是使用顶部、底部、左侧和右侧的物理方向来指示我们的目标盒子的哪一边。但是，当writing-mode不是默认的从上到下的水平方向时，这些值往往会令人困惑。</p>
+    <p>CSS 逻辑属性与逻辑值这一 CSS 模块引入了逻辑属性和逻辑值，由此得以通过逻辑的——而不是实体的——方向与尺度映射控制布局。</p>
+
+    <h2>块向与行向</h2>
+    <p>逻辑属性和逻辑值用抽象术语块向和行向描述其流向。这些术语的实体含义取决于书写模式。</p>
+
+    <h2>块向尺度</h2>
+    <p>与行内文本流向垂直的方向上的尺度，如横排书写模式中的竖直尺度，以及竖排书写模式中的水平尺度。对于标准的英文文本，此尺度指竖直尺度。</p>
+
+    <h2>行向尺度</h2>
+    <p>与行内文本流向平行的方向上的尺度，如横排书写模式中的水平尺度，以及横排书写模式中的竖直尺度。对于标准的英文文本，此尺度指水平尺度。</p>
+    
+    <h2>举例来说</h2>
+    <h2>border-block</h2>
+    <div style="writing-mode: horizontal-tb;border-block: 5px solid #e54d42;width: 500px;padding: 20px;margin: 20px;">
+      文字水平方向，border-block是上下方向
+    </div>
+    <div style="writing-mode: vertical-lr;border-block: 5px solid #e54d42;width: 500px;padding: 20px;margin: 20px;">
+      文字垂直方向，border-block是左右方向
+    </div>
+
+    <h2>border-inline</h2>
+    <div style="writing-mode: horizontal-tb;border-inline: 5px solid #e54d42;width: 500px;padding: 20px;margin: 20px;">
+      文字水平方向，border-inline是左右方向
+    </div>
+    <div style="writing-mode: vertical-rl;border-inline: 5px solid #e54d42;width: 500px;padding: 20px;margin: 20px;">
+      文字垂直方向，border-inline是上下方向
+    </div>
+
+    <img src="Box_Model_Properties.webp" alt="Box_Model_Properties">
+
+
+    <h1>边界的物理方向和逻辑方向的比较</h1>
+
+    <p>
+      给定了一个块级框，里面有一些文本内容，有下面的一些规范：
+    </p>
+    <ol>
+      <li>
+        文本<strong>顶部边框</strong>的颜色应该是红色(#FF6347;/*提香红*/)
+
+      </li>
+      <li>
+        文本<strong>右边边框</strong>的颜色应该是绿色(#2e8b57;/*马尔斯绿*/)
+      </li>
+      <li>
+        文本<strong>底部边框</strong>的颜色应该是蓝色(#00a0b0;/*蒂芙尼蓝*/)
+      </li>
+      <li>
+        文本<strong>左边边框</strong>的颜色应该是黄色(#F9DC24;/*申布伦黄*/)
+      </li>
+    </ol>
+
+    <p>
+      每次写入方向更改时，使用物理方向都需要进行修改，而使用逻辑属性则不需要
+    </p>
+    <hr />
+
+    <section>
+      <h1>物理方向</h1>
+      <div class="phy-boxes">
+        <article>
+          <div class="phy-box1">
+            <p>This is a sentence.</p>
+          </div>
+          <pre><code>border-top-color: #FF6347;/*提香红*/
+border-right-color: #2e8b57;/*马尔斯绿*/
+border-bottom-color: #00a0b0;/*蒂芙尼蓝*/
+border-left-color: #F9DC24;/*申布伦黄*/</code></pre>
+        </article>
+
+        <article>
+          <div class="phy-box2" dir="rtl">
+            <p lang="ar">هذه جملة.</p>
+          </div>
+          <pre><code>border-top-color: #FF6347;/*提香红*/
+border-left-color: #2e8b57;/*马尔斯绿*/
+border-bottom-color: #00a0b0;/*蒂芙尼蓝*/
+border-right-color: #F9DC24;/*申布伦黄*/</code></pre>
+        </article>
+
+        <article>
+          <div class="vlr phy-box3">
+            <p lang="mn">ᠬᠦᠮᠦᠨ ᠪᠦᠷ ᠲᠥᠷᠥᠵᠦ ᠮᠡᠨᠳᠡᠯᠡᠬᠦ ᠡᠷᠬᠡ ᠴᠢᠯᠥᠭᠡ ᠲᠡᠢ᠂</p>
+          </div>
+          <pre><code>border-left-color: #FF6347;/*提香红*/
+border-bottom-color: #2e8b57;/*马尔斯绿*/
+border-right-color: #00a0b0;/*蒂芙尼蓝*/
+border-top-color: #F9DC24;/*申布伦黄*/</code></pre>
+        </article>
+
+        <article>
+          <div class="vlr phy-box4" dir="rtl">
+            <p>هذه جملة.</p>
+          </div>
+          <pre><code>border-left-color: #FF6347;/*提香红*/
+border-top-color: #2e8b57;/*马尔斯绿*/
+border-right-color: #00a0b0;/*蒂芙尼蓝*/
+border-bottom-color: #F9DC24;/*申布伦黄*/</code></pre>
+        </article>
+
+        <article>
+          <div class="vrl phy-box5">
+            <p lang="zh-hant">这是一个句子。</p>
+          </div>
+          <pre><code>border-right-color: #FF6347;/*提香红*/
+border-bottom-color: #2e8b57;/*马尔斯绿*/
+border-left-color: #00a0b0;/*蒂芙尼蓝*/
+border-top-color: #F9DC24;/*申布伦黄*/</code></pre>
+        </article>
+
+        <article>
+          <div class="vrl phy-box6" dir="rtl">
+            <p>
+              <span lang="he">זה משפט.</span>
+              <span lang="zh-hant" dir="ltr">这是一个句子。</span>
+            </p>
+          </div>
+          <pre><code>border-right-color: #FF6347;/*提香红*/
+border-top-color: #2e8b57;/*马尔斯绿*/
+border-left-color: #00a0b0;/*蒂芙尼蓝*/
+border-bottom-color: #F9DC24;/*申布伦黄*/</code></pre>
+        </article>
+      </div>
+    </section>
+
+    <hr />
+
+    <section>
+      <h1>逻辑方向</h1>
+      <div class="log-boxes">
+        <div class="log-box">
+          <p>This is a sentence.</p>
+        </div>
+        <div class="log-box" dir="rtl">
+          <p lang="ar">هذه جملة.</p>
+        </div>
+        <div class="vlr log-box">
+          <p lang="mn">ᠬᠦᠮᠦᠨ ᠪᠦᠷ ᠲᠥᠷᠥᠵᠦ ᠮᠡᠨᠳᠡᠯᠡᠬᠦ ᠡᠷᠬᠡ ᠴᠢᠯᠥᠭᠡ ᠲᠡᠢ᠂</p>
+        </div>
+        <div class="vlr log-box" dir="rtl">
+          <p lang="ar">هذه جملة.</p>
+        </div>
+        <div class="vrl log-box">
+          <p lang="zh-hant">这是一个句子。</p>
+        </div>
+        <div class="vrl log-box" dir="rtl">
+          <p>
+            <span lang="he">זה משפט.</span>
+            <span lang="zh-hant" dir="ltr">这是一个句子。</span>
+          </p>
+        </div>
+      </div>
+      <pre><code>border-block-start-color: #FF6347;/*提香红*/
+border-inline-end-color: #2e8b57;/*马尔斯绿*/
+border-block-end-color: #00a0b0;/*蒂芙尼蓝*/
+border-inline-start-color: #F9DC24;/*申布伦黄*/</code></pre>
+    </section>
+  </body>
+</html>

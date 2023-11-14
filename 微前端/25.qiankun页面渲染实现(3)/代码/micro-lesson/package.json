@@ -1,0 +1,30 @@
+{
+  "name": "micro-lesson",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:vue2": "cd sub/vue2-demo && npm install",
+    "install:react": "cd sub/react-demo && npm install",
+    "install:vite": "cd sub/vue3-demo && npm install",
+    "install:main": "cd main && npm install",
+    "install-all": "npm-run-all install:*",
+    "start:vue2": "cd sub/vue2-demo && npm start ",
+    "start:react": "cd sub/react-demo && npm start",
+    "start:vite": "cd sub/vue3-demo && npm start",
+    "start:main": "cd main && npm start",
+    "start-all": "npm-run-all --parallel start:*",
+    "serve-all": "npm-run-all --parallel start:*",
+    "build:vue2": "cd sub/vue2-demo && npm run build",
+    "build:react": "cd sub/react-demo && npm run build",
+    "build:vite": "cd sub/vite-demo && npm run build",
+    "build:main": "cd main && npm run build",
+    "build-all": "npm-run-all --parallel build:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于"
+  },
+  "home": {
+    "header": "欢迎使用Vue3 I18n 教学",
+    "content": "这个教学教导大家在Vue3中使用vue-I18n---{company}"
+  }
+}

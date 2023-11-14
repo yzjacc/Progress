@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于",
+    "post": "文章",
+    "element": "Element"
+  },
+  "home": {
+    "header": "欢迎使用Vue3 I18n 教学",
+    "content": "这个教学教导大家在Vue3中使用vue-I18n---{company}",
+    "num_visits": "该网站还没有人浏览:( | 该网站首次被浏览了 | 该网站已经被浏览了{n}次"
+  },
+  "about": {
+    "header": "关于我们",
+    "donations": "收到贡献:{donations}"
+  },
+  "element": {
+    "large": "大",
+    "default": "默认",
+    "small": "小",
+    "pick_a_day": "请选择一天",
+    "quick_select": "快速选择",
+    "today": "今天",
+    "yesterday": "昨天",
+    "last_week": "上一周"
+  }
+}

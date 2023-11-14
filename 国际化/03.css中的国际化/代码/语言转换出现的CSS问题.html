@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container1{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 200px;
+      border: 1px solid #000;
+    }
+    .container1 div{
+      max-width: 300px;
+      border: 1px solid #000;
+      padding: 30px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .container2 {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: minmax(50px, auto);
+    }
+
+    .container2 h1 {
+      grid-column: 1 / span 12;
+      font-size: 36px;
+    }
+
+    .container2 p {
+      grid-column: 1 / span 12;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .long-text {
+      width: 300px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 20px;
+    }
+
+    .header{
+      position: relative;
+      font-size: 17px;
+      margin:30px;
+    }
+    .header span{
+      position: relative;
+      margin: 30px;
+      border:1px solid red
+    }
+    .header_tw{
+      position: relative;
+      font-size: 14px;
+      margin:30px;
+    }
+    .header_tw span{
+      position: relative;
+      margin: 15px;
+      border:1px solid blue
+    }
+  </style>
+</head>
+<body>
+
+  <div class="long-text">
+    This is a long text that will be truncated with an ellipsis when it overflows the container.
+  </div>
+  <div class="long-text">
+    这是一个长文本，溢出时将用省略号截断
+  </div>
+
+  <hr>
+
+  <div class="container1">
+    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, ipsum.</div>
+    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, ipsum.</div>
+    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, ipsum.</div>
+    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, ipsum.</div>
+  </div>
+
+  <hr>
+
+  <div class="container2">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <h1>中英文切换示例</h1>
+    <p>这是一个包含中英文的段落。This is a paragraph that contains both Chinese and English text.</p>
+  </div>
+
+  <hr>
+
+  <div id="nav" class="header">
+    <span>首页</span>
+    <span>新闻</span>
+    <span>角色</span>
+    <span>视频</span>
+    <span>关于</span>
+    <span>联系</span>
+  </div>
+  <button id="btn">繁體</button>
+</body>
+<script>
+const btn = document.getElementById('btn');
+const nav = document.getElementById('nav');
+btn.addEventListener('click',(e)=>{
+  const val = e.target.innerText;
+  if(val === '繁體'){
+    e.target.innerText = '简体';
+    nav.style.fontVariantEastAsian = 'traditional'
+    nav.className = 'header_tw';
+  }else{
+    e.target.innerText = '繁體';
+    nav.style.fontVariantEastAsian = 'simplified'
+    nav.className = 'header';
+  }
+});
+</script>
+</html>

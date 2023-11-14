@@ -1,0 +1,27 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "post": "Article",
+    "element": "Element"
+  },
+  "home": {
+    "header": "Welcome to Vue3 I18n Tutorial",
+    "content": "This tutorial teaches you how to use vue-I18n in Vue3---{company}",
+    "num_visits": "This page hasn't been visited :( | This page has been visited {n} time | This page has been visited {n} times"
+  },
+  "about": {
+    "header": "About US",
+    "donations": "Donations raised:{donations}"
+  },
+  "element": {
+    "large": "large",
+    "default": "default",
+    "small": "small",
+    "pick_a_day": "please select a day",
+    "quick_select": "quick selection",
+    "today": "today",
+    "yesterday": "yesterday",
+    "last_week": "last week"
+  }
+}

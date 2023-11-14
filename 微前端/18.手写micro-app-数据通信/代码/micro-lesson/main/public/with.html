@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+  // var a = 10;
+  // const obj = {
+  //   a:1,
+  //   b:2,
+  //   c:3
+  // }
+  // with(obj){
+  //   console.log(a);
+  //   console.log(b);
+  //   console.log(c);
+  // }
+
+  // const sandboxCode = `with(scope){console.log(a)}`;
+
+  //通过Function直接执行
+  // Function('scope',sandboxCode)(obj);
+
+  //直接通过eval执行
+  // eval(sandboxCode);
+
+  // (function(scope){
+  //   with(scope){
+  //     console.log("---",a);
+  //   }
+  // })(obj)
+
+  //通过上面的写法，eval可以传值
+  // eval(`(function(scope){${sandboxCode}})(obj)`)
+
+
+  //打印this的情况
+  // const sandboxCode = `with(scope){console.log(a);console.log(this)}`;
+  // Function('scope',sandboxCode)(obj); //1 window
+  // Function('scope',sandboxCode)(window); //10 window
+
+  //注意这里的第一个参数obj，是需要改变this 的指向
+  //第二个参数，是立即执行函数需要的参数
+  // eval(`(function(scope){${sandboxCode}}).call(obj,obj)`); // 1 obj对象
+  
+  //为了不让局部调用对this产生影响，最好使用下面的方式
+  // (0,eval)(`(function(scope){${sandboxCode}}).call(obj,obj)`);
+
+
+  //with 如果在提供的上下文中，没有找到某个变量,代码会沿着作用域向上查找  
+  // var globalVal = 10;
+  // const obj = {
+  //   a:1,
+  //   b:2,
+  //   c:3
+  // }
+
+  // const sandboxCode = `with(scope){a = 10; globalVal = 1;}`;
+
+  //无论怎样，with找不到的变量，都会向上查找，然后做处理
+  //globalVal=1
+  // Function('scope',sandboxCode)(obj);  
+
+  // (0,eval)(`(function(scope){${sandboxCode}}).call(obj,obj)`);
+
+
+  //通过代理对象，处理with查找变量的问题
+  /*
+  var globalVal = 10;
+  const obj = {
+    a:1,
+    b:2,
+    c:3,
+    // console:window.console
+  }
+
+  let sandboxProxy = new Proxy(obj,{
+    get(target,key){
+      return target[key]
+    },
+    has(target,key){
+      return true //无论怎么样都返回true，相当于告诉对象我这里有这个属性
+    }
+  });
+
+  // const sandboxCode = `with(scope){a = 10; globalVal = 1;}`;
+
+  //由于有了has，而且返回的是true
+  const sandboxCode = `with(scope){a = 10; globalVal = 1;console.log(a)}`;
+
+  (0,eval)(`(function(scope){${sandboxCode}}).call(sandboxProxy,sandboxProxy)`);
+  console.log(obj);
+  console.log(globalVal);
+  */
+  
+  //改变代理对象，可以处理window上的函数和属性
+  /*
+  var globalVal = 10;
+  const obj = {
+    a:1,
+    b:2,
+    c:3,
+  }
+
+  let sandboxProxy = new Proxy(obj,{
+    get(target,key){
+      //优先从代理对象上取值
+      if(Reflect.has(target,key)){
+        return Reflect.get(target,key);
+      }
+
+      //如果找不到，就直接从window对象上取值
+      const rawValue = Reflect.get(window,key);
+
+      //比如window.addEventListener
+      if(typeof rawValue === 'function'){
+        const valueStr = rawValue.toString(); //转换为字符串
+        //如果valueStr<<不是>>以大写字母开头的函数名或者以class开头的字符串,需要执行其中的代码块
+        //简单来说，就是排除构造函数和类
+        if(!/^function\s+[A-Z]/.test(valueStr) && !/^class\s+/.test(valueStr)){
+          return rawValue.bind(window); //绑定window对象
+        }
+      }
+
+      //其他情况直接返回
+      return rawValue
+    },
+
+    has(target,key){
+      return true;
+    }
+  });
+
+  console.log(sandboxProxy)
+  const sandboxCode = `with(scope){a = 10; globalVal = 1;console.log(a)}`;
+
+  (0,eval)(`(function(scope){${sandboxCode}}).call(sandboxProxy,sandboxProxy)`);
+  console.log(obj);
+  console.log(globalVal);
+  */
+
+  
+  let sandboxProxy = new Proxy({},{
+    get(target,key){
+      //优先从代理对象上取值
+      if(Reflect.has(target,key)){
+        return Reflect.get(target,key);
+      }
+
+      //如果找不到，就直接从window对象上取值
+      const rawValue = Reflect.get(window,key);
+
+      //如果兜底的是一个函数，需要绑定window对象，比如window.addEventListener
+      if(typeof rawValue === 'function'){
+        const valueStr = rawValue.toString(); //转换为字符串
+        //如果valueStr<<不是>>以大写字母开头的函数名或者以class开头的字符串,需要执行其中的代码块
+        //简单来说，就是排除构造函数和类
+        if(!/^function\s+[A-Z]/.test(valueStr) && !/^class\s+/.test(valueStr)){
+          return rawValue.bind(window); //绑定window对象
+        }
+      }
+
+      //其他情况直接返回
+      return rawValue
+    },
+    set:(target,key,value)=>{
+      Reflect.set(target,key,value);
+      return true;
+    }
+
+    // has(target,key){
+    //   return true;
+    // }
+  });
+
+  // console.log(window);
+  // console.log(sandboxProxy);
+
+  window.globalStr = "hello 基座应用"
+  const sandboxCode = `with(window){window.globalStr = "hello react 子应用";console.log(window);console.log(this)}`;
+
+  (0,eval)(`(function(window){${sandboxCode}}).call(sandboxProxy,sandboxProxy)`);
+
+  console.log(window.globalStr);
+</script>
+</html>

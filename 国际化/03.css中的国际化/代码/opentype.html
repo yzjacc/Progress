@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p{
+      font-size: 20px;
+      line-height: 1.5;
+      width: 770px;
+    }
+    /* bootstrap表格*/
+    table {
+      width: 50%;
+      margin-bottom: 1rem;
+      color: #212529;
+      border-collapse: collapse;
+      text-align: center;
+    }
+    table th,
+    table td {
+      padding: 0.75rem;
+      vertical-align: top;
+      border-top: 1px solid #dee2e6;
+    }
+    table thead th {
+      vertical-align: bottom;
+      border-bottom: 2px solid #dee2e6;
+    }
+    table tbody + tbody {
+      border-top: 2px solid #dee2e6;
+    }
+    button{
+      margin: 10px;
+      padding: 5px 10px;
+      font-size: 14px;
+      line-height: 1.5;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      color: #333;
+      cursor: pointer;
+    }
+    .zhs{
+      font-variant-east-asian: simplified;
+    }
+    .zht{
+      font-variant-east-asian: traditional;
+    }
+  </style>
+</head>
+<body>
+  <p class="zh-content">
+    一个简体字可能对应多个繁体字，如简体字「发」，其相应的繁体字可能为「發」或者「髮」。
+    一个繁体汉字对应多个简体汉字的情况与前者相比数量较少，但是仍需注意。
+    如繁体字「乾」可能对应简体字「干」或者「乾」
+  </p>
+
+  <div>
+    <button class="zhsBtn">简体</button>
+    <button class="zhtBtn">繁体</button>
+  </div>
+
+  <h2>简繁汉字的对应关系，具体还应该由上下文决定</h2>
+  <table>
+    <tr>
+      <th>中国大陆</th>
+      <th>中國臺灣省</th>
+    </tr>
+    <tr>
+      <td>程序</td>
+      <td>程式</td>
+    </tr>
+    <tr>
+      <td>图标</td>
+      <td>圖示</td>
+      </tr>
+    <tr>
+      <td>变量</td>
+      <td>變數</td>
+    </tr>
+    <tr>
+      <td>U盘</td>
+      <td>隨身碟</td>
+    </tr>
+    <tr>
+      <td>硬盘</td>
+      <td>硬碟</td>
+    </tr>
+    <tr>
+      <td>内存</td>
+      <td>記憶體</td>
+    </tr>
+    <tr>
+      <td>信息</td>
+      <td>資訊</td>
+    </tr>
+    <tr>
+      <td>设置</td>
+      <td>設定</td>
+    </tr>
+    <tr>
+      <td>比特</td>
+      <td>位元</td>
+    </tr>
+    <tr>
+      <td>屏幕</td>
+      <td>熒幕</td>
+    </tr>
+  </table>
+</body>
+<script>
+  const zhsBtn = document.querySelector(".zhsBtn");
+  const zhtBtn = document.querySelector(".zhtBtn");
+  const zhContent = document.querySelector(".zh-content");
+  
+  zhsBtn.addEventListener('click',(e)=>{
+    zhContent.classList.remove("zht");
+    zhContent.classList.add("zhs");
+  })
+  zhtBtn.addEventListener('click',(e)=>{
+    zhContent.classList.remove("zhs");
+    zhContent.classList.add("zht");
+  }) 
+</script>
+</html>

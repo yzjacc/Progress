@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <template id="app-template">
+      <slot name="title"></slot>
+      <input type="text" >
+      <button>新增</button>
+    </template>
+
+    <button>点击</button>
+    <custom-button name="app-button" url="https://www.baidu.com" value="99">
+      <div slot="title">
+        <h2>新增</h2>
+      </div>
+    </custom-button>
+  </body>
+  <script src="./index.js"></script>
+</html>

@@ -1,0 +1,86 @@
+:root {
+  margin: 0;
+  padding: 0;
+  --common-padding: 20px;
+  --common-padding-small: 8px;
+}
+
+html {
+  font-size: 1px;
+}
+
+body {
+  font-family: arial;
+  font-size: 14rem;
+}
+
+.push-end {
+  float: inline-end;
+}
+
+.common-stracture {
+  max-inline-size: 1100px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}
+
+.main-header {
+  padding: var(--common-padding);
+  font-size: 40px;
+  background: #000;
+  color: #fff;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: auto 300px;
+  padding-block-start: var(--common-padding);
+  padding-block-end: var(--common-padding);
+  background: #eee;
+}
+.main-content .main {
+  padding-inline-start: var(--common-padding);
+  padding-inline-end: var(--common-padding);
+}
+
+.side-column-box {
+  border: solid 1px #888;
+}
+.side-column-box-header {
+  padding: var(--common-padding-small);
+  background-color: #f2f2f2;
+}
+.side-column-box-title {
+  font-weight: bold;
+  font-size: 18rem;
+}
+
+.articles-template-item {
+  display: flow-root;
+  padding: var(--common-padding-small);
+}
+.articles-template-item .image {
+  display: block;
+  float: inline-start;
+  inline-size: 40px;
+  block-size: 40px;
+  margin-inline-end: var(--common-padding-small);
+  margin-block-end: var(--common-padding-small);
+  background-color: #000;
+}
+.articles-template-item .title {
+  font-weight: bold;
+}
+
+.main-title {
+  font-size: 30rem;
+  margin-block-end: var(--common-padding);
+}
+
+/*Not Working*/
+@media (max-inline-size: 1000px) {
+  .main-content {
+    background: Red;
+    grid-template-columns: auto;
+  }
+}
