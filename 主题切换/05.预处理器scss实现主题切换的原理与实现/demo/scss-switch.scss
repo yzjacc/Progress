@@ -1,0 +1,143 @@
+// 接处理
+// @mixin themeBg {
+//   html.primary & {
+//     color: #222;
+//     background-color: #fff;
+//   }
+//   html.dark & {
+//     color: #fff;
+//     background-color: #222;
+//     color-scheme: dark;
+//   }
+//   html.green & {
+//     color: #fff;
+//     background-color: #008f8e;
+//   }
+//   html.purple & {
+//     color: #fbd26a;
+//     background-color: #422256;
+//   }
+// }
+
+// @mixin themeBorder {
+//   html.primary & {
+//     border: 1px solid #000;
+//   }
+//   html.dark & {
+//     border: 1px solid #fff;
+//   }
+//   html.green & {
+//     border: 1px solid #fff;
+//   }
+//   html.purple & {
+//     border: 1px solid #fbd26a;
+//   }
+// }
+
+$themeMap: (
+  primary: (
+    bg-color: #fff,
+    font-color: #000,
+    border-color: #000,
+  ),
+  dark: (
+    bg-color: #000,
+    font-color: #fff,
+    border-color: #fff,
+  ),
+  green: (
+    bg-color: #008f8e,
+    font-color: #fff,
+    border-color: #fff,
+  ),
+  purple: (
+    bg-color: #422256,
+    font-color: #fbd26a,
+    border-color: #fbd26a,
+  ),
+);
+
+// 怎么去调用scss中map的内容
+// @mixin themeMixin {
+//   html.primary & {
+//     color: map-get(map-get($themeMap, primary), font-color);
+//     background-color: map-get(map-get($themeMap, primary), bg-color);
+//   }
+//   html.dark & {
+//     color: map-get(map-get($themeMap, dark), font-color);
+//     background-color: map-get(map-get($themeMap, dark), bg-color);
+//   }
+// }
+
+@mixin themeMixin {
+  @each $themeKey, $themeValue in $themeMap {
+    html.#{$themeKey} & {
+      //下面这样定义的话，就直接固定了混入中要写入什么css内容，不通用
+      // color: map-get($themeValue, font-color);
+      // background-color: map-get($themeValue, bg-color);
+      // border: 1px solid map-get($themeValue, border-color);
+
+      //由于外部要使用循环变量出来的内容，所以声明一个全局变量，方便外部调用
+      $currentTheme: $themeValue !global;
+      //可以使用scss中的@content，这个就很类似于vue中的插槽
+      @content;
+      //使用完之后，最好将全局变量清空
+      $currentTheme: null !global;
+    }
+  }
+}
+
+//封装一个函数，方便调用取值
+@function getVar($key) {
+  @return map-get($currentTheme, $key);
+}
+
+//直接获取背景颜色的值
+@mixin background_color($color) {
+  @include themeMixin {
+    background-color: getVar($color) !important;
+  }
+}
+
+//直接获取字体颜色的值
+@mixin font_color($color) {
+  @include themeMixin {
+    color: getVar($color) !important;
+  }
+}
+
+//直接获取边框颜色的值
+@mixin border_color($color) {
+  @include themeMixin {
+    border-color: getVar($color) !important;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  transition: color 0.5s, background-color 0.5s;
+  @include themeMixin {
+    color: getVar(font-color);
+    background-color: getVar(bg-color);
+  }
+}
+.layout {
+  display: flex;
+  justify-content: center;
+}
+
+.layer {
+  width: 300px;
+  height: 300px;
+  padding: 8px;
+  margin: 10px;
+  border: 1px solid;
+  @include border_color(border-color);
+}

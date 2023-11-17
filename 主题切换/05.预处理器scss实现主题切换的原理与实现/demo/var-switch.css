@@ -1,0 +1,78 @@
+:root{
+  --theme-color: #222;
+  --theme-background-color: #fff;
+}
+
+.primary{
+  --theme-color: #222;
+  --theme-background-color: #fff;
+}
+
+.dark{
+  --theme-color: #fff;
+  --theme-background-color: #222;
+  color-scheme: dark;
+}
+
+.green{
+  --theme-color: #fff;
+  --theme-background-color: #008f8e;
+}
+
+.purple{
+  --theme-color: #fbd26a;
+  --theme-background-color: #422256;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  transition:color .5s, background-color .5s;
+  color:var(--theme-color);
+  background-color:var(--theme-background-color);
+}
+.layout{
+  display: flex;
+  justify-content: center;
+}
+
+.layer{
+  width: 300px;
+  height: 300px;
+  padding: 8px;
+  margin: 10px;
+  border:1px solid var(--theme-color);
+  background-color: var(--theme-background-color);
+}
+
+/*
+@media (prefers-color-scheme: dark) {
+
+  .container{
+    color:#fff;
+    background-color:#000;
+  }
+  .layer{
+    border:1px solid #fff;
+    background-color: #000;
+  }
+}
+@media (prefers-color-scheme: light) {
+
+  .container{
+    color:#000;
+    background-color:#fff;
+  }
+  .layer{
+    border:1px solid #000;
+    background-color: #fff;
+  }
+}
+*/

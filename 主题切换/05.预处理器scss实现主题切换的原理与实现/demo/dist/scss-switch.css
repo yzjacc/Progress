@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  transition: color 0.5s, background-color 0.5s;
+}
+html.primary .container {
+  color: #000;
+  background-color: #fff;
+}
+html.dark .container {
+  color: #fff;
+  background-color: #000;
+}
+html.green .container {
+  color: #fff;
+  background-color: #008f8e;
+}
+html.purple .container {
+  color: #fbd26a;
+  background-color: #422256;
+}
+
+.layout {
+  display: flex;
+  justify-content: center;
+}
+
+.layer {
+  width: 300px;
+  height: 300px;
+  padding: 8px;
+  margin: 10px;
+  border: 1px solid;
+}
+html.primary .layer {
+  border-color: #000 !important;
+}
+html.dark .layer {
+  border-color: #fff !important;
+}
+html.green .layer {
+  border-color: #fff !important;
+}
+html.purple .layer {
+  border-color: #fbd26a !important;
+}

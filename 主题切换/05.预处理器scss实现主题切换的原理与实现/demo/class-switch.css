@@ -1,0 +1,62 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.container{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  transition:color .5s, background-color .5s;
+}
+
+html.primary .container{
+  color: #222;
+  background-color: #fff;
+}
+
+html.dark .container{
+  color: #fff;
+  background-color: #222;
+  color-scheme: dark;
+}
+
+html.green .container{
+  color: #fff;
+  background-color: #008f8e;
+}
+
+html.purple .container{
+  color: #fbd26a;
+  background-color: #422256;
+}
+
+
+.layout{
+  display: flex;
+  justify-content: center;
+}
+
+.layer{
+  width: 300px;
+  height: 300px;
+  padding: 8px;
+  margin: 10px;
+  border:1px solid #000;
+}
+
+html.primary .layer{
+  border:1px solid #000;
+}
+
+html.dark .layer{
+  border:1px solid #fff;
+}
+
+html.green .layer{
+  border:1px solid #ccc;
+}
+
+html.purple .layer{
+  border:1px solid #fbd26a;
+}

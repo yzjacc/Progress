@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="dist/scss-switch.css">
+</head>
+<body>
+  <div class="container">
+    <div class="layout">
+      <input type="radio" value="primary" name="theme">白色 <br>
+      <input type="radio" value="dark" name="theme">黑色 <br>
+      <input type="radio" value="green" name="theme">绿色 <br>
+      <input type="radio" value="purple" name="theme">紫色 <br>
+    </div>
+    <div class="layout">
+      <div class="layer">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, maiores ducimus cumque consectetur nemo voluptate vel nesciunt beatae ipsum aliquam.
+      </div>
+      <div class="layer">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, maiores ducimus cumque consectetur nemo voluptate vel nesciunt beatae ipsum aliquam.
+      </div>
+      <div class="layer">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, maiores ducimus cumque consectetur nemo voluptate vel nesciunt beatae ipsum aliquam.
+      </div>
+      <div class="layer">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, maiores ducimus cumque consectetur nemo voluptate vel nesciunt beatae ipsum aliquam.
+      </div>
+    </div>
+    
+  </div>
+  
+</body>
+<script>
+ 
+  const selectors = document.querySelectorAll('input[name="theme"]');
+  const theme = localStorage.getItem('theme');
+  if(theme){
+    document.documentElement.setAttribute('class', theme);
+    selectors.forEach((selector) => {
+      if(selector.value === theme){
+        selector.checked = true;
+      }
+    })
+  }
+  else{
+    document.documentElement.setAttribute('class', 'primary');
+    selectors[0].checked = true;
+  }
+
+  selectors.forEach((selector) => {
+    selector.addEventListener('change', (e) => {
+      const theme = e.target.value;
+      document.documentElement.setAttribute('class', theme);
+      localStorage.setItem('theme', theme);
+    })
+  })
+
+</script>
+</html>

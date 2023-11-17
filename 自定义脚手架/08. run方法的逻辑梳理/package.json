@@ -1,0 +1,23 @@
+{
+  "name": "my-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "myvue": "./bin/myvue.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "commander": "^2.9.0",
+    "inquirer": "^6.0.0",
+    "request": "^2.88.2",
+    "tildify": "^1.2.0",
+    "user-home": "^2.0.0"
+  }
+}

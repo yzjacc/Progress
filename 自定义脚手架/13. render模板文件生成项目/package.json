@@ -1,0 +1,33 @@
+{
+  "name": "my-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "myvue": "./bin/myvue.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.4.0",
+    "chalk": "^2.1.0",
+    "commander": "^2.9.0",
+    "consolidate": "^0.14.0",
+    "download-git-repo": "^1.0.1",
+    "handlebars": "^4.0.5",
+    "inquirer": "^6.0.0",
+    "metalsmith": "^2.1.0",
+    "minimatch": "^3.0.0",
+    "multimatch": "^2.1.0",
+    "ora": "^1.3.0",
+    "read-metadata": "^1.0.0",
+    "request": "^2.88.2",
+    "rimraf": "^2.5.0",
+    "tildify": "^1.2.0",
+    "user-home": "^2.0.0"
+  }
+}

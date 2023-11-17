@@ -1,0 +1,18 @@
+import { defineStore } from 'pinia';
+import { GlobalState, ObjToKeyValArray } from "@/stores/interface"
+import piniaPersistConfig from "@/config/piniaPersist"
+
+export const useGlobalStore = defineStore({
+  id: 'duyi-global',
+  state: ():GlobalState => ({ 
+    //是否是深色主题模式
+    isDark: false,
+  }),
+  actions: {
+    //设置state的值
+    setGlobalState(...args:ObjToKeyValArray<GlobalState>) { 
+      this.$patch({[args[0]]:args[1]})
+    }
+  },
+  persist:piniaPersistConfig("duyi-global")
+});
