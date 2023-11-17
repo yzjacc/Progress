@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>切换主题</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --bg: #409eff;
+        --fontSize: 25px;
+        --btn-color: #67c23a;
+      }
+      .green-theme {
+        --bg: #67c23a;
+        --btn-color: #409eff;
+      }
+      body {
+        transition: background 1s;
+        background: var(--bg);
+      }
+      button {
+        border-radius: 6px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transition: color 1s;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        border: none;
+        background: var(--btn-color);
+        font-size: var(--fontSize);
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <button>点击切换主题</button>
+    <script>
+      const THEME = "__THEME__";
+      const data = localStorage.getItem(THEME);
+      document.body.classList.add(data);
+      document.querySelector("button").addEventListener("click", () => {
+        if (document.body.classList.contains("green-theme")) {
+          document.body.classList.remove("green-theme");
+          localStorage.removeItem(THEME);
+        } else {
+          document.body.classList.add("green-theme");
+          localStorage.setItem(THEME, "green-theme");
+        }
+      });
+    </script>
+  </body>
+</html>

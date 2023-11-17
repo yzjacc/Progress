@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Blob
+      const blob = new Blob(["I am a teacher"], { type: "text/plain" });
+      console.log(blob);
+      const length = 4;
+      const firBlob = blob.slice(0, length);
+      const lastBlob = blob.slice(length);
+      // console.log(firBlog);
+      // firBlog.text().then((res) => console.log(res));
+      Promise.all([firBlob.text(), lastBlob.text()]).then((val) => {
+        console.log(val);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .drop-content {
+        width: 200px;
+        height: 200px;
+        border: 2px dashed #000;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 文件上传 -->
+    <input type="file" multiple />
+    <!-- 拖拽元素 -->
+    <div class="drop-content"></div>
+    <script>
+      // 1. new File
+      // 2. input 文件上传
+      // 3. e.dataTransfer
+
+      // const file = new File(["我是一个文本内容"], "文本.txt", {
+      //   type: "text/plain",
+      // });
+      // console.log(file);
+      // const file = document.querySelector("input");
+      // file.addEventListener("change", function (e) {
+      //   console.log(e.target.files);
+      // });
+
+      const dropContent = document.querySelector(".drop-content");
+      dropContent.addEventListener("dragover", (e) => e.preventDefault());
+      dropContent.addEventListener("drop", function (e) {
+        e.preventDefault();
+        console.log(e.dataTransfer.files);
+      });
+    </script>
+  </body>
+</html>

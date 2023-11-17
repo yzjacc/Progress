@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+      }
+      a {
+        color: #000;
+      }
+      .header {
+        height: 74px;
+      }
+      .center {
+        margin: 0 auto;
+        width: 1200px;
+        display: flex;
+        height: 100%;
+      }
+
+      .center li {
+        flex: 1;
+        height: 74px;
+        line-height: 74px;
+        text-align: center;
+      }
+      .pages {
+        width: 1200px;
+        margin: 0 auto;
+      }
+
+      .pages > div {
+        display: none;
+      }
+
+      .pages > div > h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <ul class="center">
+        <li><a href="/home">华为</a></li>
+        <li><a href="/xuanwu">玄武框架</a></li>
+        <li><a href="/hongmeng">鸿蒙系统</a></li>
+        <li><a href="/qilin">麒麟芯片</a></li>
+        <li><a href="/kunlun">昆仑玻璃</a></li>
+      </ul>
+    </div>
+    <div class="pages">
+      <div id="home">
+        <h1>华为首页</h1>
+        <div class="content">请稍等，数据响应中</div>
+      </div>
+      <div id="xuanwu">
+        <h1>玄武框架</h1>
+        <div class="content">请稍等，数据响应中</div>
+      </div>
+      <div id="hongmeng">
+        <h1>鸿蒙系统</h1>
+        <div class="content">请稍等，数据响应中</div>
+      </div>
+      <div id="qilin">
+        <h1>麒麟芯片</h1>
+        <div class="content">请稍等，数据响应中</div>
+      </div>
+      <div id="kunlun">
+        <h1>昆仑玻璃</h1>
+        <div class="content">请稍等，数据响应中</div>
+      </div>
+    </div>
+    <script>
+      const centerDom = document.querySelector(".center");
+      let activeDom = null;
+      linkPage(location.pathname === "/" ? "/home" : location.pathname);
+      centerDom.onclick = function (e) {
+        e.preventDefault();
+        const target = e.target;
+        if (target.tagName === "A") {
+          const url = target.getAttribute("href");
+          if (url === location.pathname) {
+            return;
+          }
+          linkPage(url);
+        }
+      };
+
+      function linkPage(url, isAdd = true) {
+        // 处理路由
+        if (isAdd) {
+          history.pushState({ url }, "", url);
+        }
+        // 渲染页面
+        activeDom && (activeDom.style.display = "none");
+        const dom = document.getElementById(url.slice(1));
+        dom.style.display = "block";
+        activeDom = dom;
+        fetchData(url);
+      }
+
+      function fetchData(url) {
+        const dom = activeDom.querySelector(".content");
+        dom.innerHTML = "请稍等，数据响应中";
+        setTimeout(function () {
+          dom.innerHTML = `请求到${url}的数据`;
+        }, Math.random() * 3000);
+      }
+
+      window.onpopstate = function (e) {
+        const state = e.state;
+        if (state) {
+          linkPage(state.url, false);
+        }
+      };
+    </script>
+  </body>
+</html>

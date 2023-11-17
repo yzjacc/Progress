@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./bs.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="drop-content">将目录或多个文件拖拽到此进行扫描</div>
+      <div class="upload-btns">
+        <div class="scan-file">扫描文件</div>
+        <div class="scan-dir">扫描目录</div>
+        <div class="upload">上传文件</div>
+      </div>
+      <table role="table" class="table">
+        <thead>
+          <tr>
+            <th>
+              <div style="text-align: start">名称</div>
+            </th>
+            <th>
+              <div>文件目录</div>
+            </th>
+            <th>
+              <div>类型</div>
+            </th>
+            <th>
+              <div>文件大小</div>
+            </th>
+            <th style="text-align: right">
+              <div>操作</div>
+            </th>
+          </tr>
+        </thead>
+        <tbody class="list">
+          <!-- <tr>
+            <td>名称</td>
+            <td>路径</td>
+            <td>类型</td>
+            <td>大小</td>
+            <td>删除</td>
+          </tr> -->
+        </tbody>
+      </table>
+      <input type="file" class="file" multiple />
+      <input type="file" webkitdirectory class="dir" />
+    </div>
+    <script src="./index.js"></script>
+    <!-- <script src="./upload.js"></script> -->
+  </body>
+</html>

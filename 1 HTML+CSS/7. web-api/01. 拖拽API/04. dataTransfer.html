@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .drop-content {
+        width: 200px;
+        height: 200px;
+        border: 2px dashed #000;
+      }
+      .drag-box {
+        background-color: red;
+        color: #fff;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="drop-content">拖放区域</div>
+    <div class="drag-box" draggable="true">拖拽元素</div>
+    <script>
+      const dropContent = document.querySelector(".drop-content");
+      const dragBox = document.querySelector(".drag-box");
+      dragBox.addEventListener("dragstart", function (e) {
+        // console.log(e.dataTransfer)
+        e.dataTransfer.setData("text/plain", "我是一个拖拽文本");
+        e.dataTransfer.setData("text/html", "<p>我是一个拖拽文本标签</p>");
+        const img = document.createElement("img");
+        img.src = "./assets/music.jpeg";
+        e.dataTransfer.setDragImage(img, 50, 50);
+      });
+
+      dropContent.addEventListener("dragover", function (e) {
+        e.dataTransfer.dropEffect = "copy";
+        e.preventDefault();
+      });
+
+      dropContent.addEventListener("drop", function (e) {
+        // console.log(e.dataTransfer.getData("text/html"));
+        dropContent.innerHTML = e.dataTransfer.getData("text/html");
+        console.log(e.dataTransfer.types);
+        dragBox.remove();
+      });
+    </script>
+  </body>
+</html>

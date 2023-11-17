@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="file" />
+
+    <script>
+      // FileReader
+      const fileDom = document.querySelector("[type=file]");
+      fileDom.addEventListener("change", function (e) {
+        const fr = new FileReader();
+
+        // 读取图片
+        // fr.addEventListener("load", function (e) {
+        //   console.log(e.target.result);
+        //   const img = new Image();
+        //   img.src = e.target.result;
+        //   document.body.appendChild(img)
+        // });
+        // fr.readAsDataURL(e.target.files[0]);
+
+        // 读取文字
+        fr.addEventListener("load", function (e) {
+          console.log(e.target.result);
+        });
+        fr.readAsText(e.target.files[0]);
+      });
+    </script>
+  </body>
+</html>

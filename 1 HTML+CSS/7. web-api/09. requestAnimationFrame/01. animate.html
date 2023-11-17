@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .box,
+      .box1 {
+        width: 100px;
+        height: 100px;
+        background-color: #fac;
+        position: absolute;
+        left: 0;
+      }
+      .box1 {
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">interval</div>
+    <div class="box1">frame</div>
+    <script>
+      const box = document.querySelector(".box");
+      const box1 = document.querySelector(".box1");
+      let d = 0;
+      let rd = 0;
+      const tid = setInterval(function () {
+        d++;
+        box.style.left = d + "px";
+        if (d >= 300) {
+          clearInterval(tid);
+        }
+      }, 1000/60);
+
+      function run() {
+        rd++;
+        box1.style.left = rd + "px";
+        if(rd === 300) {
+          cancelAnimationFrame(rid);
+          return;
+        }
+        requestAnimationFrame(run);
+      }
+      const rid = requestAnimationFrame(run);
+
+      // requestAnimationFrame(function (time) {
+      //   console.log(time);
+      //   console.log("渲染帧，我来啦");
+      // });
+
+      // function animate(time) {
+      //   console.log(time)
+      //   if(time > 2000) {
+      //     cancelAnimationFrame(rid);
+      //     return;
+      //   }
+      //   requestAnimationFrame(animate);
+      // }
+
+      // const rid = requestAnimationFrame(animate);
+
+      // 关闭
+      // cancelAnimationFrame(rid)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">
+      <div class="son">123</div>
+    </div>
+    <script>
+      const box = document.querySelector(".box");
+      const son = document.querySelector(".son");
+      const mob = new MutationObserver((mutations) => {
+        console.log(mutations);
+      });
+      mob.observe(box, {
+        attributes: true,
+        // attributeOldValue: true
+        childList: true,
+        characterData: true,
+        subtree: true,
+      });
+
+      function changeBox() {
+        box.style.color = 'red';
+        box.setAttribute('id', 'demo');
+
+        box.appendChild(document.createElement('div'));
+
+        box.childNodes[0].data = 123;
+      }
+    </script>
+  </body>
+</html>

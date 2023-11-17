@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: #fac;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <script>
+      const box = document.querySelector(".box");
+      // 运动函数
+      // 本质：数据在一段时间内从A变为B
+
+      function animate(from, to, duration, callback) {
+        const speed = (to - from) / duration;
+        // Date.now();
+        const startTime = Date.now();
+        function _run() {
+          const time = Date.now() - startTime;
+          if (time >= duration) {
+            // box.style.left = to + "px";
+            if (typeof callback === "function") {
+              callback(to);
+            }
+            cancelAnimationFrame(rid);
+            return;
+          }
+
+          let value = from + speed * time;
+          if (typeof callback === "function") {
+            callback(value);
+          }
+          requestAnimationFrame(_run);
+        }
+        const rid = requestAnimationFrame(_run);
+      }
+
+      animate(100, 200, 2000, function (val) {
+        box.style.left = val + "px";
+      });
+      animate(100, 200, 2000, function (val) {
+        box.style.height = val + "px";
+      });
+      animate(100, 200, 2000, function (val) {
+        box.style.top = val + "px";
+      });
+      animate(100, 200, 2000, function (val) {
+        box.style.width = val + "px";
+      });
+      animate(0.5, 1, 2000, function (val) {
+        box.style.opacity = val;
+      });
+    </script>
+  </body>
+</html>

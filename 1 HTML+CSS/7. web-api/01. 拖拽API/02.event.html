@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .drop-content {
+        width: 200px;
+        height: 200px;
+        border: 2px dashed #000;
+      }
+      .drag-box {
+        background-color: red;
+        color: #fff;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="drop-content">拖放区域</div>
+    <div class="drag-box" draggable="true">拖拽元素</div>
+    <input type="text">
+    <script>
+      const dropContent = document.querySelector(".drop-content");
+      const dragBox = document.querySelector(".drag-box");
+
+      dragBox.addEventListener("dragstart", () => console.log("开始拖拽"));
+      //   dragBox.addEventListener("drag", () => console.log("拖拽过程中"));
+      dragBox.addEventListener("dragend", () => console.log("拖拽结束"));
+
+      dropContent.addEventListener("dragenter", () => {
+        console.log("拖拽元素进入到目标区域");
+      });
+      dropContent.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        console.log("拖拽元素在目标区域内拖拽");
+      });
+      dropContent.addEventListener("dragleave", () => {
+        console.log("拖拽元素离开目标区域");
+      });
+
+      dropContent.addEventListener("drop", (e) => {
+        e.preventDefault();
+        console.log("拖拽元素在目标区域内释放");
+      });
+      document.querySelector('input').addEventListener('drop', function(e) {
+        e.preventDefault();
+      })
+    </script>
+  </body>
+</html>

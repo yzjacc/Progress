@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>拖拽排序示例</title>
+    <style>
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 5px;
+        background-color: #f9f9f9;
+        cursor: grab;
+      }
+
+      li.dragging {
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="sortableList">
+      <li draggable="true">Item 1</li>
+      <li draggable="true">Item 2</li>
+      <li draggable="true">Item 3</li>
+      <li draggable="true">Item 4</li>
+      <li draggable="true">Item 5</li>
+    </ul>
+
+    <script>
+      const sortableList = document.getElementById("sortableList");
+      let draggingElement = null;
+
+      sortableList.addEventListener("dragstart", function (e) {
+        e.target.classList.add("dragging");
+        draggingElement = e.target;
+      });
+
+      sortableList.addEventListener("dragover", function (e) {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = "move";
+        if (e.target !== draggingElement && e.target.tagName === "LI") {
+          const targetMsg = e.target.getBoundingClientRect();
+          // e.clientY
+          const mouseY = e.clientY - targetMsg.top;
+          const targetHeight = targetMsg.height;
+          if (mouseY < targetHeight / 2) {
+            sortableList.insertBefore(draggingElement, e.target);
+          } else {
+            sortableList.insertBefore(draggingElement, e.target.nextSibling);
+          }
+        }
+      });
+
+      sortableList.addEventListener("dragend", function (e) {
+        e.target.classList.remove("dragging");
+        draggingElement = null;
+      });
+    </script>
+  </body>
+</html>

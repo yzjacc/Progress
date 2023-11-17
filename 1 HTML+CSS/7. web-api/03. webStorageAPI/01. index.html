@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>web Storage API</title>
+  </head>
+  <body>
+    <script>
+      // 本地化存储
+      window.localStorage;
+      window.sessionStorage;
+
+      // 存储内容：字符串
+      // 增删改查
+
+      // setItem (增，改)
+      //   localStorage.setItem("user", "多多");
+      //   sessionStorage.setItem("user", "多多");
+
+      // getItem （查）
+      //   console.log(localStorage.getItem("user"));
+      //   console.log(sessionStorage.getItem("user"));
+
+      // removeItem clear（删）
+      //   localStorage.removeItem("user");
+      //   console.log(localStorage.getItem("user"));
+
+      function getAllMsg() {
+        for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i);
+          const item = localStorage.getItem(key);
+          console.log(item);
+        }
+      }
+    </script>
+  </body>
+</html>

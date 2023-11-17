@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .content {
+        width: 100px;
+        height: 200px;
+        border: 2px solid #fac;
+        overflow: scroll;
+      }
+      .content div {
+        width: 50px;
+        height: 100px;
+        background-color: #cfa;
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div class="box">box</div>
+    </div>
+    <script>
+      const content = document.querySelector(".content");
+      const box = document.querySelector(".box");
+      // 交叉观察者
+      // Intersection Observer
+      const ob = new IntersectionObserver(
+        (entries) => {
+          console.log(entries);
+          console.log("交叉情况发生变化");
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              ob.unobserve(entry.target);
+              console.log("满足交叉条件");
+            } else {
+              console.log("不满足交叉条件");
+            }
+          });
+        },
+        {
+          root: content,
+          rootMargin: '20px',
+          threshold: 1,
+        }
+      );
+
+      ob.observe(box);
+    </script>
+  </body>
+</html>

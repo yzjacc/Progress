@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>表格计算</title>
+  </head>
+  <body>
+    <table id="data-table">
+      <thead>
+        <tr>
+          <th>商品</th>
+          <th>数量</th>
+          <th>单价</th>
+          <th>总价</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>商品 1</td>
+          <td contenteditable="true">2</td>
+          <td contenteditable="true">10</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>商品 2</td>
+          <td contenteditable="true">3</td>
+          <td contenteditable="true">15</td>
+          <td>45</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button id="add-button">添加商品</button>
+
+    <script>
+      const table = document.querySelector("#data-table");
+      const addBtn = document.querySelector("#add-button");
+
+      let goodsNum = 2;
+      addBtn.onclick = function () {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `<tr>
+          <td>商品 ${++goodsNum}</td>
+          <td contenteditable="true">0</td>
+          <td contenteditable="true">0</td>
+          <td>0</td>
+        </tr>`;
+        table.tBodies[0].appendChild(tr);
+      };
+
+      const mob = new MutationObserver((mutaions) => {
+        console.log("元素发生了变化");
+        // 谁变了
+        mutaions.forEach(mutation => {
+          const target = mutation.target;
+          const trParent=target.parentElement.parentElement;
+          const result = trParent.children[1].innerText * trParent.children[2].innerText;
+          trParent.children[3].innerText = result;
+        })
+      });
+
+      mob.observe(table, {
+        characterData: true,
+        subtree: true,
+      });
+    </script>
+  </body>
+</html>

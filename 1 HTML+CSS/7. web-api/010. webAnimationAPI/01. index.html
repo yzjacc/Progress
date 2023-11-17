@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <script>
+      const box = document.querySelector(".box");
+      //
+      // 0-9a-z随机数 6位
+      // Number.prototype.toString()
+      function getColor() {
+        return "#" + Math.random().toString(16).slice(2, 8);
+      }
+      Math.random().toString(16);
+      // Web Animation API
+      box.animate(
+        [{ backgroundColor: getColor() }, { backgroundColor: getColor() }],
+        {
+          duration: 2000,
+          fill: "forwards",
+        }
+      );
+    </script>
+  </body>
+</html>

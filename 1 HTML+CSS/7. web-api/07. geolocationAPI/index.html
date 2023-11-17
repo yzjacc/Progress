@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="show"></div>
+    <script>
+      const showDom = document.querySelector(".show");
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          console.log(position);
+          const { longitude, latitude, accuracy } = position.coords;
+          showDom.innerHTML = `
+           <div>经度：${longitude}</div>
+           <div>纬度：${latitude}</div>
+           <div>精确度：${accuracy}</div>
+          `
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+    </script>
+  </body>
+</html>

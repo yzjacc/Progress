@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <button class="start">开始</button>
+    <button class="pause">暂停</button>
+    <button class="cancel">取消</button>
+    <button class="finish">立即完成</button>
+    <button class="reverse">反向播放</button>
+    <input type="range" value="0" class="timeChange" min="0" max="3000" />
+    <script>
+      const box = document.querySelector(".box");
+      const start = document.querySelector(".start");
+      const pause = document.querySelector(".pause");
+      const cancel = document.querySelector(".cancel");
+      const finish = document.querySelector(".finish");
+      const reverse = document.querySelector(".reverse");
+      const timeChange = document.querySelector(".timeChange");
+
+      // 设置一个动画
+      const aniamteCtrl = box.animate([
+        {transform: 'translateX(0px)'},
+        {backgroundColor: 'red'},
+        {borderRadius: '100%', transform: 'translateX(500px)', backgroundColor: 'green'}
+      ], {
+        duration: 3000,
+        fill: 'forwards'
+      });
+
+      // 控制动画
+      start.onclick = function() {
+        aniamteCtrl.play();
+      }
+      cancel.onclick = function() {
+        aniamteCtrl.cancel();
+      }
+      finish.onclick = function() {
+        aniamteCtrl.finish();
+      }
+      pause.onclick = function() {
+        aniamteCtrl.pause();
+      }
+      reverse.onclick = function() {
+        aniamteCtrl.reverse();
+      }
+      timeChange.onchange = function(e) {
+        // console.log(e.target.value);
+        // aniamteCtrl.start();
+        aniamteCtrl.currentTime = e.target.value;
+      }
+    </script>
+  </body>
+</html>
