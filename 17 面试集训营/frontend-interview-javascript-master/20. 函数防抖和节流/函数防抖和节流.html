@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="txt">
+    <script>
+        var txt = document.getElementById("txt");
+
+        /**
+         * func：一定时间后要执行的函数
+         * wait：等待的时间，单位是毫秒
+         */
+        // function debounce(func, wait){
+        //     var timeId = null; // 存储 setTimeout 返回的 id
+        //     return function(...args){
+        //         if(timeId){
+        //             // 进入此 if，说明目前处于等待当中，但是由于又调用了，所以需要重新开始计时
+        //             clearTimeout(timeId);
+        //         }
+        //         timeId = setTimeout(function(){
+        //             func(...args);
+        //         },wait)
+        //     }
+        // }
+
+        // 该函数是一个通过函数，它的作用是将另外一个函数变成防抖函数
+        // 该函数接收两个参数 1. 要将哪一个函数变成发抖的函数 2. 要隔的时间
+        // 该函数会返回一个新的函数
+        // var debounceHandle = debounce(function(event){
+        //     console.log(event.target.value);
+        // }, 500)
+
+
+        // 函数节流
+        // 1. 时间戳的形式来实现
+
+        /*
+         * func ： 要执行的函数
+         * wait： 间隔的时间
+         */
+
+        // function throttle(func, wait) {
+        //     var pre = 0; // 上一次时间，只不过一开始的时候为 0 
+        //     return function(...args){
+        //         var now = new Date(); // 获取最新的时间戳
+        //         if(now - pre > wait){
+        //             // 进入此 if，说明时间已经到了等待时间那么长，可以执行一次
+        //             func(...args);
+        //             // 更新上一次的时间
+        //             pre = now;
+        //         }
+        //     }
+        // }
+
+        // 2. 使用定时器来实现
+        function throttle(func, wait) {
+            var timeId = null;
+            return function(...args){
+                if(!timeId){
+                    func(...args);
+                    timeId = setTimeout(function(){
+                        timeId = null;
+                    },wait);
+                }
+            }
+        }
+
+        var throttleHandle = throttle(function(event){
+            console.log(event.target.value);
+        }, 2000)
+
+
+        txt.onkeyup = function (event) {
+            throttleHandle(event);
+        }
+
+    </script>
+</body>
+
+</html>

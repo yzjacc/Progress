@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面一</title>
+</head>
+
+<body>
+    <h1>新增学生</h1>
+    <div>
+        <span>学生学号：</span>
+        <input type="text" name="stuId" id="stuId">
+    </div>
+    <div>
+        <span>学生姓名：</span>
+        <input type="text" name="stuName" id="stuName">
+    </div>
+    <div>
+        <span>学生年龄：</span>
+        <input type="text" name="stuAge" id="stuAge">
+    </div>
+    <button id="addBtn">新增学生</button>
+    <script src="./db.js"></script>
+    <script>
+        let btn = document.querySelector("#addBtn");
+        let stuId = document.querySelector("#stuId");
+        let stuName = document.querySelector("#stuName");
+        let stuAge = document.querySelector("#stuAge");
+        openDB("stuDB", 1)
+            .then((db)=>{
+                btn.onclick = function(){
+                    addData(db,"stu",{
+                        "stuId" : stuId.value,
+                        "stuName" : stuName.value,
+                        "stuAge" : stuAge.value,
+                    });
+                    stuId.value = stuName.value = stuAge.value = "";
+                }
+            })
+    </script>
+</body>
+
+</html>

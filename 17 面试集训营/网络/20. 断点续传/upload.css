@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  word-break: break-all;
+}
+
+.container {
+  width: 400px;
+  margin: 0 auto;
+  background: #eee;
+  padding: 20px;
+  margin-top: 20px;
+}
+.btn {
+  border: none;
+  outline: none;
+  font-size: inherit;
+  display: block;
+  margin-bottom: 1em;
+  white-space: nowrap;
+  cursor: pointer;
+  border: -5px solid #dcdfe6;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.1s;
+  font-weight: 500;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 5px;
+  height: 40px;
+}
+
+.btn.choose {
+  color: #606266;
+  background: #fff;
+  border-color: #dcdfe6;
+}
+
+.btn.choose:hover {
+  color: #409eff;
+  border-color: #c6e2ff;
+  background-color: #ecf5ff;
+}
+
+.btn.control {
+  color: #fff;
+  background-color: #409eff;
+  border-color: #409eff;
+}
+
+.btn.control:hover {
+  background: #66b1ff;
+  border-color: #66b1ff;
+  color: #fff;
+}
+
+.progress {
+  width: 100%;
+  height: 60px;
+  background: #ccc;
+  border-radius: 20px;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.progress .wrapper {
+  position: relative;
+  width: 100%;
+  height: 5px;
+}
+.progress .wrapper::before {
+  content: '';
+  width: 100%;
+  background: #eee;
+  height: 5px;
+  border-radius: 3px;
+  display: block;
+}
+.inner {
+  position: absolute;
+  width: 0%;
+  background: #7ebf50;
+  height: 5px;
+  transition: 0.1s;
+  border-radius: 3px;
+  left: 0;
+  top: 0;
+}
+.inner span {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  transform: translateX(50%);
+  font-size: 12px;
+  background: #333;
+  color: #fff;
+  padding: 0 3px;
+}
+.inner span::before {
+  content: '';
+  position: absolute;
+  border: 5px solid #333;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -100%);
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+
+.item {
+  margin-bottom: 1em;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #00000080;
+  color: #fff;
+}

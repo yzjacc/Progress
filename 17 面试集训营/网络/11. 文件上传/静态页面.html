@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文件上传</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .form-container {
+        width: 400px;
+        margin: 0 auto;
+        background: #eee;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 30px;
+      }
+      .form-item {
+        margin: 1.5em 0;
+      }
+      .title {
+        height: 30px;
+        line-height: 30px;
+      }
+      input {
+        width: 100%;
+        height: 30px;
+        font-size: inherit;
+      }
+      img {
+        max-width: 200px;
+        max-height: 250px;
+        margin-top: 1em;
+        border-radius: 5px;
+      }
+      .submit {
+        width: 100%;
+        background: #0057d8;
+        color: #fff;
+        border: 1px solid #0141a0;
+        border-radius: 5px;
+        height: 40px;
+        font-size: inherit;
+        transition: 0.2s;
+      }
+      .submit:hover {
+        background: #0061f3;
+        border: 1px solid #0057d8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="form-item">
+        <div class="title">账号</div>
+        <input type="text" id="username" />
+      </div>
+      <div class="form-item">
+        <div class="title">密码</div>
+        <input type="password" id="password" />
+      </div>
+      <div class="form-item">
+        <div class="title">
+          头像
+          <button id="btnupload">上传文件</button>
+        </div>
+        <img src="" id="avatar" alt="" />
+      </div>
+      <div class="form-item">
+        <button class="submit">提交注册</button>
+      </div>
+    </div>
+  </body>
+</html>

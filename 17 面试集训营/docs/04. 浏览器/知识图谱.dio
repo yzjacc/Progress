@@ -1,0 +1,108 @@
+<mxfile host="65bd71144e">
+    <diagram id="QFoU5hE6jV3CWI5dNyLY" name="第 1 页">
+        <mxGraphModel dx="1206" dy="632" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="19" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="1398" y="116" width="169" height="179" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Roboto Mono;fontSize=16;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="19" vertex="1">
+                    <mxGeometry width="169" height="179" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="图例" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=16;fontFamily=Roboto Mono;" parent="19" vertex="1">
+                    <mxGeometry x="63.5" y="7" width="42" height="23" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="必会知识" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontFamily=Roboto Mono;" parent="19" vertex="1">
+                    <mxGeometry x="18" y="42" width="133" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="建议学习的知识" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontFamily=Roboto Mono;" parent="19" vertex="1">
+                    <mxGeometry x="18" y="85" width="133" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="选择学习的知识" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontFamily=Roboto Mono;" parent="19" vertex="1">
+                    <mxGeometry x="18" y="128" width="133" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="五层网络模型" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="1004.5" y="119" width="160" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="73" target="71">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="三次握手和四次挥手" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="723" y="119" width="250" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="76" target="73">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="浏览器的TCP连接数限制" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="723" y="175" width="250" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="78" target="71">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="78" target="95">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="993" y="191"/>
+                            <mxPoint x="993" y="247"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="78" value="SSL 和 TSL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="1004.5" y="175" width="160" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="79" target="78">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="HTTPS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="1004.5" y="231" width="160" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="82" target="73">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="HTTP2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="582" y="119" width="110" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="常见状态码" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="1194" y="119" width="160" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" value="跨域问题" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="1194" y="176" width="160" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="常见请求方法" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="1194" y="231" width="160" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="web socket" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="1194" y="287" width="160" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="93" value="XSS攻击" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="1004.5" y="343" width="160" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="94" value="CSRF攻击" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="1004.5" y="287" width="160" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="95" value="对称加密和非对称加密" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="723" y="231" width="250" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="97" value="HTTP缓存协议" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="1195" y="343" width="160" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="98" value="keep-alive" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="582" y="176" width="110" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="99" value="文件上传" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="582" y="231" width="110" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="100" target="99">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="断点续传" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="582" y="287" width="110" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="网络性能优化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontFamily=Roboto Mono;" vertex="1" parent="1">
+                    <mxGeometry x="723" y="287" width="251" height="31" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

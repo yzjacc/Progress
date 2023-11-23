@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color:red;
+        }
+        .test{
+            transform: translate(0,0);
+            will-change: transform;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <span>Lorem ipsum dolor sit amet.</span>
+    </p>
+    <p class="test">
+        <span>Lorem ipsum dolor sit amet.</span>
+    </p>
+    <script>
+        const op = document.querySelector(".test");
+        op.style.marginLeft = "100px";
+        op.style.marginLeft = "150px";
+        op.style.marginLeft
+        op.style.marginLeft = "200px";
+    </script>
+</body>
+</html>

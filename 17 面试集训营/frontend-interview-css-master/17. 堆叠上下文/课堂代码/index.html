@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            display: flex;
+        }
+
+        .parent {
+            width: 200px;
+            height: 100px;
+            background: #168bf5;
+            /* 虽然设置了z-index，但是没有设置position，z-index 无效，.parent还是普通元素，没有产生层叠上下文 */
+            z-index: 1;
+        }
+
+        .child {
+            width: 100px;
+            height: 200px;
+            background: #32d19c;
+            position: relative;
+            z-index: -1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="parent">
+            parent
+            <div class="child">child</div>
+        </div>
+    </div>
+</body>
+
+</html>

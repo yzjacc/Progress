@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>计数：<output id="result"></output></p>
+    <button id="startBtn">开始工作</button>
+    <button id="stopBtn">停止工作</button>
+    <script>
+        const startBtn = document.getElementById("startBtn");
+        const stopBtn = document.getElementById("stopBtn");
+        let worker; // 用于存储 worker 线程
+        startBtn.onclick = function(){
+            worker = new Worker('worker.js');
+            worker.onmessage = function(event){
+                document.querySelector("#result").innerHTML = event.data;
+            }
+        }
+        stopBtn.onclick = function(){
+            worker.terminate();
+            worker = null;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<mxfile host="65bd71144e">
+    <diagram id="QFoU5hE6jV3CWI5dNyLY" name="第 1 页">
+        <mxGraphModel dx="738" dy="494" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 14px;&quot;&gt;03. 浏览器的组成部分&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="216" y="214" width="178" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="218" y="267" width="169" height="179" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Roboto Mono;fontSize=16;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="19" vertex="1">
+                    <mxGeometry width="169" height="179" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;font color=&quot;#000000&quot;&gt;图例&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=16;fontFamily=Roboto Mono;" parent="19" vertex="1">
+                    <mxGeometry x="63.5" y="7" width="42" height="23" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;font color=&quot;#000000&quot;&gt;必会知识&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontFamily=Roboto Mono;" parent="19" vertex="1">
+                    <mxGeometry x="18" y="42" width="133" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;font color=&quot;#000000&quot;&gt;建议学习的知识&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontFamily=Roboto Mono;" parent="19" vertex="1">
+                    <mxGeometry x="18" y="85" width="133" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;font color=&quot;#000000&quot;&gt;选择学习的知识&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontFamily=Roboto Mono;" parent="19" vertex="1">
+                    <mxGeometry x="18" y="128" width="133" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size: 14px;&quot;&gt;02. 资源提示关键词&lt;/font&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="215" y="155" width="179" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 14px;&quot;&gt;01. 浏览器渲染流程&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="26" y="155" width="161" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#000000;strokeWidth=2;spacingLeft=10;fontSize=14;" parent="1" source="63" target="64" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size: 14px&quot;&gt;05. WebSQL&lt;/font&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="421" y="216" width="200" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size: 14px&quot;&gt;04. 浏览器的离线存储概述&lt;/font&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="422" y="157" width="198" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#000000;strokeWidth=2;spacingLeft=10;fontSize=14;" parent="1" source="69" target="63" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size: 14px&quot;&gt;06. IndexedDB&lt;/font&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="422" y="281" width="196" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 14px&quot;&gt;08. 浏览器缓存&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="420" y="412" width="197" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size: 14px&quot;&gt;10. BroadCast 实现跨标签页通信&lt;/font&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="653" y="216" width="253" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size: 14px&quot;&gt;09. 跨标签页通信概述&lt;/font&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="654" y="157" width="253" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="&lt;span style=&quot;font-size: 12px;&quot;&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size: 12px;&quot;&gt;11. ServiceWorker 实现跨标签页通信&lt;/font&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="653" y="273" width="252" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 14px&quot;&gt;12. storage 实现跨标签页通信&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="653" y="330" width="254" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="" style="edgeStyle=none;html=1;strokeWidth=2;" parent="1" source="80" target="69" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="&lt;span style=&quot;font-size: 14px&quot;&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size: 14px&quot;&gt;07. File API&lt;/font&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="421" y="350" width="196" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 12px;&quot;&gt;13. SharedWorker 实现跨标签页通信&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="653" y="388" width="254" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 14px&quot;&gt;14. IndexedDB 实现跨标签页通信&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="654" y="446" width="254" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 14px&quot;&gt;15. cookie 实现跨标签页通信&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="654" y="501" width="254" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 12px;&quot;&gt;16. postMessage 实现跨标签页通信&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="654" y="557" width="254" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=2;" parent="1" source="86" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="908" y="175" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="971" y="629"/>
+                            <mxPoint x="971" y="175"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="86" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 14px&quot;&gt;17. Websocket 实现跨标签页通信&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="654" y="613" width="254" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 14px&quot;&gt;18. Web Worker&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="654" y="669" width="254" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="97" value="" style="endArrow=none;html=1;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="906" y="288" as="sourcePoint"/>
+                        <mxPoint x="970" y="288" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="98" value="" style="endArrow=none;html=1;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="907" y="347" as="sourcePoint"/>
+                        <mxPoint x="971" y="347" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="99" value="" style="endArrow=none;html=1;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="908" y="403" as="sourcePoint"/>
+                        <mxPoint x="972" y="403" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="100" value="" style="endArrow=none;html=1;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="908" y="463" as="sourcePoint"/>
+                        <mxPoint x="972" y="463" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="101" value="" style="endArrow=none;html=1;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="907" y="516" as="sourcePoint"/>
+                        <mxPoint x="971" y="516" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="102" value="" style="endArrow=none;html=1;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="908" y="572" as="sourcePoint"/>
+                        <mxPoint x="972" y="572" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="103" value="" style="endArrow=none;html=1;strokeWidth=2;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="906" y="234" as="sourcePoint"/>
+                        <mxPoint x="970" y="234" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

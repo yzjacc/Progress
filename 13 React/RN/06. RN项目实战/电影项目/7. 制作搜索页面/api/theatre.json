@@ -1,0 +1,92 @@
+[
+    {
+        "theaterName": "嘉莱国际影城（金科路店）",
+        "theaterAddr": "金牛区金科西路58号（负一楼）",
+        "allowRefund": true,
+        "endorse": true,
+        "snack": true,
+        "vipTag": true,
+        "startPrice": 19.9
+    },
+    {
+        "theaterName": "大地悦影绘影城（激光杜比百货店）",
+        "theaterAddr": "新都区新中路77号懿润百货五楼",
+        "allowRefund": true,
+        "endorse": true,
+        "snack": false,
+        "vipTag": true,
+        "startPrice": 29.9
+    },
+    {
+        "theaterName": "太平洋影城（彭州店）",
+        "theaterAddr": "彭州市天彭镇金彭东路122号置信逸都购物中心三楼",
+        "allowRefund": true,
+        "endorse": false,
+        "snack": true,
+        "vipTag": true,
+        "startPrice": 19.9
+    },
+    {
+        "theaterName": "中影盛世影城（大丰圣迈德店）",
+        "theaterAddr": "新都区大丰街道蓉北路二段168号1栋3层1号附2-3号",
+        "allowRefund": true,
+        "endorse": false,
+        "snack": false,
+        "vipTag": true,
+        "startPrice": 19.9
+    },
+    {
+        "theaterName": "嘉莱巨幕国际影城（华宇广场店）",
+        "theaterAddr": "锦江区沙河街道上沙河铺街789号华宇广场二楼",
+        "allowRefund": true,
+        "endorse": true,
+        "snack": true,
+        "vipTag": true,
+        "startPrice": 19.9
+    },
+    {
+        "theaterName": "联娱国际影城（兰天店）",
+        "theaterAddr": "金堂县赵镇街道新建路133号兰天城市广场5号楼四楼",
+        "allowRefund": false,
+        "endorse": true,
+        "snack": false,
+        "vipTag": true,
+        "startPrice": 19.9
+    },
+    {
+        "theaterName": "橙天国际影城（成都Upark公园店）",
+        "theaterAddr": "武侯区高新区盛治街838号C栋3楼",
+        "allowRefund": false,
+        "endorse": true,
+        "snack": true,
+        "vipTag": false,
+        "startPrice": 19.9
+    },
+    {
+        "theaterName": "中影飞尚国际影城",
+        "theaterAddr": "新都区新都街道电子路388号海伦城市广场4楼",
+        "allowRefund": true,
+        "endorse": true,
+        "snack": false,
+        "vipTag": true,
+        "startPrice": 19.9
+    },
+    {
+        "theaterName": "嘉莱炜岸国际影城",
+        "theaterAddr": "龙泉驿区驿都西路3666号41栋3层1号",
+        "allowRefund": true,
+        "endorse": false,
+        "snack": true,
+        "vipTag": true,
+        "startPrice": 19.9
+    },
+    {
+        "theaterName": "太平洋影城（师大店）",
+        "theaterAddr": "龙泉驿区大面街道龙城大道728号",
+        "allowRefund": true,
+        "endorse": true,
+        "snack": true,
+        "vipTag": true,
+        "startPrice": 19.9
+    }
+]

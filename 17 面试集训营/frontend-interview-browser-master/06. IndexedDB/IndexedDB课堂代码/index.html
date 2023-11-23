@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="./db.js"></script>
+    <script>
+        openDB("stuDB", 1)
+            .then((db)=>{
+                // 调用添加数据方法
+                // addData(db, "stu", { "stuId": 4, "stuName": "谢杰", "stuAge": 18 });
+                // addData(db, "stu", { "stuId": 5, "stuName": "张三", "stuAge": 23 });
+                // addData(db, "stu", { "stuId": 6, "stuName": "李四", "stuAge": 24 });
+                // addData(db, "stu", { "stuId": 7, "stuName": "王武", "stuAge": 32 });
+                // addData(db, "stu", { "stuId": 8, "stuName": "刘德华", "stuAge": 34 });
+                // addData(db, "stu", { "stuId": 9, "stuName": "张学友", "stuAge": 28 });
+                // addData(db, "stu", { "stuId": 10, "stuName": "郭富城", "stuAge": 27 });
+                // addData(db, "stu", { "stuId": 11, "stuName": "黎明", "stuAge": 17 });
+                // addData(db, "stu", { "stuId": 12, "stuName": "邓超", "stuAge": 19 });
+                // addData(db, "stu", { "stuId": 13, "stuName": "刘翔", "stuAge": 15 });
+                // addData(db, "stu", { "stuId": 14, "stuName": "洋洋", "stuAge": 12 });
+                // addData(db, "stu", { "stuId": 15, "stuName": "林佳音", "stuAge": 14 });
+                // addData(db, "stu", { "stuId": 16, "stuName": "袁进", "stuAge": 34 });
+                // addData(db, "stu", { "stuId": 17, "stuName": "老闫", "stuAge": 36 });
+                // addData(db, "stu", { "stuId": 18, "stuName": "沈爷", "stuAge": 34 });
+
+                // 调用根据主键来查询的方法
+                // return getDataByKey(db, "stu", 3);
+
+                // 根据游标查询所有数据
+                // return cursorGetData(db, "stu");
+
+                // 根据索引来查询某一条数据
+                // 只是通过索引来查询的话，只会返回满足条件的第一条数据
+                // return getDataByIndex(db, "stu", "stuAge", 18);
+
+                // 根据索引和游标来进行查询
+                // return getDataByIndex(db, "stu", "stuAge", 20);
+
+                // 测试分页查询
+                // return cursorGetDataByIndexAndPage(db, "stu", "", "", 2, 5);
+
+                // 修改数据
+                // return updateDB(db, "stu",  { "stuId": 4, "stuName": "谢杰2", "stuAge": 28 });
+
+                // 删除数据
+                // return deleteDB(db, "stu", 4);
+
+                // 删除多条指定条件的数据
+                return cursorDelete(db, "stu", "stuAge", 34);
+            }).then((stuInfo)=>{
+                console.log(stuInfo);
+            })
+    </script>
+</body>
+
+</html>

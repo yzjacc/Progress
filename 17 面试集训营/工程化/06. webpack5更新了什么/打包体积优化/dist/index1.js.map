@@ -1,0 +1,1 @@
+{"version":3,"file":"index1.js","mappings":"AAAAA,QAAQC,IAAI","sources":["webpack://op-package/./src/index1.js"],"sourcesContent":["console.log(\"index1.js没有依赖其他模块，也没有导出任何东西\");\n"],"names":["console","log"],"sourceRoot":""}

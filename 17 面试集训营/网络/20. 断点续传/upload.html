@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>断点续传-示例</title>
+    <link rel="stylesheet" href="./upload.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">
+        <button class="btn choose">选择文件</button>
+        <input type="file" id="file" style="display: none" />
+        <div class="progress" style="display: none">
+          <div class="wrapper">
+            <div class="inner">
+              <span>0%</span>
+            </div>
+          </div>
+        </div>
+        <button
+          class="btn control"
+          data-status="unchoose"
+          style="display: none"
+        >
+          开始上传
+        </button>
+      </div>
+      <div class="item" id="link" style="display: none">
+        <span>文件访问地址：</span>
+        <p>
+          <a href=""></a>
+        </p>
+      </div>
+    </div>
+    <div class="modal" style="display: none">
+      <div class="center">处理中, 请稍后...</div>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/spark-md5/3.0.0/spark-md5.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="./upload.js"></script>
+  </body>
+</html>

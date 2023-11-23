@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 题目1:
+        // console.log('script start');
+        // setTimeout(function () {
+        //     console.log('setTimeout');
+        // }, 0);
+
+        // Promise.resolve().then(function () {
+        //     console.log('promise1');
+        // }).then(function () {
+        //     console.log('promise2');
+        // });
+
+        // console.log('script end');
+
+        // script start
+        // script end
+        // promise1
+        // promise2
+        // setTimeout
+
+        // 宏任务队列：setTimeout
+        // 微任务队列：promise1、promise2
+
+        // 题目2
+        Promise.resolve().then(() => {
+            console.log('Promise1')
+            setTimeout(() => {
+                console.log('setTimeout2')
+            }, 0)
+        })
+        setTimeout(() => {
+            console.log('setTimeout1')
+            Promise.resolve().then(() => {
+                console.log('Promise2')
+            })
+        }, 0)
+
+        // Promise1
+        // setTimeout1
+        // Promise2
+        // setTimeout2
+
+        // 宏任务队列：setTimeout2
+        // 微任务队列：
+    </script>
+</body>
+
+</html>

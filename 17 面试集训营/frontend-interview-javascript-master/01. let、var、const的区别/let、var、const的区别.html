@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // console.log(a);
+        // var a = 10;
+        // 这里存在一个变量提升的现象
+        // 所谓变量提升，就是将变量的声明部分提升到当前作用域的最顶端
+        // 上面的代码就等价于：
+        //    var a;
+        //    console.log(a);
+        //    a = 10;
+
+        // var 声明的变量会成为 window 对象的一个属性
+        // var i = 10;
+        // let j = 20;
+        // console.log(window.i);
+        // console.log(window.j);
+
+        // 重复声明
+        // var i = 10;
+        // var i = 20;
+        // console.log(20);
+        // let j = 10;
+        // let j = 20;
+
+        // let 声明的变量不存在变量（声明）提升
+        console.log(j);
+        let j = 10;
+    </script>
+</body>
+
+</html>

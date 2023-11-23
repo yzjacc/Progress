@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面二</title>
+</head>
+
+<body>
+    <script>
+        // 创建一个广播频道，并且传入的字符串要和页面一的一样
+        const broadCastChannel = new BroadcastChannel("load");
+
+        broadCastChannel.onmessage = function(e){
+            console.log(e.data);
+        }
+    </script>
+</body>
+
+</html>

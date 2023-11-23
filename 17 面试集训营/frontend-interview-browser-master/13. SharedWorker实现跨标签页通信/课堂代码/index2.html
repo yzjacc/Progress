@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面二</title>
+</head>
+
+<body>
+    <script>
+        const worker = new SharedWorker("worker.js");
+        worker.port.start();
+        worker.port.onmessage = function(e){
+            if(e.data){
+                console.log(`来自 worker 的数据：`,e.data);
+            }
+        }
+        setInterval(function(){
+            worker.port.postMessage("get");
+        },1000)
+    </script>
+</body>
+
+</html>

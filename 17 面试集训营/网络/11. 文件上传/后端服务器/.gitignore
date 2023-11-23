@@ -1,0 +1,8 @@
+node_modules
+public/upload/*.png
+public/upload/*.jpg
+public/upload/*.gif
+public/upload/*.bmp
+public/upload/*.webp
+public/upload/*.svg
+public/upload/*.jpeg

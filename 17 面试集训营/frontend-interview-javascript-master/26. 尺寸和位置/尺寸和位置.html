@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            height: 5000px;
+        }
+
+        /* .container {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border: 5px solid;
+            overflow: auto;
+            padding: 10px;
+            margin: 20px;
+        } */
+        .container {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            border: 1px solid;
+            overflow: auto;
+            padding: 10px;
+            margin: 20px;
+            position: relative;
+        }
+
+        .item {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="container" style="width:400px">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Dolores provident
+        mollitia distinctio cupiditate earum, odio delectus quis sapiente! Veritatis, minus, praesentium suscipit
+        adipisci impedit ipsa eos dolor amet possimus illo eum aperiam! Atque at eveniet corrupti quas non voluptate?
+        Neque rerum alias numquam totam mollitia nemo nihil asperiores animi pariatur dolorum cum magni nesciunt, quasi
+        eius obcaecati fugiat, officia maxime ullam ducimus quia! Perferendis unde rerum, a consequatur incidunt
+        accusantium recusandae dolorum aspernatur. Suscipit ipsam inventore id. Repellendus ad vitae dolores ipsam
+        quibusdam architecto ex magni illum quisquam? Sunt ullam error eum a magni architecto consequatur sed nobis
+        obcaecati quo.</div>
+    <!-- <div id="container" class="container">
+        <div id="item" class="item"></div>
+    </div> -->
+    <script>
+        var container = document.getElementById("container");
+        console.log("clientWidth:", container.clientWidth); // 220
+        console.log("clientHeight:", container.clientHeight); // 220
+        // console.log("offsetWidth:", container.offsetWidth); // 230
+        // console.log("offsetWidth:", container.offsetWidth); // 230
+        // console.log("clientTop:", container.clientTop); // 5
+        // console.log("clientLeft:", container.clientLeft); // 5
+
+        // var item = document.getElementById('item');
+        // console.log(item.offsetParent); // 100
+        // console.log(item.offsetLeft); // 100
+        // console.log(item.offsetTop);
+
+        // console.log("scrollHeight:", container.scrollHeight);
+        // console.log("scrollWidth:", container.scrollWidth);
+
+        // container.onscroll = function () {
+        //     console.log("scrollTop:", container.scrollTop);
+        //     console.log("scrollLeft:", container.scrollLeft);
+        // }
+
+        // console.log(container.style.width);
+
+        container.onclick = function (ev) {
+            var evt = ev || event;
+            console.log("clientXY::" + evt.clientX + ":" + evt.clientY);
+            console.log("screenXY::" + evt.screenX + ":" + evt.screenY);
+            console.log("offsetXY::" + evt.offsetX + ":" + evt.offsetY);
+            console.log("pageXY::" + evt.pageX + ":" + evt.pageY);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<mxfile host="65bd71144e">
+    <diagram id="QFoU5hE6jV3CWI5dNyLY" name="第 1 页">
+        <mxGraphModel dx="738" dy="494" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="19" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="1014" y="108" width="169" height="179" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Roboto Mono;fontSize=16;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="19" vertex="1">
+                    <mxGeometry width="169" height="179" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="图例" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=16;fontFamily=Roboto Mono;" parent="19" vertex="1">
+                    <mxGeometry x="63.5" y="7" width="42" height="23" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="必会知识" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontFamily=Roboto Mono;" parent="19" vertex="1">
+                    <mxGeometry x="18" y="42" width="133" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="建议学习的知识" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontFamily=Roboto Mono;" parent="19" vertex="1">
+                    <mxGeometry x="18" y="85" width="133" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="选择学习的知识" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontFamily=Roboto Mono;" parent="19" vertex="1">
+                    <mxGeometry x="18" y="128" width="133" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="01. CMJ和ESM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="167" y="117" width="192" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="111" value="02. 代码质量和风格" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="167" y="175" width="192" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="112" value="03. ESLint" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="167" y="233" width="192" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="113" value="04. 关于webpack的诸多问题" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="387" y="117" width="278" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="05. webpack scope hoisting" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="387" y="175" width="279" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" value="06. webpack5更新了什么" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="387" y="233" width="279" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="118" value="07. npm模块安装机制" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="690" y="117" width="238" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="119" value="08. 模块联邦" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontFamily=Roboto Mono;align=left;spacingLeft=10;" parent="1" vertex="1">
+                    <mxGeometry x="690" y="175" width="238" height="31" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

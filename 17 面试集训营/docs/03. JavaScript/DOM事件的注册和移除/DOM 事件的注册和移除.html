@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">test</button>
+    <script>
+        var btn = document.getElementById("btn");
+        // btn.onclick = function () {
+        //     console.log("Hello");
+        // }
+        // btn.onclick = function(){
+        //     console.log("World");
+        //     btn.onclick = null;
+        // }
+        // btn.ondblclick = function(){
+        //     console.log("dobule~~");
+        // }
+
+        var fn1 = function () {
+            console.log("Hello!");
+            btn.removeEventListener('click', fn1)
+
+        }
+
+        var fn2 = function () {
+            console.log("World!");
+        }
+        btn.addEventListener("click", fn1, false);
+        btn.addEventListener("click", fn2, false);
+    </script>
+</body>
+
+</html>

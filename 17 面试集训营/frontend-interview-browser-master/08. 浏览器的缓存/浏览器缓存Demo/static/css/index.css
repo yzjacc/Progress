@@ -1,0 +1,25 @@
+.container{
+    width: 800px;
+    margin: 50px auto;
+    padding: 10px;
+    font-weight: 100;
+}
+
+h1{
+    text-align: center;
+    font-weight: 100;
+    color : red;
+}
+
+img{
+    width: 150px;
+}
+
+img:first-of-type{
+    float: left;
+    margin-right: 20px;
+}
+
+img:last-of-type{
+    float: right;
+}

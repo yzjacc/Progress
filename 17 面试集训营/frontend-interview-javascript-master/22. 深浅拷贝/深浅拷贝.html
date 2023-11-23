@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        //  浅拷贝
+        // 1. 直接赋值
+        //    var stu = {
+        //        name : "xiejie"
+        //    }
+        //    var stu2 = stu;
+        //    stu2.name = "zhangsan";
+        //    console.log(stu.name);
+
+        // 2. Object.assign 方法
+        // Object.assign 方法的基本使用
+        // var obj = Object.assign({name:"xiejie", age : 20},{age : 18, gender : "female"},{gender: "male"})
+        // console.log(obj);
+
+        // 使用 Object.assign 方法实现对象的拷贝
+        // var stu = {
+        //     name : "xiejie",
+        //     age : 18
+        // }
+        // var stu2 = Object.assign({}, stu);
+        // console.log(stu2);
+
+        // 使用 Object.assign 方法是一个浅拷贝
+        // const stu = {
+        //     name: 'xiejie',
+        //     age: 18,
+        //     stuInfo: {
+        //         No: 1,
+        //         score: 100
+        //     }
+        // }
+        // var stu2 = Object.assign({}, stu);
+        // stu2.name = "zhangsan";
+        // stu2.stuInfo.No = 2;
+        // console.log(stu);
+        // console.log(stu2);
+
+        // 3. ES6 的扩展运算符
+        // var arr = [1, 2, 3];
+        // var arr2 = [3, 4, 5 ,6, ...arr];
+        // console.log(arr2);
+
+        // 使用扩展运算符也可以实现对象的拷贝
+        // var stu = {
+        //     name: "xiejie",
+        //     age: 18
+        // }
+        // var stu2 = { ...stu };
+        // stu2.name = "zhangsan";
+        // console.log(stu);
+        // console.log(stu2);
+
+        // 但是使用扩展运算符实际上也是浅拷贝
+        // var stu = {
+        //     name: "xiejie",
+        //     age: 18,
+        //     stuInfo : {
+        //         No : 1
+        //     }
+        // }
+        // var stu2 = { ...stu };
+        // stu2.name = "zhangsan";
+        // stu2.stuInfo.No = 2;
+        // console.log(stu);
+        // console.log(stu2);
+
+        // 4. 使用数组的 slice 和 concat 方法来快速的复制一份数组
+        // var arr = [1,2,3];
+        // var arr2 = arr.slice();
+        // var arr3 = arr.concat();
+        // arr2[0] = 100;
+        // arr3[0] = 1000;
+        // console.log(arr);
+        // console.log(arr2);
+        // console.log(arr3);
+
+        // 但是这两个方法也是浅拷贝
+        // var arr = [1,2,3,{name : "xiejie",age : 18}];
+        // var arr2 = arr.slice();
+        // var arr3 = arr.concat();
+        // arr2[3].name = "zhangsan";
+        // arr3[3].age = 28;
+        // console.log(arr);
+        // console.log(arr2);
+        // console.log(arr3);
+
+        // 5. jQuery 中有一个叫做 $.extend 的方法，可以实现深浅拷贝
+        // var stu = {
+        //     name: "xiejie",
+        //     age: 18,
+        //     stuInfo: {
+        //         No: 1
+        //     }
+        // }
+        // var cloneObj = {};
+        // 该方法接收 3 个参数：1. 布尔值（true 代表深拷贝，false 代表浅拷贝，不传默认就是浅拷贝）
+        // 2. 目标对象
+        // 3. 被拷贝的对象
+        // $.extend(cloneObj, stu);
+        // cloneObj.stuInfo.No = 100;
+        // console.log(stu);
+        // console.log(cloneObj);
+
+
+        // 深拷贝
+
+
+        // 1. JSON.parse(JSON.stringify)
+        // var stu = {
+        //     name: "xiejie",
+        //     age: 18,
+        //     stuInfo: {
+        //         No: 1
+        //     }
+        // }
+        // var stu2 = JSON.parse(JSON.stringify(stu));
+        // stu.stuInfo.No = 1000;
+        // console.log(stu);
+        // console.log(stu2);
+
+        // 但是这种方式有缺陷，JSON.parse 本意上是用来处理 JSON 数据的
+        // JSON 数据是不允许有函数的
+
+        // var stu = {
+        //     name: "xiejie",
+        //     age: 18,
+        //     stuInfo: {
+        //         No: 1
+        //     },
+        //     sayHello(){
+        //         console.log("Hello");
+        //     }
+        // }
+        // var stu2 = JSON.parse(JSON.stringify(stu));
+        // stu.stuInfo.No = 1000;
+        // console.log(stu);
+        // console.log(stu2);
+
+        // 2. 使用 jQuery 中的 $extend 来拷贝
+        // var stu = {
+        //     name: "xiejie",
+        //     age: 18,
+        //     stuInfo: {
+        //         No: 1
+        //     },
+        //     sayHello() {
+        //         console.log("Hello");
+        //     }
+        // }
+        // var cloneObj = {};
+        // 该方法接收 3 个参数：1. 布尔值（true 代表深拷贝，false 代表浅拷贝，不传默认就是浅拷贝）
+        // 2. 目标对象
+        // 3. 被拷贝的对象
+        // $.extend(true, cloneObj, stu);
+        // cloneObj.stuInfo.No = 100;
+        // console.log(stu);
+        // console.log(cloneObj);
+
+        // 3. 如果是使用原生 js，那么要实现对象的深拷贝就只有老老实实的写递归了
+
+        var stu = {
+            name: "xiejie",
+            age: 18,
+            stuInfo: {
+                No: 1
+            },
+            sayHello() {
+                console.log("Hello");
+            }
+        }
+
+        /*
+         * target : 要克隆的对象
+         * [{},{}....]
+         */
+        function deepClone(target) {
+            var result; // 最终克隆的新的对象
+            if (typeof target === "object") {
+                // 如果进入到 if，那么就需要各种判断
+                if (Array.isArray(target)) {
+                    result = [];
+                    for (var i in target) {
+                        result.push(deepClone(target[i]));
+                    }
+                } else if (target === null) {
+                    result = null;
+                } else if (target.constructor === RegExp || target.constructor === Date) {
+                    result = target;
+                } else {
+                    // 进入此分支，说明是一个对象
+                    result = {};
+                    for (var i in target) {
+                        result[i] = deepClone(target[i]);
+                    }
+                }
+            } else {
+                // 进入此分支，说明当前的 target 是诸如 number、boolean、string 之类的类型
+                result = target;
+            }
+            return result;
+        }
+
+
+        var stu2 = deepClone(stu);
+        stu2.stuInfo.No = 1000;
+        console.log(stu);
+        console.log(stu2);
+
+
+        var arr = [1, 2, 3, { name: "xiejie", age: 18 }];
+        var arr2 = deepClone(arr);
+        arr2[3].name = "zhangsan";
+        console.log(arr);
+        console.log(arr2);
+    </script>
+</body>
+
+</html>

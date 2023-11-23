@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var ws = new WebSocket('ws://localhost:9527');
+
+      ws.onopen = function () {
+        console.log('连接到了服务器');
+      };
+
+      // 事件：收到服务器消息后触发
+      ws.onmessage = function (e) {
+        console.log(e.data); // e.data：服务器发送的消息
+      };
+      // 事件：连接关闭后触发
+      ws.onclose = function () {
+        console.log('连接关闭了');
+      };
+    </script>
+  </body>
+</html>

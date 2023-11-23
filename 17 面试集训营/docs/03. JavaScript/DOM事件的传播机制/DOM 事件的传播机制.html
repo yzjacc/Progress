@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="ul">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+    <script>
+        // var lis = document.getElementsByTagName("li");
+        // for(var i=0;i<lis.length;i++){
+        //     lis[i].onclick = function(){
+        //         console.log("Hello World");
+        //     }
+        // }
+
+        // 使用事件委托来优化上面的代码
+
+        // 事件委托优点 1: 只用在父元素上面绑定相应的事件，绑定的事件更少，页面的效率更高
+
+        var ul = document.getElementById('ul');
+        ul.onclick = function(e){
+            if(e.target.nodeName === "LI"){
+                console.log("Hello World");
+            }
+        }
+
+        // 事件委托优点 2:后面新增的元素，事件也存在
+    </script>
+</body>
+
+</html>

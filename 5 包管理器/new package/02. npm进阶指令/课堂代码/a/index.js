@@ -1,0 +1,1 @@
+exports.name = "npm link test";

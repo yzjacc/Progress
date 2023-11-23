@@ -1,0 +1,55 @@
+<mxfile host="65bd71144e">
+    <diagram id="QFoU5hE6jV3CWI5dNyLY" name="第 1 页">
+        <mxGraphModel dx="868" dy="529" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="文档声明" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="377" y="96" width="114" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="语义化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="542" y="97" width="114" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="页面可见性" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="212" y="264" width="114" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontFamily=Roboto Mono;fontSize=16;" parent="1" source="10" target="11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="iframe" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="542" y="264" width="114" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontFamily=Roboto Mono;fontSize=16;" parent="1" source="11" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="SEO" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="542" y="180" width="114" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="微格式" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="377" y="264" width="114" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="W3C标准组织" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="377" y="180" width="114" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Roboto Mono;fontSize=16;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="766" y="97" width="169" height="179" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="图例" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=16;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="829.5" y="104" width="42" height="23" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="必会知识" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="784" y="139" width="133" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="建议学习的知识" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="784" y="182" width="133" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="选择学习的知识" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="784" y="225" width="133" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="替换元素" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="381" y="348" width="113" height="31" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

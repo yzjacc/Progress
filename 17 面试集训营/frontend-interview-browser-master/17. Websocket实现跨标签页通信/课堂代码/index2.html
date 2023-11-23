@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 建立 websocket 连接
+        var ws = new WebSocket("ws://localhost:3000");
+        var count = 1; // 用于计数
+        ws.onopen = function () {
+            ws.onmessage = function (event) {
+                var oP = document.createElement("p");
+                oP.innerHTML = `第${count}次接收到消息：${event.data}`;
+                document.body.appendChild(oP);
+                count++;
+            }
+        }
+        // 关闭窗口或者窗口刷新的时候
+        // 要关闭当前的 websocket 连接
+        window.onbeforeunload = function () {
+            ws.close();
+        }
+    </script>
+</body>
+
+</html>

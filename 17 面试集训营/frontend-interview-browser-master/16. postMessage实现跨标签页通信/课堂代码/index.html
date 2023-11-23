@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面一</title>
+</head>
+
+<body>
+    <button id="popBtn">弹出新窗口</button>
+    <input type="text" id="content">
+    <button id="btn">发送数据</button>
+    <script>
+        const popBtn = document.querySelector("#popBtn");
+        const content = document.querySelector("#content");
+        const btn = document.querySelector("#btn");
+
+        let opener = null; // 用于保存 window.open 打开的窗口的引用
+        popBtn.onclick = function(){
+            opener = window.open("index2.html", "123123", "height=400,width=400,top=20,resizeable=yes");
+        }
+        btn.onclick = function(){
+            let data = {
+                value : content.value
+            }
+            // data 代表的是要发送的数据，第二个参数是 origin，使用 * 代表所有域
+            opener.postMessage(data, "*")
+        }
+    </script>
+</body>
+
+</html>

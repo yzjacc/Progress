@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 600px;
+            height: 300px;
+            /* border: 100px solid; */
+            margin: 50px auto;
+            background: url('./zelda.jpg') no-repeat center/cover;
+            /* 接下来我要设置遮罩 */
+            /* -moz-mask-image:url('./mask.png'); */
+            /* -webkit-mask-image: linear-gradient(transparent 10%, blue); */
+            /* -moz-mask-repeat:no-repeat; */
+            /* -moz-mask-position: center; */
+            /* -webkit-mask-size: cover; */
+            /* -webkit-mask-origin:content-box; */
+            /* -webkit-mask-clip: content-box; */
+            /* mask-mode: luminance; */
+
+            /* 设置倒影 */
+            /* 第一个值是倒影的位置（上下左右） */
+            /* 上 above 下 below 左 left 右 right */
+            /* 第二值是倒影距离 */
+            /* 第三个值是一个遮罩 */
+            -webkit-box-reflect: below 15px linear-gradient(transparent 10%, blue);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mask"></div>
+</body>
+
+</html>

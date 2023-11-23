@@ -1,0 +1,64 @@
+<mxfile host="65bd71144e">
+    <diagram id="QFoU5hE6jV3CWI5dNyLY" name="第 1 页">
+        <mxGraphModel dx="685" dy="637" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="91" value="01. Promise基础" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;fontSize=16;fontFamily=Roboto Mono;strokeColor=#82b366;align=left;spacingLeft=9;" parent="1" vertex="1">
+                    <mxGeometry x="966" y="108" width="237" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="网络性能优化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="582" y="734" width="251" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="157" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;align=left;spacingLeft=9;" parent="1" source="152" target="91" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="152" value="02. Promise的链式调用" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;fontSize=16;fontFamily=Roboto Mono;strokeColor=#82b366;align=left;spacingLeft=9;" parent="1" vertex="1">
+                    <mxGeometry x="966" y="167" width="237" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="158" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;align=left;spacingLeft=9;" parent="1" source="153" target="152" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="153" value="03. Promise的静态方法" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;fontSize=16;fontFamily=Roboto Mono;strokeColor=#82b366;align=left;spacingLeft=9;" parent="1" vertex="1">
+                    <mxGeometry x="966" y="226" width="237" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="159" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;align=left;spacingLeft=9;" parent="1" source="154" target="153" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="154" value="04. async 和 await" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;fontSize=16;fontFamily=Roboto Mono;strokeColor=#82b366;align=left;spacingLeft=9;" parent="1" vertex="1">
+                    <mxGeometry x="966" y="285" width="238" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="160" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;align=left;spacingLeft=9;" parent="1" source="155" target="154" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="155" value="05. Promise的相关面试题" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;fontSize=16;fontFamily=Roboto Mono;strokeColor=#82b366;align=left;spacingLeft=9;" parent="1" vertex="1">
+                    <mxGeometry x="966" y="344" width="238" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="161" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;align=left;spacingLeft=9;" parent="1" source="156" target="155" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="156" value="06. 手写Promise（多节课）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;fontSize=16;fontFamily=Roboto Mono;strokeColor=#b85450;align=left;spacingLeft=9;" parent="1" vertex="1">
+                    <mxGeometry x="966" y="403" width="238" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Roboto Mono;fontSize=16;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="1398" y="116" width="169" height="179" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="图例" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontSize=16;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="1461.5" y="123" width="42" height="23" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="必会知识" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="1416" y="158" width="133" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="建议学习的知识" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="1416" y="201" width="133" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="选择学习的知识" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontFamily=Roboto Mono;" parent="1" vertex="1">
+                    <mxGeometry x="1416" y="244" width="133" height="31" as="geometry"/>
+                </mxCell>
+                <mxCell id="164" value="箭头表示知识间的依赖关系" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fontFamily=Roboto Mono;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="983.5" y="44" width="202" height="23" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

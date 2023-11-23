@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面二</title>
+    <style>
+        table{
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+        table td{
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>学生表</h1>
+    <table id="tab">
+        <!-- <tr>
+            <td>学号</td>
+            <td>姓名</td>
+            <td>年龄</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>謝傑</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>张三</td>
+            <td>19</td>
+        </tr> -->
+    </table>
+    <script src="./db.js"></script>
+    <script>
+
+        function render(arr){
+            let tab = document.querySelector("#tab");
+            tab.innerHTML = `
+                <tr>
+                    <td>学号</td>
+                    <td>姓名</td>
+                    <td>年龄</td>
+                </tr>
+            `;
+            let str = arr.map(item=>{
+                return `
+                    <tr>
+                        <td>${item.stuId}</td>
+                        <td>${item.stuName}</td>
+                        <td>${item.stuAge}</td>
+                    </tr>
+                `
+            }).join("");
+            tab.innerHTML += str;
+        }
+
+        async function renderTable(){
+            let db = await openDB("stuDB",1);
+            let stuInfo = await getDataByKey(db, "stu");
+            render(stuInfo);
+
+            setInterval(async function(){
+                let stuInfo2 = await getDataByKey(db, "stu");
+                if(stuInfo2.length !== stuInfo.length){
+                    stuInfo = stuInfo2;
+                    render(stuInfo);
+                }
+            }, 1000);
+        }
+        renderTable()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面二</title>
+</head>
+
+<body>
+    <script>
+        window.onstorage = function(e){
+            console.log("修改的键为：",e.key);
+            console.log("之前的值为：",e.oldValue);
+            console.log("修改后的值为：",e.newValue);
+            console.log(e.storageArea);
+            console.log(e.url);
+        }
+    </script>
+</body>
+
+</html>

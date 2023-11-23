@@ -1,0 +1,17 @@
+{
+  "name": "rollup-plugin-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/pluginutils": "^5.0.4",
+    "rollup": "^3.29.3"
+  }
+}
